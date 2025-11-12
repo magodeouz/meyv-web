@@ -117,7 +117,7 @@ export function Footer({ onNavigate }: FooterProps) {
                     <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Quality</p>
                     <DropdownArrowIcon />
                   </button>
-                  <button className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0 cursor-pointer bg-transparent border-none">
+                  <button onClick={() => onNavigate?.('contact')} className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0 cursor-pointer bg-transparent border-none">
                     <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Con</p>
                   </button>
                 </div>
