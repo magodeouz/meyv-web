@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Component1920PxContact from "@/imports/1920PxContact";
 
 const responsiveStyle = {
-  "--design-height": 3000,
+  "--design-height": 3200,
 } as CSSProperties;
 
 const ContactPage = () => {
