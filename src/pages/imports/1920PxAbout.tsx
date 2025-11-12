@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import svgPaths from "./svg-uxdpx2db5h";
 import imgImage54 from "@/assets/5d67a7f916b6f43f466fc2c9204eff762a68d9fe.png";
 import imgImage55 from "@/assets/0e9e73385ce1d4831434ca7b2f84acde628e099d.png";
@@ -80,13 +80,27 @@ function Layer() {
 
 function Frame() {
   return (
-    <Link
+    <NavLink
       to="/"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer"
+      end
+      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
     >
-      <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
-    </Link>
+      {({ isActive }) => (
+        <>
+          <div
+            aria-hidden="true"
+            className={`absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+          />
+          <p
+            className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+              isActive ? "text-[#115132]" : "text-[#212121]"
+            }`}
+          >
+            Home
+          </p>
+        </>
+      )}
+    </NavLink>
   );
 }
 
@@ -100,23 +114,51 @@ function Frame2() {
 
 function Frame1() {
   return (
-    <Link
+    <NavLink
       to="/about"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer"
+      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
     >
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
-    </Link>
+      {({ isActive }) => (
+        <>
+          <p
+            className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+              isActive ? "text-[#115132]" : "text-[#212121]"
+            }`}
+          >
+            Who we are
+          </p>
+          <span
+            aria-hidden="true"
+            className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+          />
+        </>
+      )}
+    </NavLink>
   );
 }
 
 function Frame4() {
   return (
-    <Link
+    <NavLink
       to="/factories"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer"
+      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
     >
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Factories</p>
-    </Link>
+      {({ isActive }) => (
+        <>
+          <p
+            className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+              isActive ? "text-[#115132]" : "text-[#212121]"
+            }`}
+          >
+            Factories
+          </p>
+          <span
+            aria-hidden="true"
+            className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+          />
+        </>
+      )}
+    </NavLink>
   );
 }
 
@@ -134,13 +176,25 @@ function DropdownArrowIcon300WRounded() {
 
 function Frame3() {
   return (
-    <Link
+    <NavLink
       to="/quality"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer"
+      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
     >
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Quality & Certificates`}</p>
-      <DropdownArrowIcon300WRounded />
-    </Link>
+      {({ isActive }) => (
+        <>
+          <p
+            className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+              isActive ? "text-[#115132]" : "text-[#212121]"
+            }`}
+          >{`Quality & Certificates`}</p>
+          <DropdownArrowIcon300WRounded />
+          <span
+            aria-hidden="true"
+            className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+          />
+        </>
+      )}
+    </NavLink>
   );
 }
 
