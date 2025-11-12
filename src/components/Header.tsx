@@ -1,5 +1,5 @@
 import type { MouseEvent } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import svgPaths from "@/imports/svg-lasglpsk63";
 
@@ -103,6 +103,7 @@ interface HeaderProps {
 
 export function Header({ onNavigate }: HeaderProps = {}) {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const createClickHandler =
     (page: string) => (event: MouseEvent<HTMLAnchorElement>) => {
@@ -156,7 +157,11 @@ export function Header({ onNavigate }: HeaderProps = {}) {
       <button
         className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0 cursor-pointer border-none"
         onClick={() => {
-          window.location.href = "mailto:sales@meyv.com.tr?subject=Meyv%20Website%20Inquiry";
+          if (onNavigate) {
+            onNavigate("contact");
+          } else {
+            navigate("/contact");
+          }
         }}
       >
         <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">
