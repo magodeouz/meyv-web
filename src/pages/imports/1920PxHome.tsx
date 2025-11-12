@@ -1093,7 +1093,10 @@ export default function Component1920PxHome() {
       <Frame18 />
       <div className="absolute bg-[#f1f4ee] h-[1014px] left-0 top-[1950px] w-[1920px]" data-name="Bg">
       </div>
-      <div className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[normal] left-[960px] not-italic text-[#115132] text-[96px] text-center text-nowrap top-[2081px] tracking-[-1.92px] translate-x-[-50%] whitespace-pre">
+      <div
+        className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#115132] text-[96px] text-center text-nowrap top-[2081px] tracking-[-1.92px] whitespace-pre"
+        style={{ left: "50%", transform: "translateX(-50%)" }}
+      >
         <p className="mb-0">We believe in</p>
         <p>putting families first</p>
       </div>
