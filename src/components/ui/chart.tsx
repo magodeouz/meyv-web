@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 "use client";
 
 import * as React from "react";
@@ -215,7 +216,7 @@ function ChartTooltipContent({
                           {
                             "--color-bg": indicatorColor,
                             "--color-border": indicatorColor,
-                          } as React.CSSProperties
+                          } as CSSProperties
                         }
                       />
                     )

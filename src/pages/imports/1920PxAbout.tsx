@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import svgPaths from "./svg-uxdpx2db5h";
+
+import { Header } from "@/components/Header";
 import imgImage54 from "@/assets/5d67a7f916b6f43f466fc2c9204eff762a68d9fe.png";
 import imgImage55 from "@/assets/0e9e73385ce1d4831434ca7b2f84acde628e099d.png";
 import imgImage56 from "@/assets/8123f21ea8fc9b038b5691ee9999d4159a1da9a0.png";
@@ -17,6 +18,7 @@ import imgSubtract from "@/assets/621fbd1189a078e94f34c1d981c75bf20ecd9fd8.png";
 import imgImage from "@/assets/166061a53088192508b93d7e7f99bcbd487eb813.png";
 import imgImage1 from "@/assets/7de7b8b5b2103373d58539913cb1593d70b344b0.png";
 import imgImage2 from "@/assets/f45333813f767b890458d78f18201021fae2063e.png";
+import svgPaths from "./svg-uxdpx2db5h";
 import { imgImage68 } from "./svg-h82ub";
 
 function Title() {
@@ -249,12 +251,7 @@ function Frame5() {
 }
 
 function Frame8() {
-  return (
-    <div className="absolute bg-white content-stretch flex h-[110px] items-center justify-between left-[80px] top-0 w-[1760px]">
-      <Frame7 />
-      <Frame5 />
-    </div>
-  );
+  return <Header />;
 }
 
 function Frame16() {

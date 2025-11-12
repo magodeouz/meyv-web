@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+
+import { Header } from "@/components/Header";
 import svgPaths from "./svg-c0zbl1co9l";
 import imgImage69 from "@/assets/a07f6137190a89f184a4264475fbf0e621ee2d70.png";
 import imgImage70 from "@/assets/2837a00b28597efe31db5853400bda5ffd9796bb.png";
@@ -190,12 +192,7 @@ function Frame5() {
 }
 
 function Frame8() {
-  return (
-    <div className="absolute bg-white content-stretch flex h-[110px] items-center justify-between left-[80px] top-0 w-[1760px]">
-      <Frame7 />
-      <Frame5 />
-    </div>
-  );
+  return <Header />;
 }
 
 function Frame16() {

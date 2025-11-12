@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import svgPaths from "./svg-k8wa0wvcwg";
+
+import { Header } from "@/components/Header";
 import imgImage45 from "@/assets/4235fb4fc0155f8606913f4a8a328eddc47ae6f3.png";
 import imgImage from "@/assets/e7c107b24f0ce6f0dda5844a9b2b7c2d0969fde9.png";
 import imgImage1 from "@/assets/b0cc92681aa86709451caebbe356114df5e8fda5.png";
@@ -15,6 +16,8 @@ import imgSubtract from "@/assets/a3df3399bbd1dc78bb969951b80a980fd5eb7236.png";
 import imgImage7 from "@/assets/3bdd021126e7144bff0fb88be2d65fb487625a2d.png";
 import imgImage47 from "@/assets/fb252188c435916b7a570630eb63bdd319548751.png";
 import imgImage8 from "@/assets/76c0d6b70fc2309f69378e002683c4e617591eac.png";
+import type { CSSProperties } from "react";
+import svgPaths from "./svg-k8wa0wvcwg";
 
 const scrollToSection = (id: string) => {
   const el = document.getElementById(id);
@@ -170,9 +173,26 @@ function Frame() {
 
 function Frame2() {
   return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer" onClick={() => scrollToSection("products")}>
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
-    </div>
+    <NavLink
+      to="/products"
+      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
+    >
+      {({ isActive }) => (
+        <>
+          <p
+            className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+              isActive ? "text-[#115132]" : "text-[#212121]"
+            }`}
+          >
+            Products
+          </p>
+          <span
+            aria-hidden="true"
+            className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+          />
+        </>
+      )}
+    </NavLink>
   );
 }
 
@@ -313,12 +333,7 @@ function Frame5() {
 }
 
 function Frame8() {
-  return (
-    <div className="absolute bg-white content-stretch flex h-[110px] items-center justify-between left-[80px] top-0 w-[1760px]">
-      <Frame7 />
-      <Frame5 />
-    </div>
-  );
+  return <Header />;
 }
 
 function Frame16() {
@@ -527,7 +542,7 @@ function Frame40() {
   return (
     <div className="content-stretch flex gap-[24px] h-[520px] items-center relative shrink-0 w-full">
       <Frame36 />
-      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as React.CSSProperties}>
+      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as CSSProperties}>
         <div className="flex-none h-full rotate-[90deg]">
           <div className="h-full relative w-[520px]">
             <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
@@ -539,7 +554,7 @@ function Frame40() {
         </div>
       </div>
       <Frame37 />
-      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as React.CSSProperties}>
+      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as CSSProperties}>
         <div className="flex-none h-full rotate-[90deg]">
           <div className="h-full relative w-[520px]">
             <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
@@ -925,7 +940,7 @@ function Frame52() {
       <div aria-hidden="true" className="active-underline absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[32px] text-nowrap tracking-[-0.64px] whitespace-pre">Blueberry</p>
       <div className="relative shrink-0 size-[32px] accordion-arrow arrow-invert" data-name="Vector">
-        <div className="absolute inset-0" style={{ "--fill-0": "rgba(17, 81, 50, 1)" } as React.CSSProperties}>
+        <div className="absolute inset-0" style={{ "--fill-0": "rgba(17, 81, 50, 1)" } as CSSProperties}>
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
             <path d={svgPaths.p37282e00} fill="var(--fill-0, #115132)" id="Vector" />
           </svg>
