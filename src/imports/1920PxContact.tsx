@@ -837,16 +837,6 @@ function Subfooter() {
   );
 }
 
-function Footer() {
-  return (
-    <div className="absolute bg-white bottom-[31px] content-stretch flex flex-col gap-[100px] items-start left-0 w-[1920px]" data-name="Footer">
-      <Top />
-      <Mid />
-      <Subfooter />
-    </div>
-  );
-}
-
 export default function Component1920PxContact({ onNavigate }: ContactComponentProps = {}) {
   return (
     <div className="bg-white relative size-full" data-name="1920px - Contact">
@@ -867,7 +857,9 @@ export default function Component1920PxContact({ onNavigate }: ContactComponentP
       </div>
       <Frame />
       <Frame26 />
-      <SiteFooter onNavigate={onNavigate} />
+      <div className="absolute bottom-[31px] left-0 w-full">
+        <SiteFooter onNavigate={onNavigate} />
+      </div>
     </div>
   );
 }
