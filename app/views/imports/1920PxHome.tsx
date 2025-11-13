@@ -2,8 +2,9 @@
 
 import type { CSSProperties } from "react";
 
-import NavLink from "@/components/NavLink";
 import { Header } from "@/components/Header";
+import NavLink from "@/components/NavLink";
+import { HeroSection as SharedHeroSection } from "@/components/HeroSection";
 import svgPaths from "./svg-k8wa0wvcwg";
 
 const imgImage45 = "/assets/4235fb4fc0155f8606913f4a8a328eddc47ae6f3.png";
@@ -68,36 +69,6 @@ const toggleProduct = (detailsId: string, headerId?: string) => {
     }
   }
 };
-
-function Title() {
-  return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start not-italic relative shrink-0 text-white w-full" data-name="Title">
-      <div className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] relative shrink-0 text-[96px] text-nowrap whitespace-pre">
-        <p className="mb-0">{`Organic &`}</p>
-        <p>Conventional</p>
-      </div>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] min-w-full relative shrink-0 text-[21px] w-[min-content]">We provide premium fruit, vegetable, herb, and specialty ingredients—grown and processed to meet the highest standards.</p>
-    </div>
-  );
-}
-
-function Frame9() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-[24px] py-[16px] relative rounded-[1000px] shrink-0 cursor-pointer" onClick={() => scrollToSection("products")}>
-      <div aria-hidden="true" className="absolute border border-solid border-white inset-0 pointer-events-none rounded-[1000px]" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">Products</p>
-    </div>
-  );
-}
-
-function Frame10() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-[60px] items-start left-[160px] top-[264px] w-[785px]">
-      <Title />
-      <Frame9 />
-    </div>
-  );
-}
 
 function Layer() {
   return (
@@ -340,14 +311,13 @@ function Frame8() {
 
 function Frame16() {
   return (
-    <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal gap-[40px] items-start leading-[0] not-italic relative shrink-0 text-[#303030] w-[664px]">
-      <div className="leading-[1.6] relative shrink-0 text-[18px] w-full">
-        <p className="mb-0">Meyv, where tradition meets innovation, is dedicated to redefining how the world experiences fruit—through sustainable sourcing and advanced freeze-drying technology. Our mission is to deliver natural, nutrient-rich fruit products that retain their original flavor, color, and integrity—without compromise.</p>
-        <p className="mb-0">&nbsp;</p>
-        <p>By blending modern preservation techniques with time-honored harvesting practices, we offer shelf-stable solutions that meet today’s demands for quality, convenience, and sustainability—supporting healthier choices for generations to come.</p>
+    <div className="flex flex-col gap-6 md:gap-8 items-start w-full space-y-4">
+      <div className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#303030] text-base sm:text-lg md:text-xl">
+        <p className="mb-4">Meyv, where tradition meets innovation, is dedicated to redefining how the world experiences fruit—through sustainable sourcing and advanced freeze-drying technology. Our mission is to deliver natural, nutrient-rich fruit products that retain their original flavor, color, and integrity—without compromise.</p>
+        <p>By blending modern preservation techniques with time-honored harvesting practices, we offer shelf-stable solutions that meet today&apos;s demands for quality, convenience, and sustainability—supporting healthier choices for generations to come.</p>
       </div>
-      <p className="leading-[normal] relative shrink-0 text-[0px] text-[18px] w-full">
-        <span className="font-['Inter:Bold',sans-serif] font-bold not-italic">Learn More</span>
+      <p className="font-['Inter:Regular',sans-serif] leading-normal text-base sm:text-lg md:text-xl text-[#303030]">
+        <span className="font-['Inter:Bold',sans-serif] font-bold">Learn More</span>
         <span>{` →`}</span>
       </p>
     </div>
@@ -356,46 +326,50 @@ function Frame16() {
 
 function Frame17() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Where freshness meets innovation</p>
-      <Frame16 />
+    <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start w-full">
+      <div className="flex-1 text-left">
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Where freshness meets innovation</p>
+      </div>
+      <div className="flex-1">
+        <Frame16 />
+      </div>
     </div>
   );
 }
 
 function Frame11() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">100%</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Customer Satisfaction Rate</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Meyv shows how products meet consumer needs, enhancing satisfaction and fostering loyalty, leading to recommendations and expanding influence.</p>
+    <div className="flex-1 flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">100%</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[#212121] text-lg sm:text-xl md:text-2xl leading-snug">Customer Satisfaction Rate</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal text-[#303030] text-sm sm:text-base md:text-lg opacity-70 leading-relaxed">Meyv shows how products meet consumer needs, enhancing satisfaction and fostering loyalty, leading to recommendations and expanding influence.</p>
     </div>
   );
 }
 
 function Frame12() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">20+</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Years of Experience</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">With 20 years in agriculture, Meyv shows how products meet consumer needs, enhancing satisfaction and loyalty.</p>
+    <div className="flex-1 flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">20+</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[#212121] text-lg sm:text-xl md:text-2xl leading-snug">Years of Experience</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal text-[#303030] text-sm sm:text-base md:text-lg opacity-70 leading-relaxed">With 20 years in agriculture, Meyv shows how products meet consumer needs, enhancing satisfaction and loyalty.</p>
     </div>
   );
 }
 
 function Frame13() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">160K</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Farmer Around the World</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Meyv illustrates how products cater to the needs of farmers globally, boosting their satisfaction and loyalty. Loyalty boosts recommendations and expands impact.</p>
+    <div className="flex-1 flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">160K</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[#212121] text-lg sm:text-xl md:text-2xl leading-snug">Farmer Around the World</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal text-[#303030] text-sm sm:text-base md:text-lg opacity-70 leading-relaxed">Meyv illustrates how products cater to the needs of farmers globally, boosting their satisfaction and loyalty. Loyalty boosts recommendations and expands impact.</p>
     </div>
   );
 }
 
 function Frame15() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
+    <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start w-full">
       <Frame11 />
       <Frame12 />
       <Frame13 />
@@ -405,15 +379,10 @@ function Frame15() {
 
 function Frame18() {
   return (
-    <div id="about" className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[910px] w-[1920px]">
-      <Frame17 />
-      <Frame15 />
-      <div className="absolute flex h-[678px] items-center justify-center left-[-440px] mix-blend-darken top-[162px] w-[721.586px]">
-        <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-          <div className="h-[678px] relative w-[721.586px]" data-name="image 45">
-            <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage45} />
-          </div>
-        </div>
+    <div id="about" className="relative w-full px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32">
+      <div className="max-w-screen-xl mx-auto space-y-16 md:space-y-24">
+        <Frame17 />
+        <Frame15 />
       </div>
     </div>
   );
@@ -421,9 +390,9 @@ function Frame18() {
 
 function Frame19() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[40px] items-start left-[280px] top-[2586px] w-[664px]">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">By integrating modern techniques with time-honored methods, we aim to create a more resilient and efficient agricultural landscape for future generations.</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#303030] text-[0px] text-[18px] w-full">
+    <div className="flex flex-col gap-6 md:gap-8 items-start space-y-4">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#303030] text-base sm:text-lg md:text-xl">By integrating modern techniques with time-honored methods, we aim to create a more resilient and efficient agricultural landscape for future generations.</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-normal text-[#303030] text-base sm:text-lg md:text-xl">
         <span className="font-['Inter:Bold',sans-serif] font-bold">Learn More</span>
         <span>{` →`}</span>
       </p>
@@ -433,25 +402,29 @@ function Frame19() {
 
 function Group() {
   return (
-    <div className="absolute contents left-[280px] top-[2407px]">
-      <div className="absolute h-[403px] left-[1035px] pointer-events-none rounded-[40px] top-[2407px] w-[545px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover rounded-[40px] size-full" src={imgImage} />
+    <div className="relative w-full px-4 md:px-8 lg:px-16 xl:px-24 py-12 md:py-24">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+        <div className="flex-1">
+          <Frame19 />
+        </div>
+        <div className="flex-1 flex justify-center md:justify-end">
+          <img alt="" className="w-full max-w-md h-auto aspect-[4/3] object-cover rounded-3xl" src={imgImage} />
+        </div>
       </div>
-      <Frame19 />
     </div>
   );
 }
 
 function Frame34() {
   return (
-    <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal gap-[40px] items-start not-italic relative shrink-0 text-[#303030] w-[664px]">
-      <p className="leading-[1.6] relative shrink-0 text-[18px] w-full">From field to final product, our mission is to maintain the integrity of every ingredient we process. Whether flash-frozen with IQF or gently vacuum-dried, our methods lock in peak freshness, making premium quality available all year round.</p>
+    <div className="flex flex-col gap-6 md:gap-8 items-start space-y-4">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#303030] text-base sm:text-lg md:text-xl">From field to final product, our mission is to maintain the integrity of every ingredient we process. Whether flash-frozen with IQF or gently vacuum-dried, our methods lock in peak freshness, making premium quality available all year round.</p>
       <button
         type="button"
         onClick={() => scrollToSection("products")}
-        className="leading-[normal] relative shrink-0 text-[16px] text-[#212121] inline-flex items-center gap-[8px] cursor-pointer"
+        className="font-['Inter:Regular',sans-serif] leading-normal text-base sm:text-lg md:text-xl text-[#212121] inline-flex items-center gap-2 cursor-pointer bg-transparent border-none p-0 hover:opacity-70 transition-opacity"
       >
-        <span className="font-['Inter:Bold',sans-serif] font-bold not-italic">Learn More</span>
+        <span className="font-['Inter:Bold',sans-serif] font-bold">Learn More</span>
         <span aria-hidden="true">→</span>
       </button>
     </div>
@@ -460,27 +433,29 @@ function Frame34() {
 
 function Frame39() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Our preservation methods, explained</p>
-      <Frame34 />
+    <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start w-full">
+      <div className="flex-1">
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Our preservation methods, explained</p>
+      </div>
+      <div className="flex-1">
+        <Frame34 />
+      </div>
     </div>
   );
 }
 
 function Frame54() {
   return (
-    <div className="absolute bg-[rgba(205,226,83,0.8)] box-border content-stretch flex gap-[10px] items-center justify-center left-0 px-[20px] py-[8px] rounded-br-[20px] rounded-tr-[20px] top-[400px] w-[241px]">
-      <p className="basis-0 font-['Inter:Medium',sans-serif] font-medium grow leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[28px] text-neutral-50 tracking-[-0.56px]">From fresh to forever</p>
+    <div className="absolute bottom-4 left-0 bg-[rgba(205,226,83,0.8)] px-4 md:px-6 py-2 md:py-3 rounded-br-2xl rounded-tr-2xl">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-neutral-50 text-lg sm:text-xl md:text-2xl">From fresh to forever</p>
     </div>
   );
 }
 
 function Frame53() {
   return (
-    <div className="content-stretch flex gap-[32px] items-center relative shrink-0">
-      <div className="h-[520px] relative rounded-[40px] shrink-0 w-[316px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage1} />
-      </div>
+    <div className="relative w-full">
+      <img alt="" className="w-full h-auto aspect-[3/4] object-cover rounded-3xl" src={imgImage1} />
       <Frame54 />
     </div>
   );
@@ -488,17 +463,17 @@ function Frame53() {
 
 function Frame35() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start not-italic relative shrink-0 text-[#212121] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[24px] w-full">Fresh Harvesting</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[16px] w-full">Fruits and vegetables are picked at peak ripeness to ensure optimal flavor and nutrition.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl">Fresh Harvesting</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#212121] text-sm sm:text-base md:text-lg">Fruits and vegetables are picked at peak ripeness to ensure optimal flavor and nutrition.</p>
     </div>
   );
 }
 
 function Frame36() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[20px] grow h-full items-start min-h-px min-w-px relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[56px] tracking-[-0.96px] w-full">01</p>
+    <div className="flex flex-col gap-4 md:gap-6 w-full space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">01</p>
       <Frame35 />
     </div>
   );
@@ -506,17 +481,17 @@ function Frame36() {
 
 function Frame41() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start not-italic relative shrink-0 text-[#212121] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[24px] w-full">Rapid Freezing</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[16px] w-full">Each piece is quickly frozen individually using ultra-low temperatures to prevent clumping and preserve texture.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl">Rapid Freezing</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#212121] text-sm sm:text-base md:text-lg">Each piece is quickly frozen individually using ultra-low temperatures to prevent clumping and preserve texture.</p>
     </div>
   );
 }
 
 function Frame37() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[20px] grow h-full items-start justify-center min-h-px min-w-px relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[56px] tracking-[-0.96px] w-full">02</p>
+    <div className="flex flex-col gap-4 md:gap-6 w-full space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">02</p>
       <Frame41 />
     </div>
   );
@@ -524,17 +499,17 @@ function Frame37() {
 
 function Frame44() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start not-italic relative shrink-0 text-[#212121] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[24px] w-full">Long-Lasting Quality</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[16px] w-full">Maintains natural taste, color, and nutritional value—perfect for foodservice and retail with extended shelf life.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl">Long-Lasting Quality</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#212121] text-sm sm:text-base md:text-lg">Maintains natural taste, color, and nutritional value—perfect for foodservice and retail with extended shelf life.</p>
     </div>
   );
 }
 
 function Frame38() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[20px] grow h-full items-start justify-end min-h-px min-w-px relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[56px] tracking-[-0.96px] w-full">03</p>
+    <div className="flex flex-col gap-4 md:gap-6 w-full space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">03</p>
       <Frame44 />
     </div>
   );
@@ -542,31 +517,11 @@ function Frame38() {
 
 function Frame40() {
   return (
-    <div className="content-stretch flex gap-[24px] h-[520px] items-center relative shrink-0 w-full">
+    <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 w-full">
       <Frame36 />
-      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as CSSProperties}>
-        <div className="flex-none h-full rotate-[90deg]">
-          <div className="h-full relative w-[520px]">
-            <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 520 1">
-                <line id="Line 1" stroke="var(--stroke-0, #D5D9E3)" x2="520" y1="0.5" y2="0.5" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="hidden lg:block w-full h-px bg-[#D5D9E3]" />
       <Frame37 />
-      <div className="flex h-full items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*1)+(var(--transform-inner-width)*0)))]" style={{ "--transform-inner-width": "520", "--transform-inner-height": "520" } as CSSProperties}>
-        <div className="flex-none h-full rotate-[90deg]">
-          <div className="h-full relative w-[520px]">
-            <div className="absolute bottom-0 left-0 right-0 top-[-1px]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 520 1">
-                <line id="Line 1" stroke="var(--stroke-0, #D5D9E3)" x2="520" y1="0.5" y2="0.5" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="hidden lg:block w-full h-px bg-[#D5D9E3]" />
       <Frame38 />
     </div>
   );
@@ -574,18 +529,24 @@ function Frame40() {
 
 function Frame42() {
   return (
-    <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame53 />
-      <Frame40 />
+    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center w-full">
+      <div className="flex-1">
+        <Frame53 />
+      </div>
+      <div className="flex-1">
+        <Frame40 />
+      </div>
     </div>
   );
 }
 
 function Frame43() {
   return (
-    <div id="methods" className="absolute bg-neutral-50 box-border content-stretch flex flex-col gap-[60px] items-center left-0 px-[280px] py-[160px] top-[3893px] w-[1920px]">
-      <Frame39 />
-      <Frame42 />
+    <div id="methods" className="relative bg-neutral-50 w-full px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32">
+      <div className="max-w-screen-xl mx-auto space-y-12 md:space-y-16">
+        <Frame39 />
+        <Frame42 />
+      </div>
     </div>
   );
 }
@@ -612,8 +573,8 @@ function Frame14() {
 
 function Frame20() {
   return (
-    <div className="bg-white box-border content-stretch flex gap-[16px] h-[64px] items-center justify-center pl-[32px] pr-[12px] py-[10px] relative rounded-[32px] shrink-0 w-[213px] cursor-pointer" onClick={() => scrollToSection("products")}>
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[18px] text-nowrap tracking-[1.8px] uppercase whitespace-pre">Products</p>
+    <div className="bg-white flex gap-4 h-14 md:h-16 items-center justify-center px-6 md:px-8 py-3 rounded-full cursor-pointer hover:opacity-90 transition-opacity" onClick={() => scrollToSection("products")}>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-normal text-[#115132] text-base sm:text-lg md:text-xl uppercase tracking-wider">Products</p>
       <Frame14 />
     </div>
   );
@@ -621,13 +582,15 @@ function Frame20() {
 
 function Cta() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[60px] h-[700px] items-center justify-center left-0 top-[6093px] w-[1920px]" data-name="CTA">
+    <div className="relative w-full h-[400px] md:h-[550px] lg:h-[700px]" data-name="CTA">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgCta} />
+        <img alt="" className="absolute w-full h-full object-cover" src={imgCta} />
         <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
       </div>
-      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[#115132] text-[152px] text-center tracking-[-3.04px] w-[min-content]">Crafted to Stay Fresh</p>
-      <Frame20 />
+      <div className="relative h-full flex flex-col items-center justify-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8">
+        <p className="font-['Inter:Bold',sans-serif] font-bold leading-tight text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center max-w-5xl">Crafted to Stay Fresh</p>
+        <Frame20 />
+      </div>
     </div>
   );
 }
@@ -684,22 +647,19 @@ function Logo1() {
 
 function ContactInfo() {
   return (
-    <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-[32px] w-full">sales@meyv.com.tr</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start md:items-end space-y-2" data-name="Contact Info">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-xl sm:text-2xl md:text-3xl lg:text-4xl">+90 (232) 864 22 00</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl lg:text-3xl">sales@meyv.com.tr</p>
     </div>
   );
 }
 
 function Top() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Top">
-      <div aria-hidden="true" className="absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="box-border content-stretch flex items-center justify-between px-[80px] py-[60px] relative w-full">
-          <Logo1 />
-          <ContactInfo />
-        </div>
+    <div className="w-full border-b border-[#d5d9e3]" data-name="Top">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 px-4 md:px-8 lg:px-16 xl:px-24 py-8 md:py-12 lg:py-16">
+        <Logo1 />
+        <ContactInfo />
       </div>
     </div>
   );
@@ -707,13 +667,13 @@ function Top() {
 
 function SloganLogo() {
   return (
-    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[28px] w-[403px]">
+    <div className="flex flex-col gap-6 md:gap-8 items-start" data-name="Slogan & Logo">
+      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug text-[#212121] text-xl sm:text-2xl md:text-3xl">
         <p className="mb-0">Naturally Sweet,</p>
         <p>Perfectly Dried</p>
       </div>
-      <div className="h-[45px] relative shrink-0 w-[128px]" data-name="image 66">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage66} />
+      <div className="w-32 h-12" data-name="image 66">
+        <img alt="" className="w-full h-full object-contain" src={imgImage66} />
       </div>
     </div>
   );
@@ -864,7 +824,7 @@ function Item2() {
 
 function Menu4() {
   return (
-    <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-name="Menu">
+    <div className="basis-0 content-stretch flex flex-col md:flex-row grow items-start justify-between gap-8 md:gap-4 min-h-px min-w-px relative shrink-0" data-name="Menu">
       <Item />
       <Item1 />
       <Item2 />
@@ -874,12 +834,10 @@ function Menu4() {
 
 function Mid() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Mid">
-      <div className="size-full">
-        <div className="box-border content-stretch flex items-start justify-between px-[80px] py-0 relative w-full">
-          <SloganLogo />
-          <Menu4 />
-        </div>
+    <div className="w-full" data-name="Mid">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-12 md:gap-16 px-4 md:px-8 lg:px-16 xl:px-24 py-8 md:py-12">
+        <SloganLogo />
+        <Menu4 />
       </div>
     </div>
   );
@@ -887,12 +845,10 @@ function Mid() {
 
 function Subfooter() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Subfooter">
-      <div className="size-full">
-        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[normal] not-italic px-[80px] py-[32px] relative text-[#333333] text-[16px] text-nowrap w-full whitespace-pre">
-          <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
-          <p className="opacity-70 relative shrink-0 text-right cursor-pointer" onClick={() => scrollToSection("home")}>Back to Top</p>
-        </div>
+    <div className="w-full" data-name="Subfooter">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-8 px-4 md:px-8 lg:px-16 xl:px-24 py-6 md:py-8">
+        <p className="font-['Inter:Regular',sans-serif] font-normal leading-normal text-[#333333] text-sm sm:text-base opacity-70">Copyright © 2025. All rights reserved.</p>
+        <p className="font-['Inter:Regular',sans-serif] font-normal leading-normal text-[#333333] text-sm sm:text-base opacity-70 cursor-pointer hover:opacity-100 transition-opacity" onClick={() => scrollToSection("home")}>Back to Top</p>
       </div>
     </div>
   );
@@ -900,7 +856,7 @@ function Subfooter() {
 
 function Footer() {
   return (
-    <div id="footer" className="absolute bg-white content-stretch flex flex-col gap-[100px] items-start left-0 top-[6793px] w-[1920px]" data-name="Footer">
+    <div id="footer" className="relative bg-white w-full space-y-12 md:space-y-16 lg:space-y-24" data-name="Footer">
       <Top />
       <Mid />
       <Subfooter />
@@ -910,10 +866,9 @@ function Footer() {
 
 function Frame45() {
   return (
-    <div id="header-raspberry" className="content-stretch flex items-center justify-between relative shrink-0 w-full cursor-pointer" onClick={() => toggleProduct("product-raspberry-details", "header-raspberry")}>
-      <div aria-hidden="true" className="active-underline absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[32px] text-nowrap tracking-[-0.64px] whitespace-pre">Raspberry</p>
-      <div className="relative shrink-0 size-[32px] accordion-arrow" data-name="Vector">
+    <div id="header-raspberry" className="flex items-center justify-between w-full cursor-pointer py-4 border-b border-[#d5d9e3]" onClick={() => toggleProduct("product-raspberry-details", "header-raspberry")}>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl lg:text-3xl">Raspberry</p>
+      <div className="shrink-0 w-6 h-6 md:w-8 md:h-8 accordion-arrow" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
           <path d={svgPaths.p24e75940} fill="var(--fill-0, #212121)" id="Vector" />
         </svg>
@@ -938,10 +893,9 @@ function Frame46() {
 
 function Frame52() {
   return (
-    <div id="header-blueberry" className="is-open box-border content-stretch flex items-center justify-between pb-[12px] pt-0 px-0 relative shrink-0 w-full cursor-pointer" onClick={() => toggleProduct("product-blueberry-details", "header-blueberry")}>
-      <div aria-hidden="true" className="active-underline absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[32px] text-nowrap tracking-[-0.64px] whitespace-pre">Blueberry</p>
-      <div className="relative shrink-0 size-[32px] accordion-arrow arrow-invert" data-name="Vector">
+    <div id="header-blueberry" className="is-open flex items-center justify-between w-full cursor-pointer py-4 border-b border-[#d5d9e3]" onClick={() => toggleProduct("product-blueberry-details", "header-blueberry")}>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#115132] text-lg sm:text-xl md:text-2xl lg:text-3xl">Blueberry</p>
+      <div className="shrink-0 w-6 h-6 md:w-8 md:h-8 accordion-arrow arrow-invert" data-name="Vector">
         <div className="absolute inset-0" style={{ "--fill-0": "rgba(17, 81, 50, 1)" } as CSSProperties}>
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
             <path d={svgPaths.p37282e00} fill="var(--fill-0, #115132)" id="Vector" />
@@ -954,9 +908,9 @@ function Frame52() {
 
 function Frame48() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start leading-[1.6] not-italic relative shrink-0 text-[#212121] text-[16px] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 w-full">Features:</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 w-full">
+    <div className="flex flex-col gap-3 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[#212121] text-base sm:text-lg">Features:</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#212121] text-sm sm:text-base md:text-lg">
         {` • 100% natural, no added sugar`}
         <br aria-hidden="true" />
         {` • Rich in potassium and fiber`}
@@ -985,10 +939,9 @@ function Frame56() {
 
 function Frame57() {
   return (
-    <div id="header-banana" className="content-stretch flex items-center justify-between relative shrink-0 w-full cursor-pointer" onClick={() => toggleProduct("product-banana-details", "header-banana")}>
-      <div aria-hidden="true" className="active-underline absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[32px] text-nowrap tracking-[-0.64px] whitespace-pre">Banana</p>
-      <div className="relative shrink-0 size-[32px] accordion-arrow" data-name="Vector">
+    <div id="header-banana" className="flex items-center justify-between w-full cursor-pointer py-4 border-b border-[#d5d9e3]" onClick={() => toggleProduct("product-banana-details", "header-banana")}>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl lg:text-3xl">Banana</p>
+      <div className="shrink-0 w-6 h-6 md:w-8 md:h-8 accordion-arrow" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
           <path d={svgPaths.p24e75940} fill="var(--fill-0, #212121)" id="Vector" />
         </svg>
@@ -1013,10 +966,9 @@ function Frame58() {
 
 function Frame59() {
   return (
-    <div id="header-apple" className="content-stretch flex items-center justify-between relative shrink-0 w-full cursor-pointer" onClick={() => toggleProduct("product-apple-details", "header-apple")}>
-      <div aria-hidden="true" className="active-underline absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[32px] text-nowrap tracking-[-0.64px] whitespace-pre">Apple</p>
-      <div className="relative shrink-0 size-[32px] accordion-arrow" data-name="Vector">
+    <div id="header-apple" className="flex items-center justify-between w-full cursor-pointer py-4 border-b border-[#d5d9e3]" onClick={() => toggleProduct("product-apple-details", "header-apple")}>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#212121] text-lg sm:text-xl md:text-2xl lg:text-3xl">Apple</p>
+      <div className="shrink-0 w-6 h-6 md:w-8 md:h-8 accordion-arrow" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
           <path d={svgPaths.p24e75940} fill="var(--fill-0, #212121)" id="Vector" />
         </svg>
@@ -1041,7 +993,7 @@ function Frame47() {
 
 function Frame49() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-[664px]">
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
       <Frame46 />
       <Frame56 />
       <Frame58 />
@@ -1052,134 +1004,206 @@ function Frame49() {
 
 function Frame50() {
   return (
-    <div className="content-stretch flex gap-[148px] items-start relative shrink-0 w-full">
-      <div className="h-[491px] relative rounded-[40px] shrink-0 w-[548px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage2} />
+    <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-start w-full">
+      <div className="flex-1">
+        <img alt="" className="w-full h-auto aspect-[4/5] object-cover rounded-3xl" src={imgImage2} />
       </div>
-      <Frame49 />
+      <div className="flex-1">
+        <Frame49 />
+      </div>
     </div>
   );
 }
 
 function Frame51() {
   return (
-    <div id="products" className="absolute box-border content-stretch flex flex-col gap-[60px] items-start left-0 px-[280px] py-[160px] top-[2964px] w-[1920px]">
-      <div aria-hidden="true" className="absolute border border-black border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-full">Products</p>
-      <Frame50 />
+    <div id="products" className="relative w-full px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32">
+      <div className="max-w-screen-xl mx-auto space-y-12 md:space-y-16">
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Products</p>
+        <Frame50 />
+      </div>
     </div>
   );
 }
 
 function Frame30() {
   return (
-    <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[371px] mt-[214px] not-italic relative text-[#115132] w-[387px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Consistent Quality</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">From harvest to packaging, every product meets strict international food safety and quality standards.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#115132] text-xl sm:text-2xl md:text-3xl">Consistent Quality</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#115132] text-sm sm:text-base md:text-lg">From harvest to packaging, every product meets strict international food safety and quality standards.</p>
     </div>
   );
 }
 
 function Frame31() {
   return (
-    <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[20px] mt-[146px] not-italic relative text-[#115132] w-[276px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Unmatched Freshness</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We preserve the original taste, color, and nutrients of our ingredients through advanced IQF and freeze-drying technologies.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#115132] text-xl sm:text-2xl md:text-3xl">Unmatched Freshness</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#115132] text-sm sm:text-base md:text-lg">We preserve the original taste, color, and nutrients of our ingredients through advanced IQF and freeze-drying technologies.</p>
     </div>
   );
 }
 
 function Frame32() {
   return (
-    <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[20px] mt-[540px] not-italic relative text-[#cde253] w-[730px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Tailored Solutions</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We offer customizable formats and blends to fit your production needs, whether for retail, foodservice, or industrial use.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#cde253] text-xl sm:text-2xl md:text-3xl">Tailored Solutions</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#cde253] text-sm sm:text-base md:text-lg">We offer customizable formats and blends to fit your production needs, whether for retail, foodservice, or industrial use.</p>
     </div>
   );
 }
 
 function Frame33() {
   return (
-    <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[847px] mt-[536px] not-italic relative text-[#115132] w-[482px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Sustainable Approach</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We prioritize eco-conscious farming, minimal waste, and energy-efficient processing to protect our planet while feeding the world.</p>
+    <div className="flex flex-col gap-3 md:gap-4 items-start space-y-2">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug text-[#115132] text-xl sm:text-2xl md:text-3xl">Sustainable Approach</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-relaxed text-[#115132] text-sm sm:text-base md:text-lg">We prioritize eco-conscious farming, minimal waste, and energy-efficient processing to protect our planet while feeding the world.</p>
     </div>
   );
 }
 
 function Group1() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <div className="[grid-area:1_/_1] bg-[#f1f4ee] ml-0 mt-0 rounded-[24px] size-[316px]" />
-      <div className="[grid-area:1_/_1] bg-[#f1f4ee] h-[316px] ml-[348px] mt-0 rounded-[24px] w-[432px]" />
-      <div className="[grid-area:1_/_1] h-[160px] ml-[368px] mt-[16px] relative rounded-[24px] w-[392px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage3} />
+    <>
+      {/* Desktop complex grid layout */}
+      <div className="hidden lg:grid grid-cols-[max-content] grid-rows-[max-content] leading-[0] place-items-start relative shrink-0">
+        <div className="[grid-area:1_/_1] bg-[#f1f4ee] ml-0 mt-0 rounded-[24px] size-[316px]" />
+        <div className="[grid-area:1_/_1] bg-[#f1f4ee] h-[316px] ml-[348px] mt-0 rounded-[24px] w-[432px]" />
+        <div className="[grid-area:1_/_1] h-[160px] ml-[368px] mt-[16px] relative rounded-[24px] w-[392px]" data-name="image">
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage3} />
+        </div>
+        <div className="[grid-area:1_/_1] h-[105px] ml-[20px] mt-[16px] relative rounded-[24px] w-[276px]" data-name="image">
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage4} />
+        </div>
+        <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[371px] mt-[214px] not-italic relative text-[#115132] w-[387px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Consistent Quality</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">From harvest to packaging, every product meets strict international food safety and quality standards.</p>
+        </div>
+        <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[20px] mt-[146px] not-italic relative text-[#115132] w-[276px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Unmatched Freshness</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We preserve the original taste, color, and nutrients of our ingredients through advanced IQF and freeze-drying technologies.</p>
+        </div>
+        <div className="[grid-area:1_/_1] bg-[#115132] h-[316px] ml-0 mt-[348px] rounded-[24px] w-[780px]" />
+        <div className="[grid-area:1_/_1] h-[152px] ml-[20px] mt-[368px] relative rounded-[24px] w-[740px]" data-name="image">
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage5} />
+        </div>
+        <div className="[grid-area:1_/_1] bg-[#cde253] h-[664px] ml-[812px] mt-0 rounded-[24px] w-[548px]" />
+        <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[20px] mt-[540px] not-italic relative text-[#cde253] w-[730px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Tailored Solutions</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We offer customizable formats and blends to fit your production needs, whether for retail, foodservice, or industrial use.</p>
+        </div>
+        <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] ml-[847px] mt-[536px] not-italic relative text-[#115132] w-[482px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[28px] w-full">Sustainable Approach</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[14px] w-full">We prioritize eco-conscious farming, minimal waste, and energy-efficient processing to protect our planet while feeding the world.</p>
+        </div>
+        <div className="[grid-area:1_/_1] h-[476px] ml-[839px] mt-[32px] relative rounded-[24px] w-[495px]" data-name="image">
+          <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage6} />
+        </div>
       </div>
-      <div className="[grid-area:1_/_1] h-[105px] ml-[20px] mt-[16px] relative rounded-[24px] w-[276px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage4} />
+
+      {/* Mobile simplified layout */}
+      <div className="lg:hidden flex flex-col gap-6 w-full">
+        <div className="bg-[#f1f4ee] p-6 rounded-[24px]">
+          <div className="h-[150px] mb-4 relative rounded-[16px] w-full" data-name="image">
+            <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgImage4} />
+          </div>
+          <Frame31 />
+        </div>
+        
+        <div className="bg-[#f1f4ee] p-6 rounded-[24px]">
+          <div className="h-[150px] mb-4 relative rounded-[16px] w-full" data-name="image">
+            <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgImage3} />
+          </div>
+          <Frame30 />
+        </div>
+
+        <div className="bg-[#115132] p-6 rounded-[24px]">
+          <div className="h-[150px] mb-4 relative rounded-[16px] w-full" data-name="image">
+            <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgImage5} />
+          </div>
+          <div className="box-border content-stretch flex flex-col gap-[14px] items-start leading-[normal] not-italic relative text-[#cde253] w-full">
+            <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-xl w-full">Tailored Solutions</p>
+            <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-xs w-full">We offer customizable formats and blends to fit your production needs, whether for retail, foodservice, or industrial use.</p>
+          </div>
+        </div>
+
+        <div className="bg-[#cde253] p-6 rounded-[24px]">
+          <div className="h-[250px] mb-4 relative rounded-[16px] w-full" data-name="image">
+            <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgImage6} />
+          </div>
+          <Frame33 />
+        </div>
       </div>
-      <Frame30 />
-      <Frame31 />
-      <div className="[grid-area:1_/_1] bg-[#115132] h-[316px] ml-0 mt-[348px] rounded-[24px] w-[780px]" />
-      <div className="[grid-area:1_/_1] h-[152px] ml-[20px] mt-[368px] relative rounded-[24px] w-[740px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage5} />
-      </div>
-      <div className="[grid-area:1_/_1] bg-[#cde253] h-[664px] ml-[812px] mt-0 rounded-[24px] w-[548px]" />
-      <Frame32 />
-      <Frame33 />
-      <div className="[grid-area:1_/_1] h-[476px] ml-[839px] mt-[32px] relative rounded-[24px] w-[495px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[24px] size-full" src={imgImage6} />
-      </div>
-    </div>
+    </>
   );
 }
 
 function Frame55() {
   return (
-    <div id="why" className="absolute box-border content-stretch flex flex-col gap-[60px] items-start left-0 px-[280px] py-[160px] top-[4991px] w-[1920px]">
-      <div aria-hidden="true" className="absolute border border-black border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] min-w-full not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[min-content]">Why choose our products?</p>
-      <Group1 />
+    <div id="why" className="relative w-full px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32">
+      <div className="max-w-screen-xl mx-auto space-y-12 md:space-y-16">
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Why choose our products?</p>
+        <Group1 />
+      </div>
     </div>
   );
 }
 
 export default function Component1920PxHome() {
   return (
-    <div id="home" className="bg-white relative size-full" data-name="1920px - Home">
-      <div className="absolute h-[800px] left-[80px] top-[110px] w-[1760px]" data-name="Subtract">
-        <img alt="" className="block max-w-none size-full" height="800" src={imgSubtract} width="1760" />
-      </div>
-      <Frame10 />
-      <Frame8 />
+    <div id="home" className="bg-white relative w-full min-h-screen overflow-x-hidden" data-name="1920px - Home">
+      {/* Hero Section with Background */}
+      <SharedHeroSection
+        topSlot={<Frame8 />}
+        backgroundSrc={imgSubtract}
+        backgroundAlt="Fresh produce crates in an orchard"
+        titleLines={["Organic &", "Conventional"]}
+        paragraphs={[
+          "We provide premium fruit, vegetable, herb, and specialty ingredients—grown and processed to meet the highest standards.",
+        ]}
+        paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl"
+        contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-16 py-32 md:py-48 lg:py-64 text-white gap-12"
+        hideGradient
+        cta={{
+          label: "Products",
+          onClick: () => scrollToSection("products"),
+          className: "px-6 md:px-10 py-3 md:py-4 border-white",
+        }}
+      />
+      
+      {/* About Section */}
       <Frame18 />
-      <div className="absolute bg-[#f1f4ee] h-[1014px] left-0 top-[1950px] w-[1920px]" data-name="Bg">
+      
+      {/* Families First Section */}
+      <div className="relative bg-[#f1f4ee] w-full py-16 md:py-24 lg:py-32 overflow-hidden" data-name="Bg">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8 flex items-center justify-center relative">
+          <div className="font-['Inter:Medium',sans-serif] font-medium leading-tight text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center z-10">
+            <p className="mb-2">We believe in</p>
+            <p>putting families first</p>
+          </div>
+          <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-64 h-48 lg:w-96 lg:h-64" data-name="image">
+            <img alt="" className="w-full h-full object-cover rounded-3xl opacity-50" src={imgImage7} />
+          </div>
+        </div>
       </div>
-      <div
-        className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#115132] text-[96px] text-center text-nowrap top-[2081px] tracking-[-1.92px] whitespace-pre"
-        style={{ left: "50%", transform: "translateX(-50%)" }}
-      >
-        <p className="mb-0">We believe in</p>
-        <p>putting families first</p>
-      </div>
-      <div className="absolute h-[285px] left-[52px] pointer-events-none rounded-[40px] top-[2054px] w-[364px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover rounded-[40px] size-full" src={imgImage7} />
-      </div>
+      
+      {/* Image Section */}
       <Group />
-      <Frame43 />
-      <Cta />
-      <Footer />
+      
+      {/* Products Section */}
       <Frame51 />
+      
+      {/* Methods Section */}
+      <Frame43 />
+      
+      {/* Why Section */}
       <Frame55 />
-      <div className="absolute h-[678px] left-[1248px] mix-blend-darken pointer-events-none top-[1751px] w-[721.586px]" data-name="image 45">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover size-full" src={imgImage45} />
-      </div>
-      <div className="absolute h-[575px] left-[1682px] mix-blend-darken pointer-events-none top-[3522px] w-[408.301px]" data-name="image 47">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover size-full" src={imgImage47} />
-      </div>
-      <div className="absolute h-[280px] left-[1292px] pointer-events-none rounded-[48px] top-[728px] w-[548px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover rounded-[48px] size-full" src={imgImage8} />
-      </div>
+      
+      {/* CTA Section */}
+      <Cta />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
