@@ -199,8 +199,8 @@ function Frame8() {
 
 function Frame16() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-      <div className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
+      <div className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-base md:text-[18px] w-full">
         <p className="mb-0">Our products are grown under continuous supervision on contracted or company-owned fields, ensuring complete quality control from the very beginning. After harvest, the raw materials are processed into finished or semi-finished goods at our own production facilities.</p>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">All packaging and related services are carried out by our group companies, maintaining full control over every stage—from field to container loading.</p>
@@ -212,8 +212,8 @@ function Frame16() {
 
 function Frame17() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Vertical integration and full traceability</p>
+    <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[32px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full md:w-1/2">Vertical integration and full traceability</p>
       <Frame16 />
     </div>
   );
@@ -221,7 +221,7 @@ function Frame17() {
 
 function Frame18() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[510px] w-[1920px]">
+    <div className="relative box-border content-stretch flex flex-col gap-16 md:gap-24 lg:gap-[120px] items-start left-0 px-4 md:px-8 lg:px-[280px] py-16 md:py-24 lg:py-[160px] mt-[350px] md:mt-[400px] lg:mt-[510px] w-full">
       <Frame17 />
     </div>
   );
@@ -230,7 +230,7 @@ function Frame18() {
 function Frame24() {
   return (
     <div className="box-border content-stretch flex flex-col items-start pb-[34px] pt-0 px-0 relative shrink-0">
-      <div className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] mb-[-34px] not-italic relative shrink-0 text-[80px] text-nowrap text-white whitespace-pre">
+      <div className="font-['Inter:Medium',sans-serif] font-medium leading-tight md:leading-[96px] not-italic relative shrink-0 text-5xl md:text-7xl lg:text-[80px] text-white">
         <p className="mb-0">{`Quality &`}</p>
         <p>Certificates</p>
       </div>
@@ -240,16 +240,16 @@ function Frame24() {
 
 function Title() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-name="Title">
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full" data-name="Title">
       <Frame24 />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] min-w-full not-italic relative shrink-0 text-[21px] text-white w-[min-content]">Ensuring excellence at every step — from field to final product — through certified processes, strict quality control, and complete traceability.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] w-full not-italic relative shrink-0 text-base md:text-lg lg:text-[21px] text-white">Ensuring excellence at every step — from field to final product — through certified processes, strict quality control, and complete traceability.</p>
     </div>
   );
 }
 
 function Frame10() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[60px] items-start left-[160px] rounded-[32px] top-[157px] w-[602px]">
+    <div className="absolute content-stretch flex flex-col gap-8 md:gap-[60px] items-start left-4 md:left-8 lg:left-[160px] rounded-[32px] top-32 md:top-36 lg:top-[157px] right-4 md:right-auto w-auto lg:w-[602px]">
       <Title />
     </div>
   );
@@ -267,17 +267,17 @@ function MaskGroup() {
 
 function Text() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 w-[664px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-[48px] w-full">From field to final product</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-[16px] w-full">Every stage of our production is managed in-house — from cultivation in our contracted and company-owned fields to processing, packaging, and logistics. This end-to-end control ensures total traceability and consistent product quality, allowing us to deliver premium standards without compromise.</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">From field to final product</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">Every stage of our production is managed in-house — from cultivation in our contracted and company-owned fields to processing, packaging, and logistics. This end-to-end control ensures total traceability and consistent product quality, allowing us to deliver premium standards without compromise.</p>
     </div>
   );
 }
 
 function Section() {
   return (
-    <div className="content-stretch flex gap-[148px] h-[440px] items-center relative shrink-0 w-full" data-name="Section">
-      <MaskGroup />
+    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
+      <div className="hidden lg:block"><MaskGroup /></div>
       <Text />
     </div>
   );
@@ -285,9 +285,9 @@ function Section() {
 
 function Text1() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 w-[664px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-[48px] w-full">Integrated quality, transparent process</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-[16px] w-full">We combine agricultural expertise with advanced manufacturing and packaging technologies within our own facilities. By managing every link in the value chain, we guarantee transparency, traceability, and reliability — ensuring our customers receive products they can trust, every time.</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">Integrated quality, transparent process</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">We combine agricultural expertise with advanced manufacturing and packaging technologies within our own facilities. By managing every link in the value chain, we guarantee transparency, traceability, and reliability — ensuring our customers receive products they can trust, every time.</p>
     </div>
   );
 }
@@ -304,16 +304,16 @@ function MaskGroup1() {
 
 function Section1() {
   return (
-    <div className="content-stretch flex gap-[148px] h-[440px] items-center relative shrink-0 w-full" data-name="Section">
+    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
       <Text1 />
-      <MaskGroup1 />
+      <div className="hidden lg:block"><MaskGroup1 /></div>
     </div>
   );
 }
 
 function Frame26() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[80px] items-start left-[280px] top-[1997px] w-[1360px]">
+    <div className="content-stretch flex flex-col gap-12 md:gap-16 lg:gap-[80px] items-start w-full">
       <Section />
       <Section1 />
     </div>
@@ -323,8 +323,8 @@ function Frame26() {
 function MaskGroup2() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 w-full" data-name="Mask group">
-      <div className="[grid-area:1_/_1] h-[658px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[8px_0px] mask-size-[1128px_547px] ml-[-8px] mt-0 relative rounded-[28.011px] w-[1153px]" data-name="map 1" style={{ maskImage: `url('${imgMap1}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[28.011px] size-full" src={imgMap2} />
+      <div className="relative rounded-[28.011px] w-full max-w-[1153px] mx-auto" data-name="map 1">
+        <img alt="" className="w-full h-auto object-contain rounded-[28.011px]" src={imgMap2} />
       </div>
     </div>
   );
@@ -332,10 +332,10 @@ function MaskGroup2() {
 
 function Frame25() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[60px] items-center left-[396px] top-[1120px] w-[1128px]">
+    <div className="content-stretch flex flex-col gap-8 md:gap-12 lg:gap-[60px] items-center w-full px-4 md:px-8">
       <MaskGroup2 />
-      <div className="h-[150px] relative shrink-0 w-[950.262px]" data-name="image 75">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage75} />
+      <div className="h-auto relative shrink-0 w-full max-w-[950px]" data-name="image 75">
+        <img alt="" className="w-full h-auto object-contain" src={imgImage75} />
       </div>
     </div>
   );
@@ -394,8 +394,8 @@ function Logo1() {
 function ContactInfo() {
   return (
     <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-[32px] w-full">sales@meyv.com.tr</p>
+      <p className="relative shrink-0 text-xl md:text-3xl lg:text-[40px] w-full">+90 (232) 864 22 00</p>
+      <p className="relative shrink-0 text-lg md:text-2xl lg:text-[32px] w-full">sales@meyv.com.tr</p>
     </div>
   );
 }
@@ -404,8 +404,8 @@ function Top() {
   return (
     <div className="relative shrink-0 w-full" data-name="Top">
       <div aria-hidden="true" className="absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="box-border content-stretch flex items-center justify-between px-[80px] py-[60px] relative w-full">
+      <div className="flex flex-col md:flex-row items-center size-full">
+        <div className="box-border content-stretch flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-0 px-4 md:px-8 lg:px-[80px] py-8 md:py-12 lg:py-[60px] relative w-full">
           <Logo1 />
           <ContactInfo />
         </div>
@@ -417,12 +417,12 @@ function Top() {
 function SloganLogo() {
   return (
     <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[28px] w-[403px]">
+      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-xl md:text-2xl lg:text-[28px] w-full max-w-[403px]">
         <p className="mb-0">Naturally Sweet,</p>
         <p>Perfectly Dried</p>
       </div>
-      <div className="h-[45px] relative shrink-0 w-[128px]" data-name="image 66">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage66} />
+      <div className="h-[45px] relative shrink-0 w-[128px] mt-4" data-name="image 66">
+        <img alt="" className="w-full h-full object-contain" src={imgImage66} />
       </div>
     </div>
   );
@@ -573,7 +573,7 @@ function Item2() {
 
 function Menu4() {
   return (
-    <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-name="Menu">
+    <div className="basis-0 content-stretch flex flex-col md:flex-row grow items-start justify-between gap-8 md:gap-4 min-h-px min-w-px relative shrink-0" data-name="Menu">
       <Item />
       <Item1 />
       <Item2 />
@@ -585,7 +585,7 @@ function Mid() {
   return (
     <div className="relative shrink-0 w-full" data-name="Mid">
       <div className="size-full">
-        <div className="box-border content-stretch flex items-start justify-between px-[80px] py-0 relative w-full">
+        <div className="box-border content-stretch flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 px-4 md:px-8 lg:px-[80px] py-0 relative w-full">
           <SloganLogo />
           <Menu4 />
         </div>
@@ -598,9 +598,9 @@ function Subfooter() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subfooter">
       <div className="size-full">
-        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[normal] not-italic px-[80px] py-[32px] relative text-[#333333] text-[16px] text-nowrap w-full whitespace-pre">
+        <div className="box-border content-stretch flex flex-col md:flex-row font-['Inter:Regular',sans-serif] font-normal items-start justify-between gap-4 md:gap-0 leading-[normal] not-italic px-4 md:px-8 lg:px-[80px] py-6 md:py-[32px] relative text-[#333333] text-sm md:text-[16px] w-full">
           <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
-          <p className="opacity-70 relative shrink-0 text-right">Back to Top</p>
+          <p className="opacity-70 relative shrink-0 text-left md:text-right">Back to Top</p>
         </div>
       </div>
     </div>
@@ -609,7 +609,7 @@ function Subfooter() {
 
 function Footer() {
   return (
-    <div className="bg-white content-stretch flex flex-col gap-[100px] items-start relative shrink-0 w-full" data-name="Footer">
+    <div className="bg-white content-stretch flex flex-col gap-12 md:gap-20 lg:gap-[100px] items-start relative shrink-0 w-full" data-name="Footer">
       <Top />
       <Mid />
       <Subfooter />
@@ -619,7 +619,7 @@ function Footer() {
 
 function CtaFooter() {
   return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 top-[4068px] w-[1920px]" data-name="CTA & Footer">
+    <div className="content-stretch flex flex-col items-start w-full" data-name="CTA & Footer">
       <Footer />
     </div>
   );
@@ -627,16 +627,16 @@ function CtaFooter() {
 
 function Frame22() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">Our operations meet the highest international food safety and quality standards. From farm to frozen fruit, every process is certified to ensure consistency, hygiene, and trust — delivering products that meet global expectations.</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-base md:text-[18px] w-full">Our operations meet the highest international food safety and quality standards. From farm to frozen fruit, every process is certified to ensure consistency, hygiene, and trust — delivering products that meet global expectations.</p>
     </div>
   );
 }
 
 function Frame23() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[32px] items-start left-[280px] top-[3161px] w-[664px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[48px] tracking-[-0.96px] w-full">Certified Quality, Guaranteed Freshness</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[32px] items-start w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full">Certified Quality, Guaranteed Freshness</p>
       <Frame22 />
     </div>
   );
@@ -644,69 +644,95 @@ function Frame23() {
 
 function Text2() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[312px] top-[3864px] w-[368px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-[18px] text-center w-full">ISO 22000 – Food Safety Management System</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-base md:text-[18px] text-center w-full">ISO 22000 – Food Safety Management System</p>
     </div>
   );
 }
 
 function Text3() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[776px] top-[3864px] w-[368px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-[18px] text-center w-full">BRCGS Food Safety Certification</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-base md:text-[18px] text-center w-full">BRCGS Food Safety Certification</p>
     </div>
   );
 }
 
 function Text4() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[1240px] top-[3864px] w-[368px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-[18px] text-center w-full">ISO 9001 – Quality Management System</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-base md:text-[18px] text-center w-full">ISO 9001 – Quality Management System</p>
     </div>
   );
 }
 
 function Group() {
   return (
-    <div className="absolute contents left-0 top-[3077px]">
-      <div className="absolute bg-[#f1f4ee] h-[631px] left-0 top-[3077px] w-[1920px]" data-name="Bg" />
-      <Frame23 />
-      <div className="absolute h-[300px] left-[280px] pointer-events-none rounded-[40px] top-[3540px] w-[432px]" data-name="image">
-        <div className="absolute inset-0 overflow-hidden rounded-[40px]">
-          <img alt="" className="absolute h-[207.93%] left-[-0.46%] max-w-none top-[-6.6%] w-[103.01%]" src={imgImage} />
+    <div className="relative bg-[#f1f4ee] py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-[280px]">
+      <div className="flex flex-col gap-12 md:gap-16">
+        <Frame23 />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="flex flex-col gap-6 items-center">
+            <div className="h-[250px] md:h-[300px] w-full pointer-events-none rounded-[40px]" data-name="image">
+              <div className="relative overflow-hidden rounded-[40px] h-full w-full">
+                <img alt="" className="w-full h-full object-cover" src={imgImage} />
+              </div>
+              <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
+            </div>
+            <Text2 />
+          </div>
+          <div className="flex flex-col gap-6 items-center">
+            <div className="h-[250px] md:h-[300px] w-full pointer-events-none rounded-[40px]" data-name="image">
+              <img alt="" className="w-full h-full object-cover rounded-[40px]" src={imgImage1} />
+              <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
+            </div>
+            <Text3 />
+          </div>
+          <div className="flex flex-col gap-6 items-center">
+            <div className="h-[250px] md:h-[300px] w-full pointer-events-none rounded-[40px]" data-name="image">
+              <div className="relative overflow-hidden rounded-[40px] h-full w-full">
+                <img alt="" className="w-full h-full object-cover" src={imgImage2} />
+              </div>
+              <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
+            </div>
+            <Text4 />
+          </div>
         </div>
-        <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
       </div>
-      <div className="absolute h-[300px] left-[744px] pointer-events-none rounded-[40px] top-[3540px] w-[432px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover rounded-[40px] size-full" src={imgImage1} />
-        <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
-      </div>
-      <div className="absolute h-[300px] left-[1208px] pointer-events-none rounded-[40px] top-[3540px] w-[432px]" data-name="image">
-        <div className="absolute inset-0 overflow-hidden rounded-[40px]">
-          <img alt="" className="absolute h-[203.77%] left-0 max-w-none top-[-24.89%] w-full" src={imgImage2} />
-        </div>
-        <div aria-hidden="true" className="absolute border border-[#d5d9e3] border-solid inset-0 rounded-[40px]" />
-      </div>
-      <Text2 />
-      <Text3 />
-      <Text4 />
     </div>
   );
 }
 
 export default function Component1920PxQualityCertificates() {
   return (
-    <div className="bg-white relative size-full" data-name="1920px - Quality & Certificates">
-      <Frame8 />
-      <Frame18 />
-      <div className="absolute h-[400px] left-[80px] top-[110px] w-[1760px]" data-name="Subtract">
-        <img alt="" className="block max-w-none size-full" height="400" src={imgSubtract} width="1760" />
+    <div className="bg-white relative w-full min-h-screen overflow-x-hidden" data-name="1920px - Quality & Certificates">
+      {/* Hero Section with Background */}
+      <div className="relative">
+        <div className="absolute h-[300px] md:h-[350px] lg:h-[400px] left-4 md:left-8 lg:left-[80px] right-4 md:right-8 lg:right-[80px] top-[110px]" data-name="Subtract">
+          <img alt="" className="w-full h-full object-cover" src={imgSubtract} />
+        </div>
+        <Frame10 />
+        <Frame8 />
       </div>
-      <Frame10 />
-      <Frame26 />
-      <Frame25 />
-      <CtaFooter />
+
+      {/* Content Section */}
+      <Frame18 />
+
+      {/* Map Section */}
+      <div className="relative py-16 md:py-24 lg:py-32">
+        <Frame25 />
+      </div>
+
+      {/* Info Sections */}
+      <div className="relative py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-[280px]">
+        <Frame26 />
+      </div>
+
+      {/* Certificates Section */}
       <Group />
+
+      {/* Footer */}
+      <CtaFooter />
     </div>
   );
 }

@@ -177,7 +177,7 @@ function Frame17() {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
       <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
-        <p className="mb-0">Picked.</p>
+        <p className="mb-0">11Picked.</p>
         <p>Perfected. Packaged.</p>
       </div>
       <Frame16 />

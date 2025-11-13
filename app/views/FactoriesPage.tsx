@@ -1,15 +1,8 @@
-import type { CSSProperties } from "react";
 import Component1920PxFactoriesOffices from "@/views/imports/1920PxFactoriesOffices";
 
-const responsiveStyle = {
-  "--design-height": 4700,
-} as CSSProperties;
-
 const FactoriesPage = () => (
-  <div className="responsive-viewport" style={responsiveStyle}>
-    <div className="responsive-canvas">
-      <Component1920PxFactoriesOffices />
-    </div>
+  <div className="w-full min-h-screen overflow-x-hidden">
+    <Component1920PxFactoriesOffices />
   </div>
 );
 

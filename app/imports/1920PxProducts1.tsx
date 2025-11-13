@@ -186,7 +186,7 @@ function Frame8() {
 function Frame16() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">111At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
     </div>
   );
 }
@@ -195,7 +195,7 @@ function Frame17() {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
       <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
-        <p className="mb-0">Picked.</p>
+        <p className="mb-0">11Picked.</p>
         <p>Perfected. Packaged.</p>
       </div>
       <Frame16 />

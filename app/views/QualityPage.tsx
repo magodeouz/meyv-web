@@ -1,15 +1,8 @@
-import type { CSSProperties } from "react";
 import Component1920PxQualityCertificates from "@/views/imports/1920PxQualityCertificates";
 
-const responsiveStyle = {
-  "--design-height": 4800,
-} as CSSProperties;
-
 const QualityPage = () => (
-  <div className="responsive-viewport" style={responsiveStyle}>
-    <div className="responsive-canvas">
-      <Component1920PxQualityCertificates />
-    </div>
+  <div className="w-full min-h-screen overflow-x-hidden">
+    <Component1920PxQualityCertificates />
   </div>
 );
 

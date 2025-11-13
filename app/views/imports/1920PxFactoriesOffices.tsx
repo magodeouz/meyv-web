@@ -197,16 +197,16 @@ function Frame8() {
 
 function Frame16() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">Our factories represent the full cycle of vertical integration — from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment. Every step takes place under one continuous control system, ensuring full traceability and consistency. With advanced food safety protocols and automation technologies, we deliver frozen fruits that preserve the taste, color, and nutrition of freshly harvested produce.</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-base md:text-[18px] w-full">Our factories represent the full cycle of vertical integration — from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment. Every step takes place under one continuous control system, ensuring full traceability and consistency. With advanced food safety protocols and automation technologies, we deliver frozen fruits that preserve the taste, color, and nutrition of freshly harvested produce.</p>
     </div>
   );
 }
 
 function Frame17() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">From field to frozen – fully integrated facilities</p>
+    <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[32px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full md:w-1/2">From field to frozen – fully integrated facilities</p>
       <Frame16 />
     </div>
   );
@@ -214,7 +214,7 @@ function Frame17() {
 
 function Frame18() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[510px] w-[1920px]">
+    <div className="relative box-border content-stretch flex flex-col gap-16 md:gap-24 lg:gap-[120px] items-start left-0 px-4 md:px-8 lg:px-[280px] py-16 md:py-24 lg:py-[160px] mt-[400px] md:mt-[450px] lg:mt-[510px] w-full">
       <Frame17 />
     </div>
   );
@@ -222,16 +222,16 @@ function Frame18() {
 
 function Title() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start not-italic relative shrink-0 text-white w-full" data-name="Title">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] relative shrink-0 text-[80px] text-nowrap whitespace-pre">{`Factories & Offices`}</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] min-w-full relative shrink-0 text-[21px] w-[min-content]">Discover the journey behind our brand and the purpose that guides everything we do.</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start not-italic relative shrink-0 text-white w-full" data-name="Title">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight md:leading-[96px] relative shrink-0 text-5xl md:text-7xl lg:text-[80px]">{`Factories & Offices`}</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] w-full relative shrink-0 text-base md:text-lg lg:text-[21px]">11Discover the journey behind our brand and the purpose that guides everything we do.</p>
     </div>
   );
 }
 
 function Frame10() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[60px] items-start left-[160px] top-[205px] w-[602px]">
+    <div className="absolute content-stretch flex flex-col gap-8 md:gap-[60px] items-start left-4 md:left-8 lg:left-[160px] top-32 md:top-40 lg:top-[205px] right-4 md:right-auto w-auto lg:w-[602px]">
       <Title />
     </div>
   );
@@ -239,13 +239,13 @@ function Frame10() {
 
 function Cta() {
   return (
-    <div className="content-stretch flex flex-col gap-[60px] h-[700px] items-center justify-center relative shrink-0 w-full" data-name="CTA">
+    <div className="content-stretch flex flex-col gap-8 md:gap-[60px] h-[400px] md:h-[550px] lg:h-[700px] items-center justify-center relative shrink-0 w-full px-4" data-name="CTA">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgCta} />
         <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
       </div>
-      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[#115132] text-[152px] text-center tracking-[-3.04px] w-[min-content]">Let the Journey Begin</p>
-      <div className="relative shrink-0 size-[96px]" data-name="Vector">
+      <p className="font-['Inter:Bold',sans-serif] font-bold leading-tight md:leading-[normal] not-italic relative shrink-0 text-[#115132] text-4xl md:text-7xl lg:text-9xl xl:text-[152px] text-center tracking-tight md:tracking-[-3.04px]">Let the Journey Begin</p>
+      <div className="relative shrink-0 size-12 md:size-20 lg:size-[96px]" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 96 96">
           <path d={svgPaths.p1b7f1380} fill="var(--fill-0, white)" id="Vector" />
         </svg>
@@ -307,8 +307,8 @@ function Logo1() {
 function ContactInfo() {
   return (
     <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-[32px] w-full">sales@meyv.com.tr</p>
+      <p className="relative shrink-0 text-xl md:text-3xl lg:text-[40px] w-full">+90 (232) 864 22 00</p>
+      <p className="relative shrink-0 text-lg md:text-2xl lg:text-[32px] w-full">sales@meyv.com.tr</p>
     </div>
   );
 }
@@ -317,8 +317,8 @@ function Top() {
   return (
     <div className="relative shrink-0 w-full" data-name="Top">
       <div aria-hidden="true" className="absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="box-border content-stretch flex items-center justify-between px-[80px] py-[60px] relative w-full">
+      <div className="flex flex-col md:flex-row items-center size-full">
+        <div className="box-border content-stretch flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-0 px-4 md:px-8 lg:px-[80px] py-8 md:py-12 lg:py-[60px] relative w-full">
           <Logo1 />
           <ContactInfo />
         </div>
@@ -330,12 +330,12 @@ function Top() {
 function SloganLogo() {
   return (
     <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[28px] w-[403px]">
+      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-xl md:text-2xl lg:text-[28px] w-full max-w-[403px]">
         <p className="mb-0">Naturally Sweet,</p>
         <p>Perfectly Dried</p>
       </div>
-      <div className="h-[45px] relative shrink-0 w-[128px]" data-name="image 66">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage66} />
+      <div className="h-[45px] relative shrink-0 w-[128px] mt-4" data-name="image 66">
+        <img alt="" className="w-full h-full object-contain" src={imgImage66} />
       </div>
     </div>
   );
@@ -486,7 +486,7 @@ function Item2() {
 
 function Menu4() {
   return (
-    <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-name="Menu">
+    <div className="basis-0 content-stretch flex flex-col md:flex-row grow items-start justify-between gap-8 md:gap-4 min-h-px min-w-px relative shrink-0" data-name="Menu">
       <Item />
       <Item1 />
       <Item2 />
@@ -498,7 +498,7 @@ function Mid() {
   return (
     <div className="relative shrink-0 w-full" data-name="Mid">
       <div className="size-full">
-        <div className="box-border content-stretch flex items-start justify-between px-[80px] py-0 relative w-full">
+        <div className="box-border content-stretch flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 px-4 md:px-8 lg:px-[80px] py-0 relative w-full">
           <SloganLogo />
           <Menu4 />
         </div>
@@ -511,9 +511,9 @@ function Subfooter() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subfooter">
       <div className="size-full">
-        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[normal] not-italic px-[80px] py-[32px] relative text-[#333333] text-[16px] text-nowrap w-full whitespace-pre">
+        <div className="box-border content-stretch flex flex-col md:flex-row font-['Inter:Regular',sans-serif] font-normal items-start justify-between gap-4 md:gap-0 leading-[normal] not-italic px-4 md:px-8 lg:px-[80px] py-6 md:py-[32px] relative text-[#333333] text-sm md:text-[16px] w-full">
           <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
-          <p className="opacity-70 relative shrink-0 text-right">Back to Top</p>
+          <p className="opacity-70 relative shrink-0 text-left md:text-right">Back to Top</p>
         </div>
       </div>
     </div>
@@ -522,7 +522,7 @@ function Subfooter() {
 
 function Footer() {
   return (
-    <div className="bg-white content-stretch flex flex-col gap-[100px] items-start relative shrink-0 w-full" data-name="Footer">
+    <div className="bg-white content-stretch flex flex-col gap-12 md:gap-20 lg:gap-[100px] items-start relative shrink-0 w-full" data-name="Footer">
       <Top />
       <Mid />
       <Subfooter />
@@ -532,7 +532,7 @@ function Footer() {
 
 function CtaFooter() {
   return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 top-[3585px] w-[1920px]" data-name="CTA & Footer">
+    <div className="content-stretch flex flex-col items-start w-full" data-name="CTA & Footer">
       <Cta />
       <Footer />
     </div>
@@ -551,17 +551,17 @@ function MaskGroup() {
 
 function Text() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 w-[664px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-[48px] w-full">Global reach, local roots</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-[16px] w-full">Our headquarters and offices strategically connect our growing regions with key export markets. While our factories are located near fertile agricultural zones to ensure rapid processing after harvest, our international offices manage sales, logistics, and customer relations with agility and precision. This global network allows us to deliver IQF fruits to partners in Europe, the Middle East, and beyond — always on time, always in perfect condition.</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">Global reach, local roots</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">Our headquarters and offices strategically connect our growing regions with key export markets. While our factories are located near fertile agricultural zones to ensure rapid processing after harvest, our international offices manage sales, logistics, and customer relations with agility and precision. This global network allows us to deliver IQF fruits to partners in Europe, the Middle East, and beyond — always on time, always in perfect condition.</p>
     </div>
   );
 }
 
 function Section() {
   return (
-    <div className="content-stretch flex gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
-      <MaskGroup />
+    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
+      <div className="hidden lg:block"><MaskGroup /></div>
       <Text />
     </div>
   );
@@ -569,9 +569,9 @@ function Section() {
 
 function Text1() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 w-[664px]" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-[48px] w-full">Controlled environments, uncompromised quality</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-[16px] w-full">Each of our facilities operates under meticulously controlled conditions — from temperature and humidity to air filtration and hygiene. Automated packaging and metal-detection systems safeguard product safety, while digital monitoring ensures process transparency. Supported by experienced food technologists and engineers, we maintain an unbroken chain of quality from the moment the fruit is picked until it reaches our customers’ doors.</p>
+    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">Controlled environments, uncompromised quality</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">Each of our facilities operates under meticulously controlled conditions — from temperature and humidity to air filtration and hygiene. Automated packaging and metal-detection systems safeguard product safety, while digital monitoring ensures process transparency. Supported by experienced food technologists and engineers, we maintain an unbroken chain of quality from the moment the fruit is picked until it reaches our customers&apos; doors.</p>
     </div>
   );
 }
@@ -588,16 +588,16 @@ function MaskGroup1() {
 
 function Section1() {
   return (
-    <div className="content-stretch flex gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
+    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
       <Text1 />
-      <MaskGroup1 />
+      <div className="hidden lg:block"><MaskGroup1 /></div>
     </div>
   );
 }
 
 function Sections() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[80px] items-start left-[280px] top-[2465px] w-[1360px]" data-name="Sections">
+    <div className="content-stretch flex flex-col gap-12 md:gap-16 lg:gap-[80px] items-start w-full" data-name="Sections">
       <Section />
       <Section1 />
     </div>
@@ -615,16 +615,16 @@ function Group1() {
 
 function Frame22() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[18px] text-white w-full">At the heart of our operations lies a commitment to precision and hygiene. Each factory is designed according to international standards such as ISO 22000, BRCGS, and HACCP, supported by advanced quality-control laboratories. From washing and slicing to freezing and packaging, every process is monitored in real-time to guarantee consistent, high-quality results. Our facilities reflect the harmony between modern engineering and nature’s finest fruits.</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-base md:text-[18px] text-white w-full">At the heart of our operations lies a commitment to precision and hygiene. Each factory is designed according to international standards such as ISO 22000, BRCGS, and HACCP, supported by advanced quality-control laboratories. From washing and slicing to freezing and packaging, every process is monitored in real-time to guarantee consistent, high-quality results. Our facilities reflect the harmony between modern engineering and nature&apos;s finest fruits.</p>
     </div>
   );
 }
 
 function Frame24() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[32px] items-start left-[280px] top-[1746px] w-[664px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-[48px] tracking-[-0.96px] w-full">Where quality meets technology</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[32px] items-start w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full">Where quality meets technology</p>
       <Frame22 />
     </div>
   );
@@ -632,16 +632,16 @@ function Frame24() {
 
 function Frame23() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[18px] text-white w-full">Our production facilities are equipped with next-generation IQF (Individually Quick Frozen) systems, automated sorting lines, and precision-controlled environments that maintain product integrity at every stage. We combine technological excellence with a deep respect for nature, ensuring that every fruit retains its freshness and authentic flavor. Continuous investment in innovation allows us to increase efficiency, sustainability, and capacity while meeting global food safety standards.</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-base md:text-[18px] text-white w-full">Our production facilities are equipped with next-generation IQF (Individually Quick Frozen) systems, automated sorting lines, and precision-controlled environments that maintain product integrity at every stage. We combine technological excellence with a deep respect for nature, ensuring that every fruit retains its freshness and authentic flavor. Continuous investment in innovation allows us to increase efficiency, sustainability, and capacity while meeting global food safety standards.</p>
     </div>
   );
 }
 
 function Frame25() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[32px] items-start left-[976px] top-[1291px] w-[664px]">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-[48px] tracking-[-0.96px] w-full">Innovation in every corner</p>
+    <div className="content-stretch flex flex-col gap-6 md:gap-[32px] items-start w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full">Innovation in every corner</p>
       <Frame23 />
     </div>
   );
@@ -665,15 +665,45 @@ function Group() {
 
 export default function Component1920PxFactoriesOffices() {
   return (
-    <div className="bg-white relative size-full" data-name="1920px - Factories & Offices">
-      <Frame8 />
-      <Frame18 />
-      <div className="absolute h-[400px] left-[80px] top-[110px] w-[1760px]" data-name="Subtract">
-        <img alt="" className="block max-w-none size-full" height="400" src={imgSubtract} width="1760" />
+    <div className="bg-white relative w-full min-h-screen overflow-x-hidden" data-name="1920px - Factories & Offices">
+      {/* Hero Section with Background */}
+      <div className="relative">
+        <div className="absolute h-[300px] md:h-[350px] lg:h-[400px] left-4 md:left-8 lg:left-[80px] right-4 md:right-8 lg:right-[80px] top-[110px]" data-name="Subtract">
+          <img alt="" className="w-full h-full object-cover" src={imgSubtract} />
+        </div>
+        <Frame10 />
+        <Frame8 />
       </div>
-      <Frame10 />
-      <Group1 />
-      <Group />
+
+      {/* Content Section */}
+      <Frame18 />
+
+      {/* Green Background Section */}
+      <div className="relative bg-[#115132] py-16 md:py-24 lg:py-32">
+        <div className="px-4 md:px-8 lg:px-[280px] flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+          <div className="w-full lg:w-1/2">
+            <Frame25 />
+          </div>
+          <div className="w-full lg:w-1/2">
+            <Frame24 />
+          </div>
+        </div>
+        {/* Decorative Images - Hidden on Mobile */}
+        <div className="hidden lg:block absolute h-[563px] left-[302px] rounded-[40px] top-[100px] w-[620px]" data-name="image">
+          <img alt="" className="w-full h-full object-cover rounded-[40px]" src={imgImage} />
+        </div>
+        <div className="hidden lg:block absolute h-[475px] right-[302px] rounded-[40px] bottom-[100px] w-[620px]" data-name="image">
+          <img alt="" className="w-full h-full object-cover rounded-[40px]" src={imgImage1} />
+        </div>
+      </div>
+
+      {/* Info Sections */}
+      <div className="relative py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-[280px]">
+        <Sections />
+      </div>
+
+      {/* CTA & Footer */}
+      <CtaFooter />
     </div>
   );
 }

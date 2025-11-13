@@ -1,7 +1,5 @@
 "use client";
 
-import type { CSSProperties } from "react";
-
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
@@ -18,129 +16,126 @@ interface ProductsOverviewProps {
 
 export function ProductsOverview({ onNavigate }: ProductsOverviewProps) {
   return (
-    <div className="bg-white relative size-full min-h-screen">
-      <div className="absolute flex h-[calc(1px*((var(--transform-inner-width)*0.6493388414382935)+(var(--transform-inner-height)*0.7604992985725403)))] items-center justify-center left-[-304px] top-[532px] w-[calc(1px*((var(--transform-inner-height)*0.6493388414382935)+(var(--transform-inner-width)*0.7604992985725403)))]" style={{ "--transform-inner-width": "449.09375", "--transform-inner-height": "509.625" } as CSSProperties}>
-        <div className="flex-none rotate-[139.508deg] scale-y-[-100%]">
-          <div className="h-[509.639px] relative w-[449.11px]">
-            <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage52} />
-          </div>
-        </div>
-      </div>
-
+    <div className="bg-white relative w-full min-h-screen overflow-x-hidden">
       <Header onNavigate={onNavigate} />
 
-      {/* Hero Title Section */}
-      <div className="absolute content-stretch flex flex-col gap-[60px] items-start left-[160px] rounded-[32px] top-[205px] w-[602px]">
-        <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
-          <div className="box-border content-stretch flex flex-col items-start pb-[34px] pt-0 px-0 relative shrink-0">
-            <p className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] not-italic relative shrink-0 text-[80px] text-nowrap text-white whitespace-pre">Products</p>
-          </div>
-          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] min-w-full not-italic relative shrink-0 text-[21px] text-white w-[min-content]">Carefully selected strawberries, freeze-dried or IQF-processed for maximum shelf life and minimal loss of flavor or texture.</p>
-        </div>
-      </div>
-
-      {/* Hero Background */}
-      <div className="absolute h-[400px] left-[80px] top-[110px] w-[1760px]">
-        <img alt="" className="block max-w-none size-full" height="400" src={imgSubtract} width="1760" />
-      </div>
-
-      {/* Picked. Perfected. Packaged. Section */}
-      <div className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[510px] w-[1920px]">
-        <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-          <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
-            <p className="mb-0">Picked.</p>
-            <p>Perfected. Packaged.</p>
-          </div>
-          <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* IQF Products Card */}
-      <button 
-        onClick={() => onNavigate('product-list')}
-        className="absolute h-[450px] left-[280px] rounded-[40px] top-[946px] w-[664px] cursor-pointer border-none p-0 overflow-hidden"
-      >
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[40px]">
-          <img alt="" className="absolute max-w-none object-50%-50% object-cover rounded-[40px] size-full" src={imgRectangle19} />
-          <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 rounded-[40px] to-50% to-[rgba(0,0,0,0.45)]" />
-        </div>
-        <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] left-1/2 not-italic text-[48px] text-center text-nowrap text-white top-[169px] tracking-[-0.96px] -translate-x-1/2 whitespace-pre">
-          <p className="mb-0">IQF</p>
-          <p>Products</p>
-        </div>
-      </button>
-
-      {/* Freeze Dry Products Card */}
-      <button 
-        onClick={() => onNavigate('product-list')}
-        className="absolute h-[450px] left-[976px] rounded-[40px] top-[946px] w-[664px] cursor-pointer border-none p-0 overflow-hidden"
-      >
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[40px]">
-          <img alt="" className="absolute max-w-none object-50%-50% object-cover rounded-[40px] size-full" src={imgRectangle20} />
-          <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 rounded-[40px] to-50% to-[rgba(0,0,0,0.45)]" />
-        </div>
-        <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] left-1/2 not-italic text-[48px] text-center text-nowrap text-white top-[169px] tracking-[-0.96px] -translate-x-1/2 whitespace-pre">
-          <p className="mb-0">Freeze Dry</p>
-          <p>Products</p>
-        </div>
-      </button>
-
-      <div className="absolute h-[515px] left-[1635px] top-[1534px] w-[527px]">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage53} />
-      </div>
-
-      {/* Why choose section */}
-      <div className="absolute top-[1396px] left-0 w-[1920px]">
-        <div className="relative shrink-0 w-full">
-          <div className="size-full">
-            <div className="box-border content-stretch flex flex-col gap-[120px] items-start px-[280px] py-[160px] relative w-full">
-              <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-                <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Why choose our products?</p>
+      <main className="flex flex-col gap-16 md:gap-24 lg:gap-32">
+        {/* Hero */}
+        <section className="relative px-4 md:px-8 lg:px-16 pt-24 md:pt-32 overflow-visible">
+          <img
+            src={imgImage52}
+            alt="Decorative fruit illustration"
+            className="hidden md:block pointer-events-none select-none absolute left-0 top-[55%] -translate-y-1/2 -translate-x-1/2 w-[220px] lg:w-[260px] h-auto object-contain"
+          />
+          <div className="max-w-screen-xl mx-auto flex flex-col gap-10">
+            <div className="w-full overflow-hidden rounded-[48px]">
+              <img src={imgSubtract} alt="Colorful frozen fruits" className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+              <div className="flex-1 space-y-6 text-left">
+                <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug md:leading-tight">Products</p>
+                <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">Carefully selected strawberries, freeze-dried or IQF-processed for maximum shelf life and minimal loss of flavor or texture.</p>
               </div>
-
-              <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-                <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-                  <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">1</p>
-                  <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Quality You Can Taste</p>
-                  <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Every product is carefully sourced, processed, and preserved to deliver peak flavor, color, and nutrition—without compromise.</p>
-                </div>
-
-                <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-                  <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">2</p>
-                  <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Trusted by Professionals Worldwide</p>
-                  <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Food brands, manufacturers, and distributors rely on our consistent quality, safety standards, and clean-label fruit solutions.</p>
-                </div>
-
-                <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-                  <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">3</p>
-                  <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">From Farm to Final Product</p>
-                  <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Our vertically integrated supply chain ensures traceability, sustainability, and reliable excellence—every step of the way.</p>
-                </div>
-              </div>
+              <div className="flex-1" />
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* CTA Section */}
-      <div className="absolute top-[2344px] left-0 w-[1920px]">
-        <div className="content-stretch flex flex-col gap-[60px] h-[450px] items-center justify-center relative shrink-0 w-full">
-          <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 overflow-hidden">
-              <img alt="" className="absolute h-[426.67%] left-0 max-w-none top-[-269.11%] w-full" src={imgCta} />
+        {/* Intro copy */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start gap-10 md:gap-16">
+            <div className="flex-1 space-y-2 text-left">
+              <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug md:leading-tight">Picked. Perfected. Packaged.</p>
             </div>
-            <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
+            <div className="flex-1">
+              <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg md:text-xl leading-relaxed">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
+            </div>
           </div>
-          <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[152px] text-center text-white tracking-[-3.04px] w-[min-content]">Fruit, Reinvented</p>
-        </div>
-      </div>
+        </section>
 
-      {/* Footer */}
-      <div className="absolute top-[2794px] left-0 w-[1920px]">
-        <Footer onNavigate={onNavigate} />
-      </div>
+        {/* Product cards */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <button
+              onClick={() => onNavigate("product-list")}
+              className="group rounded-[40px] min-h-[320px] md:min-h-[360px] lg:min-h-[420px] flex flex-col items-center justify-center gap-4 bg-cover bg-center text-white text-center px-6"
+              title="View IQF products"
+              type="button"
+            >
+              <div className="w-full h-full rounded-[40px] bg-[linear-gradient(180deg,rgba(17,81,50,0.05)_0%,rgba(17,81,50,0.55)_100%),url('/assets/88e57f1c4d0b5499fe43641635829d433e0f76fd.png')] bg-cover bg-center flex flex-col items-center justify-center gap-2 px-6 py-8">
+                <p className="font-['Inter:Semi_Bold',sans-serif] text-2xl sm:text-3xl md:text-4xl leading-snug drop-shadow-md">IQF Products</p>
+                <p className="font-['Inter:Regular',sans-serif] text-sm sm:text-base md:text-lg leading-relaxed drop-shadow-md max-w-sm">Individual quick freezing delivers perfect texture and lasting freshness in every batch.</p>
+              </div>
+            </button>
+            <button
+              onClick={() => onNavigate("product-list")}
+              className="group rounded-[40px] min-h-[320px] md:min-h-[360px] lg:min-h-[420px] flex flex-col items-center justify-center gap-4 bg-cover bg-center text-white text-center px-6"
+              title="View freeze dry products"
+              type="button"
+            >
+              <div className="w-full h-full rounded-[40px] bg-[linear-gradient(180deg,rgba(17,81,50,0.05)_0%,rgba(17,81,50,0.55)_100%),url('/assets/36e16d20d7eba77888bf886dcc2d41a5c8f94530.png')] bg-cover bg-center flex flex-col items-center justify-center gap-2 px-6 py-8">
+                <p className="font-['Inter:Semi_Bold',sans-serif] text-2xl sm:text-3xl md:text-4xl leading-snug drop-shadow-md">Freeze Dry Products</p>
+                <p className="font-['Inter:Regular',sans-serif] text-sm sm:text-base md:text-lg leading-relaxed drop-shadow-md max-w-sm">Lightweight, nutrient-dense ingredients that keep natural color, flavor, and aroma intact.</p>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        {/* Why choose */}
+        <section className="relative px-4 md:px-8 lg:px-16 overflow-visible">
+          <img
+            src={imgImage53}
+            alt="Berry illustration"
+            className="hidden md:block pointer-events-none select-none absolute right-0 top-[55%] -translate-y-1/2 translate-x-1/2 w-48 lg:w-64 h-auto object-contain"
+          />
+          <div className="max-w-screen-xl mx-auto space-y-12">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+              <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug md:leading-tight text-center md:text-left">Why choose our products?</p>
+              <div className="flex-1" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  number: "1",
+                  title: "Quality You Can Taste",
+                  copy: "Every product is carefully sourced, processed, and preserved to deliver peak flavor, color, and nutrition—without compromise.",
+                },
+                {
+                  number: "2",
+                  title: "Trusted by Professionals Worldwide",
+                  copy: "Food brands, manufacturers, and distributors rely on our consistent quality, safety standards, and clean-label fruit solutions.",
+                },
+                {
+                  number: "3",
+                  title: "From Farm to Final Product",
+                  copy: "Our vertically integrated supply chain ensures traceability, sustainability, and reliable excellence—every step of the way.",
+                },
+              ].map((item) => (
+                <div key={item.number} className="rounded-[32px] border border-[#e4e7ec] bg-white p-8 space-y-4 text-left">
+                  <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-3xl sm:text-4xl md:text-5xl leading-snug">{item.number}</p>
+                  <p className="font-['Inter:Semi_Bold',sans-serif] text-[#212121] text-lg sm:text-xl md:text-2xl leading-snug">{item.title}</p>
+                  <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-sm sm:text-base md:text-lg leading-relaxed">{item.copy}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="px-4 md:px-8 lg:px-16 pb-12 md:pb-24">
+          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden">
+            <div className="bg-[linear-gradient(180deg,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0.65)_100%),url('/assets/82c4c538c30244afbdb7308a18a81b162d0d8d85.png')] bg-cover bg-center text-white flex items-center justify-center px-6 py-24 md:py-32 lg:py-40">
+              <p className="font-['Inter:Bold',sans-serif] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-snug md:leading-tight text-center">Fruit, Reinvented</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-neutral-50 px-4 md:px-8 lg:px-16 py-12 md:py-20">
+        <div className="max-w-screen-xl mx-auto">
+          <Footer onNavigate={onNavigate} />
+        </div>
+      </footer>
     </div>
   );
 }

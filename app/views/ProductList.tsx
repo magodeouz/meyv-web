@@ -78,7 +78,7 @@ export function ProductList({ onNavigate }: ProductListProps) {
       <div className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[910px] w-[1920px]">
         <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
           <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
-            <p className="mb-0">Picked.</p>
+            <p className="mb-0">11Picked.</p>
             <p>Perfected. Packaged.</p>
           </div>
           <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">

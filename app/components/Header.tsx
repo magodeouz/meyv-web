@@ -3,6 +3,7 @@
 import type { MouseEvent } from "react";
 import type { Route } from "next";
 import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 
 import NavLink from "@/components/NavLink";
 import svgPaths from "@/imports/svg-lasglpsk63";
@@ -85,6 +86,22 @@ function LongArrowRight300WRounded() {
   );
 }
 
+function HamburgerIcon() {
+  return (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  );
+}
+
 type NavItem = {
   label: string;
   page: string;
@@ -96,7 +113,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Home", page: "home", to: "/", end: true },
   { label: "Products", page: "products", to: "/products" },
-  { label: "Who we are", page: "who-we-are", to: "/about" },
+  { label: "Who we are" , page: "who-we-are", to: "/about" },
   { label: "Factories", page: "factories", to: "/factories" },
   { label: "Quality & Certificates", page: "quality", to: "/quality", showArrow: true },
 ];
@@ -108,73 +125,142 @@ interface HeaderProps {
 export function Header({ onNavigate }: HeaderProps = {}) {
   const pathname = usePathname() ?? "/";
   const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const createClickHandler =
     (page: string) => (event: MouseEvent<HTMLAnchorElement>) => {
       if (page === "home" && pathname === "/") {
         event.preventDefault();
         scrollToSection("home");
+        setMobileMenuOpen(false);
         return;
       }
 
       if (onNavigate) {
         event.preventDefault();
         onNavigate(page);
+        setMobileMenuOpen(false);
+      } else {
+        setMobileMenuOpen(false);
       }
     };
 
+  const handleContactClick = () => {
+    setMobileMenuOpen(false);
+    if (onNavigate) {
+      onNavigate("contact");
+    } else {
+      router.push("/contact");
+    }
+  };
+
   return (
-    <div className="absolute bg-white content-stretch flex h-[110px] items-center justify-between left-[80px] top-0 w-[1760px] z-10">
-      <div className="content-stretch flex gap-[125px] items-center relative shrink-0">
-        <NavLink to="/" onClick={createClickHandler("home")} className="cursor-pointer">
-          <Layer />
-        </NavLink>
-        <nav className="content-stretch flex gap-[27px] items-center relative shrink-0">
-          {navItems.map(({ label, page, to, end, showArrow }) => (
-            <NavLink
-              key={page}
-              to={to}
-              end={end}
-              className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
-              onClick={createClickHandler(page)}
-            >
-              {({ isActive }) => (
-                <>
-                  <p
-                    className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
-                      isActive ? "text-[#115132]" : "text-[#212121]"
-                    }`}
-                  >
-                    {label}
-                  </p>
-                  {showArrow ? <DropdownArrowIcon300WRounded /> : null}
-                  <span
-                    aria-hidden="true"
-                    className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
-                  />
-                </>
-              )}
-            </NavLink>
-          ))}
-        </nav>
-      </div>
-      <button
-        className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0 cursor-pointer border-none"
-        onClick={() => {
-          if (onNavigate) {
-            onNavigate("contact");
-          } else {
-            router.push("/contact");
-          }
-        }}
-      >
-        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">
-          Contact Us
-        </p>
-        <div className="bg-white box-border content-stretch flex flex-col gap-[10px] items-center justify-center p-[10px] relative rounded-[10000px] shrink-0 size-[40px]">
-          <LongArrowRight300WRounded />
+    <>
+      {/* Desktop & Tablet Header */}
+      <div className="absolute bg-white flex h-[110px] items-center justify-between left-4 md:left-8 lg:left-20 top-0 right-4 md:right-8 lg:right-20 z-10 px-4 md:px-0">
+        <div className="flex gap-4 md:gap-8 lg:gap-[125px] items-center">
+          <NavLink to="/" onClick={createClickHandler("home")} className="cursor-pointer">
+            <Layer />
+          </NavLink>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex gap-[27px] items-center">
+            {navItems.map(({ label, page, to, end, showArrow }) => (
+              <NavLink
+                key={page}
+                to={to}
+                end={end}
+                className="box-border flex gap-[10px] items-center justify-center p-[10px] cursor-pointer group"
+                onClick={createClickHandler(page)}
+              >
+                {({ isActive }) => (
+                  <>
+                    <p
+                      className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+                        isActive ? "text-[#115132]" : "text-[#212121]"
+                      }`}
+                    >
+                      {label}
+                    </p>
+                    {showArrow ? <DropdownArrowIcon300WRounded /> : null}
+                    <span
+                      aria-hidden="true"
+                      className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+                    />
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </nav>
         </div>
-      </button>
-    </div>
+
+        <div className="flex items-center gap-4">
+          {/* Desktop Contact Button */}
+          <button
+            className="hidden md:flex bg-[#115132] box-border gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] rounded-[32px] cursor-pointer border-none"
+            onClick={handleContactClick}
+          >
+            <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[16px] text-nowrap text-white whitespace-pre">
+              Contact Us
+            </p>
+            <div className="bg-white box-border flex flex-col gap-[10px] items-center justify-center p-[10px] rounded-[10000px] size-[40px]">
+              <LongArrowRight300WRounded />
+            </div>
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-[#212121] p-2 cursor-pointer bg-transparent border-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-[110px] bg-white z-20 overflow-y-auto">
+          <nav className="flex flex-col px-8 py-6 gap-4">
+            {navItems.map(({ label, page, to, end, showArrow }) => (
+              <NavLink
+                key={page}
+                to={to}
+                end={end}
+                className="flex gap-[10px] items-center justify-between p-4 cursor-pointer border-b border-gray-100"
+                onClick={createClickHandler(page)}
+              >
+                {({ isActive }) => (
+                  <>
+                    <p
+                      className={`font-['Inter:Medium',sans-serif] font-medium text-[18px] transition-colors duration-200 ${
+                        isActive ? "text-[#115132]" : "text-[#212121]"
+                      }`}
+                    >
+                      {label}
+                    </p>
+                    {showArrow ? <DropdownArrowIcon300WRounded /> : null}
+                  </>
+                )}
+              </NavLink>
+            ))}
+            
+            {/* Mobile Contact Button */}
+            <button
+              className="mt-4 bg-[#115132] flex gap-[16px] h-[48px] items-center justify-center px-8 py-[10px] rounded-[32px] cursor-pointer border-none w-full"
+              onClick={handleContactClick}
+            >
+              <p className="font-['Inter:Medium',sans-serif] font-medium text-[16px] text-white">
+                Contact Us
+              </p>
+              <div className="bg-white flex items-center justify-center p-[10px] rounded-full size-[40px]">
+                <LongArrowRight300WRounded />
+              </div>
+            </button>
+          </nav>
+        </div>
+      )}
+    </>
   );
 }

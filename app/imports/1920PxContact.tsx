@@ -8,7 +8,6 @@ const imgImage1 = "/assets/8bb42813f5af81abc1d96e97246fc9780f0a4fce.png";
 const imgImage2 = "/assets/5dda885d439741c21b95acfdf678455a3646cc10.png";
 const imgImage3 = "/assets/e8f7981ee33f8d76608bc182e5de89d43930af24.png";
 const imgFrame1523 = "/assets/702779a6d3a3fb3e19cac6a2b110dddffb56176d.png";
-const imgImage66 = "/assets/ffeba28eb520fc86d5a21d336c1c9fc39ddb9b41.png";
 const imgImage46 = "/assets/9f31f54ac53df93789ba6a08682898a9cbb8ce0d.png";
 const imgImage4 = "/assets/74e5c57dfecd9cb4d073bd7a84d2e5be1ce7774c.png";
 
@@ -16,189 +15,26 @@ interface ContactComponentProps {
   onNavigate?: (page: string, productName?: string) => void;
 }
 
-function Layer() {
-  return (
-    <div className="h-[64px] relative shrink-0 w-[132.489px]" data-name="Layer_1">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 133 64">
-        <g clipPath="url(#clip0_1_250)" id="Layer_1">
-          <path d={svgPaths.p2c2b4370} fill="var(--fill-0, #19459D)" id="Vector" />
-          <path d={svgPaths.p29295e00} fill="var(--fill-0, #19459D)" id="Vector_2" />
-          <path d={svgPaths.p3209fa00} fill="var(--fill-0, #19459D)" id="Vector_3" />
-          <path clipRule="evenodd" d={svgPaths.p1edaac70} fill="var(--fill-0, #19459D)" fillRule="evenodd" id="Vector_4" />
-          <g id="Group">
-            <path d={svgPaths.p410e800} fill="url(#paint0_linear_1_250)" id="Vector_5" />
-            <path d={svgPaths.p2f949000} fill="url(#paint1_linear_1_250)" id="Vector_6" />
-            <g id="Group_2">
-              <path d={svgPaths.p98c4c70} fill="var(--fill-0, #CFE5AE)" id="Vector_7" />
-            </g>
-            <g id="Group_3">
-              <path d={svgPaths.p44fb900} fill="var(--fill-0, #0D6D38)" id="Vector_8" />
-            </g>
-            <g id="Group_4">
-              <path d={svgPaths.pe555700} fill="var(--fill-0, #CFE5AE)" id="Vector_9" />
-            </g>
-          </g>
-          <path d={svgPaths.p3f4ffe00} fill="var(--fill-0, #19459D)" id="Vector_10" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_250" x1="54.3525" x2="50.634" y1="63.3711" y2="46.5562">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_250" x1="19.1797" x2="54.1336" y1="52.8126" y2="45.0812">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <clipPath id="clip0_1_250">
-            <rect fill="white" height="64" width="132.489" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function Frame1() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
-    </div>
-  );
-}
-
-function Frame3() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
-    </div>
-  );
-}
-
-function Frame2() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
-    </div>
-  );
-}
-
-function Frame5() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Factories</p>
-    </div>
-  );
-}
-
-function DropdownArrowIcon300WRounded() {
-  return (
-    <div className="h-[7px] relative shrink-0 w-[12.775px]" data-name="Dropdown Arrow Icon 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13 7">
-        <g id="Dropdown Arrow Icon 300W Rounded">
-          <path d={svgPaths.p11ff1530} fill="var(--fill-0, #64748B)" id="Dropdown Arrow" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame4() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Quality & Certificates`}</p>
-      <DropdownArrowIcon300WRounded />
-    </div>
-  );
-}
-
-function Menu() {
-  return (
-    <div className="content-stretch flex gap-[27px] items-center relative shrink-0" data-name="Menu">
-      <Frame1 />
-      <Frame3 />
-      <Frame2 />
-      <Frame5 />
-      <Frame4 />
-    </div>
-  );
-}
-
-function Frame8() {
-  return (
-    <div className="content-stretch flex gap-[125px] items-center relative shrink-0">
-      <Layer />
-      <Menu />
-    </div>
-  );
-}
-
-function LongArrowRight300WRounded() {
-  return (
-    <div className="h-[16px] relative shrink-0 w-[22.559px]" data-name="Long Arrow Right 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 23 16">
-        <g id="Long Arrow Right 300W Rounded">
-          <path d={svgPaths.pcc9c080} fill="var(--fill-0, #115132)" id="Arrow Right" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame7() {
-  return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-[10px] items-center justify-center p-[10px] relative rounded-[10000px] shrink-0 size-[40px]">
-      <LongArrowRight300WRounded />
-    </div>
-  );
-}
-
-function Frame6() {
-  return (
-    <div className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">Contact Us</p>
-      <Frame7 />
-    </div>
-  );
-}
-
-function Frame21() {
-  return (
-    <div className="absolute content-stretch flex flex-col font-medium gap-[103px] items-start left-[280px] not-italic text-[#212121] top-[452px] tracking-[-0.56px] w-[316px]">
-      <p className="font-['Inter:Medium',sans-serif] leading-[normal] relative shrink-0 text-[28px] w-full">Don’t be afraid to say hello with us!</p>
-      <div className="font-['Inter:Medium','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] leading-[normal] relative shrink-0 text-[0px] w-full">
-        <p className="font-['Inter:Regular','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] font-normal mb-0 not-italic text-[24px]">{`Phone `}</p>
-        <p className="mb-0 text-[28px]">+90 (232) 864 22 00</p>
-        <p className="mb-0 text-[28px]"> </p>
-        <p className="font-['Inter:Regular','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] font-normal mb-0 not-italic text-[24px]">{`Email `}</p>
-        <p className="text-[28px]">sales@meyv.com.tr</p>
-      </div>
-    </div>
-  );
-}
-
 function Label() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-0 w-[294.656px]" data-name="label">
+    <div className="relative bg-[rgba(0,0,0,0)] mb-2" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[20px] leading-[normal] left-0 not-italic text-[#cde253] text-[14px] top-[-0.1px] w-[73px]">First Name</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#cde253] text-[14px]">First Name</p>
     </div>
   );
 }
 
 function Input() {
   return (
-    <div className="absolute bg-[#cde253] h-[50px] left-0 rounded-[8px] top-[24px] w-[294.656px]" data-name="input">
-      <div className="absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal h-[50px] justify-center leading-[0] left-[16px] not-italic text-[#115132] text-[16px] top-[25px] translate-y-[-50%] w-[38px]">
-        <p className="leading-[24px]">John</p>
-      </div>
+    <div className="relative bg-[#cde253] h-[50px] rounded-[8px] w-full flex items-center px-4" data-name="input">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#115132] text-[16px]">John</p>
     </div>
   );
 }
 
 function Div() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[74px] left-0 top-0 w-[294.656px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Label />
       <Input />
@@ -208,26 +44,24 @@ function Div() {
 
 function Label1() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-0 w-[294.672px]" data-name="label">
+    <div className="relative bg-[rgba(0,0,0,0)] mb-2" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[20px] leading-[normal] left-0 not-italic text-[#cde253] text-[14px] top-[-0.1px] w-[72px]">Last Name</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#cde253] text-[14px]">Last Name</p>
     </div>
   );
 }
 
 function Input1() {
   return (
-    <div className="absolute bg-[#cde253] h-[50px] left-0 rounded-[8px] top-[24px] w-[294.672px]" data-name="input">
-      <div className="absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal h-[50px] justify-center leading-[0] left-[16px] not-italic text-[#115132] text-[16px] top-[25px] translate-y-[-50%] w-[31px]">
-        <p className="leading-[24px]">Doe</p>
-      </div>
+    <div className="relative bg-[#cde253] h-[50px] rounded-[8px] w-full flex items-center px-4" data-name="input">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#115132] text-[16px]">Doe</p>
     </div>
   );
 }
 
 function Div1() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[74px] left-[318.66px] top-0 w-[294.672px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Label1 />
       <Input1 />
@@ -237,7 +71,7 @@ function Div1() {
 
 function Div2() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[74px] left-0 top-0 w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Div />
       <Div1 />
@@ -247,26 +81,24 @@ function Div2() {
 
 function Label2() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-0 w-[613.328px]" data-name="label">
+    <div className="relative bg-[rgba(0,0,0,0)] mb-2" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[20px] leading-[normal] left-0 not-italic text-[#cde253] text-[14px] top-[-0.1px] w-[95px]">Email Address</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#cde253] text-[14px]">Email Address</p>
     </div>
   );
 }
 
 function Input2() {
   return (
-    <div className="absolute bg-[#cde253] h-[50px] left-0 rounded-[8px] top-[24px] w-[613.328px]" data-name="input">
-      <div className="absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal h-[50px] justify-center leading-[0] left-[16px] not-italic text-[#115132] text-[16px] top-[25px] translate-y-[-50%] w-[181px]">
-        <p className="leading-[24px]">john.doe@example.com</p>
-      </div>
+    <div className="relative bg-[#cde253] h-[50px] rounded-[8px] w-full flex items-center px-4" data-name="input">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#115132] text-[16px]">john.doe@example.com</p>
     </div>
   );
 }
 
 function Div3() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[74px] left-0 top-[98px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Label2 />
       <Input2 />
@@ -276,26 +108,24 @@ function Div3() {
 
 function Label3() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-0 w-[613.328px]" data-name="label">
+    <div className="relative bg-[rgba(0,0,0,0)] mb-2" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[20px] leading-[normal] left-0 not-italic text-[#cde253] text-[14px] top-[-0.1px] w-[100px]">Phone Number</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#cde253] text-[14px]">Phone Number</p>
     </div>
   );
 }
 
 function Input3() {
   return (
-    <div className="absolute bg-[#cde253] h-[50px] left-0 rounded-[8px] top-0 w-[613px]" data-name="input">
-      <div className="absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal h-[50px] justify-center leading-[0] left-[16px] not-italic text-[#115132] text-[16px] top-[25px] translate-y-[-50%] w-[120px]">
-        <p className="leading-[24px]">(555) 123-4567</p>
-      </div>
+    <div className="relative bg-[#cde253] h-[50px] rounded-[8px] w-full flex items-center px-4" data-name="input">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#115132] text-[16px]">(555) 123-4567</p>
     </div>
   );
 }
 
 function Div4() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[50px] left-0 top-[24px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Input3 />
     </div>
@@ -304,7 +134,7 @@ function Div4() {
 
 function Div5() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[74px] left-0 top-[196px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Label3 />
       <Div4 />
@@ -314,33 +144,33 @@ function Div5() {
 
 function Label4() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-0 w-[613.328px]" data-name="label">
+    <div className="relative bg-[rgba(0,0,0,0)] mb-2" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[20px] leading-[normal] left-0 not-italic text-[#cde253] text-[14px] top-[-0.1px] w-[95px]">Your Message</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#cde253] text-[14px]">Your Message</p>
     </div>
   );
 }
 
 function Textarea() {
   return (
-    <div className="absolute bg-[#cde253] h-[122px] left-0 overflow-clip rounded-[8px] top-[24px] w-[613.328px]" data-name="textarea">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal h-[122px] leading-[24px] left-[16px] not-italic text-[#115132] text-[16px] top-[12px] w-[217px]">How can we help you today?</p>
+    <div className="relative bg-[#cde253] h-[122px] overflow-clip rounded-[8px] w-full p-4" data-name="textarea">
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic text-[#115132] text-[16px]">How can we help you today?</p>
     </div>
   );
 }
 
 function Div6() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[16px] left-0 top-[156px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] mt-2 text-right" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal h-[16px] leading-[16px] left-[515.33px] not-italic text-[#cde253] text-[12px] top-[-1.6px] w-[98px]">0/500 characters</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic text-[#cde253] text-[12px]">0/500 characters</p>
     </div>
   );
 }
 
 function Div7() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[172px] left-0 top-[294px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Label4 />
       <Textarea />
@@ -355,18 +185,18 @@ function Input4() {
 
 function Frame19() {
   return (
-    <div className="absolute content-stretch flex font-['Inter:Regular',sans-serif] font-normal gap-[4px] items-center leading-[normal] left-0 not-italic text-[14px] top-[-1.2px]">
-      <p className="h-[20px] relative shrink-0 text-white w-[89px]">I agree to the</p>
-      <p className="h-[20px] relative shrink-0 text-[#cde253] w-[112px]">Terms of Service</p>
-      <p className="h-[20px] relative shrink-0 text-white w-[25px]">and</p>
-      <p className="h-[20px] relative shrink-0 text-[#cde253] w-[92px]">Privacy Policy</p>
+    <div className="relative content-stretch flex flex-wrap font-['Inter:Regular',sans-serif] font-normal gap-[4px] items-center leading-[normal] not-italic text-[12px] md:text-[14px]">
+      <p className="relative text-white">I agree to the</p>
+      <p className="relative text-[#cde253]">Terms of Service</p>
+      <p className="relative text-white">and</p>
+      <p className="relative text-[#cde253]">Privacy Policy</p>
     </div>
   );
 }
 
 function Label5() {
   return (
-    <div className="bg-[rgba(0,0,0,0)] h-[20px] relative shrink-0 w-[329.125px]" data-name="label">
+    <div className="bg-[rgba(0,0,0,0)] relative flex-1" data-name="label">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Frame19 />
     </div>
@@ -375,7 +205,7 @@ function Label5() {
 
 function Frame20() {
   return (
-    <div className="absolute content-stretch flex gap-[8px] items-center left-0 top-0">
+    <div className="relative content-stretch flex gap-[8px] items-start">
       <Input4 />
       <Label5 />
     </div>
@@ -384,7 +214,7 @@ function Frame20() {
 
 function Div8() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[20px] left-0 top-[490px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Frame20 />
     </div>
@@ -393,16 +223,16 @@ function Div8() {
 
 function Button() {
   return (
-    <div className="absolute bg-[#cde253] h-[48px] left-0 rounded-[8px] top-0 w-[613.328px]" data-name="button">
+    <div className="relative bg-[#cde253] h-[48px] rounded-[8px] w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" data-name="button">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none rounded-[8px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium h-[24px] leading-[normal] left-[306.94px] not-italic text-[#115132] text-[16px] text-center top-[12.56px] translate-x-[-50%] w-[128px]">Submit Message</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[#115132] text-[16px] text-center">Submit Message</p>
     </div>
   );
 }
 
 function Div9() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[48px] left-0 top-[534px] w-[613.328px]" data-name="div">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full" data-name="div">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Button />
     </div>
@@ -411,7 +241,7 @@ function Div9() {
 
 function Form() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0)] h-[582px] left-[48px] top-[104px] w-[613.328px]" data-name="form">
+    <div className="relative bg-[rgba(0,0,0,0)] w-full space-y-6" data-name="form">
       <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none" />
       <Div2 />
       <Div3 />
@@ -425,9 +255,11 @@ function Form() {
 
 function Div10() {
   return (
-    <div className="absolute bg-[#115132] h-[770px] left-[931px] rounded-[40px] top-[452px] w-[709.328px]" data-name="div">
-      <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none rounded-[40px]" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[32px] left-[48px] not-italic text-[#cde253] text-[28px] text-nowrap top-[43.56px] whitespace-pre">Send us a message</p>
+    <div className="relative bg-[#115132] min-h-[600px] md:min-h-[700px] lg:h-[770px] rounded-[20px] md:rounded-[40px] w-full p-6 md:p-8 lg:p-12" data-name="div">
+      <div aria-hidden="true" className="absolute border-0 border-gray-200 border-solid inset-0 pointer-events-none rounded-[20px] md:rounded-[40px]" />
+      <p className="relative font-['Inter:Medium',sans-serif] font-medium leading-[32px] not-italic text-[#cde253] text-xl md:text-2xl lg:text-[28px] mb-8 lg:mb-12">
+        Send us a message
+      </p>
       <Form />
     </div>
   );
@@ -435,10 +267,10 @@ function Div10() {
 
 function Frame22() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[103px] items-start left-[280px] top-[1394px] w-[548px]">
+    <div className="relative content-stretch flex flex-col gap-8 md:gap-12 lg:gap-[103px] items-start w-full">
       <div className="font-['Inter:Medium','Noto_Sans:Regular',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[0px] tracking-[-0.56px] w-full">
-        <p className="font-['Inter:Regular','Noto_Sans:Regular',sans-serif] font-normal mb-0 text-[24px]">{`Office `}</p>
-        <p className="text-[28px]">IPOSB 7.Sokak No:3 Pancar-Torbalı 35875 Izmir, Türkiye</p>
+        <p className="font-['Inter:Regular','Noto_Sans:Regular',sans-serif] font-normal mb-0 text-lg md:text-xl lg:text-[24px]">Office</p>
+        <p className="text-xl md:text-2xl lg:text-[28px]">IPOSB 7.Sokak No:3 Pancar-Torbalı 35875 Izmir, Türkiye</p>
       </div>
     </div>
   );
@@ -504,7 +336,7 @@ function Group1() {
 
 function Frame() {
   return (
-    <div className="absolute h-[35px] left-[1037px] overflow-clip top-[1732px] w-[68px]" data-name="Frame">
+    <div className="relative h-[35px] overflow-clip w-[68px] mx-auto my-8" data-name="Frame">
       <Group1 />
     </div>
   );
@@ -512,8 +344,8 @@ function Frame() {
 
 function Frame23() {
   return (
-    <div className="content-stretch flex gap-[20px] items-center relative shrink-0">
-      <div className="h-[48px] relative shrink-0 w-[47.997px]" data-name="Vector">
+    <div className="content-stretch flex gap-4 md:gap-[20px] items-center relative shrink-0 flex-wrap">
+      <div className="h-[32px] md:h-[40px] lg:h-[48px] relative shrink-0 w-[32px] md:w-[40px] lg:w-[47.997px]" data-name="Vector">
         <div className="absolute inset-0" style={{ "--fill-0": "rgba(17, 81, 50, 1)" } as CSSProperties}>
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 48 48">
             <g id="Vector">
@@ -523,8 +355,8 @@ function Frame23() {
           </svg>
         </div>
       </div>
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-[48px] text-nowrap tracking-[-0.32px] tracking-[-0.96px] whitespace-pre">
-        <span>{`Instagram `}</span>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.32px] tracking-[-0.96px]">
+        <span>Instagram </span>
         <span className="text-[#115132]">@meyv</span>
       </p>
     </div>
@@ -533,18 +365,18 @@ function Frame23() {
 
 function Frame24() {
   return (
-    <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full">
-      <div className="relative rounded-[40px] shrink-0 size-[316px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage} />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-[32px] w-full">
+      <div className="relative rounded-[20px] md:rounded-[40px] aspect-square w-full" data-name="image">
+        <img alt="" className="w-full h-full object-cover pointer-events-none rounded-[20px] md:rounded-[40px]" src={imgImage} />
       </div>
-      <div className="relative rounded-[40px] shrink-0 size-[316px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage1} />
+      <div className="relative rounded-[20px] md:rounded-[40px] aspect-square w-full" data-name="image">
+        <img alt="" className="w-full h-full object-cover pointer-events-none rounded-[20px] md:rounded-[40px]" src={imgImage1} />
       </div>
-      <div className="relative rounded-[40px] shrink-0 size-[316px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage2} />
+      <div className="relative rounded-[20px] md:rounded-[40px] aspect-square w-full" data-name="image">
+        <img alt="" className="w-full h-full object-cover pointer-events-none rounded-[20px] md:rounded-[40px]" src={imgImage2} />
       </div>
-      <div className="relative rounded-[40px] shrink-0 size-[316px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage3} />
+      <div className="relative rounded-[20px] md:rounded-[40px] aspect-square w-full" data-name="image">
+        <img alt="" className="w-full h-full object-cover pointer-events-none rounded-[20px] md:rounded-[40px]" src={imgImage3} />
       </div>
     </div>
   );
@@ -552,7 +384,7 @@ function Frame24() {
 
 function Frame25() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-6 md:gap-8 lg:gap-[40px] items-start relative shrink-0 w-full z-10">
       <Frame23 />
       <Frame24 />
     </div>
@@ -561,7 +393,7 @@ function Frame25() {
 
 function Frame26() {
   return (
-    <div className="absolute box-border content-stretch flex flex-col gap-[10px] items-start left-0 px-[280px] py-[160px] top-[2114px] w-[1920px]">
+    <div className="relative box-border content-stretch flex flex-col gap-[10px] items-start px-4 md:px-8 lg:px-[280px] py-12 md:py-20 lg:py-[160px] w-full">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-white inset-0" />
         <div className="absolute bg-repeat bg-size-[481px_488px] bg-top-left inset-0 opacity-25" style={{ backgroundImage: `url('${imgFrame1523}')` }} />
@@ -571,293 +403,79 @@ function Frame26() {
   );
 }
 
-function Logo() {
-  return (
-    <div className="h-[64px] relative shrink-0 w-[132.489px]" data-name="Logo">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 133 64">
-        <g clipPath="url(#clip0_1_250)" id="Layer_1">
-          <path d={svgPaths.p2c2b4370} fill="var(--fill-0, #19459D)" id="Vector" />
-          <path d={svgPaths.p29295e00} fill="var(--fill-0, #19459D)" id="Vector_2" />
-          <path d={svgPaths.p3209fa00} fill="var(--fill-0, #19459D)" id="Vector_3" />
-          <path clipRule="evenodd" d={svgPaths.p1edaac70} fill="var(--fill-0, #19459D)" fillRule="evenodd" id="Vector_4" />
-          <g id="Group">
-            <path d={svgPaths.p410e800} fill="url(#paint0_linear_1_250)" id="Vector_5" />
-            <path d={svgPaths.p2f949000} fill="url(#paint1_linear_1_250)" id="Vector_6" />
-            <g id="Group_2">
-              <path d={svgPaths.p98c4c70} fill="var(--fill-0, #CFE5AE)" id="Vector_7" />
-            </g>
-            <g id="Group_3">
-              <path d={svgPaths.p44fb900} fill="var(--fill-0, #0D6D38)" id="Vector_8" />
-            </g>
-            <g id="Group_4">
-              <path d={svgPaths.pe555700} fill="var(--fill-0, #CFE5AE)" id="Vector_9" />
-            </g>
-          </g>
-          <path d={svgPaths.p3f4ffe00} fill="var(--fill-0, #19459D)" id="Vector_10" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_250" x1="54.3525" x2="50.634" y1="63.3711" y2="46.5562">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1_250" x1="19.1797" x2="54.1336" y1="52.8126" y2="45.0812">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <clipPath id="clip0_1_250">
-            <rect fill="white" height="64" width="132.489" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function Logo1() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px overflow-clip relative shrink-0" data-name="Logo">
-      <Logo />
-    </div>
-  );
-}
-
-function ContactInfo() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-[32px] w-full">sales@meyv.com.tr</p>
-    </div>
-  );
-}
-
-function Top() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Top">
-      <div aria-hidden="true" className="absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-row items-center size-full">
-        <div className="box-border content-stretch flex items-center justify-between px-[80px] py-[60px] relative w-full">
-          <Logo1 />
-          <ContactInfo />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SloganLogo() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[28px] w-[403px]">
-        <p className="mb-0">Naturally Sweet,</p>
-        <p>Perfectly Dried</p>
-      </div>
-      <div className="h-[45px] relative shrink-0 w-[128px]" data-name="image 66">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage66} />
-      </div>
-    </div>
-  );
-}
-
-function Frame10() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
-    </div>
-  );
-}
-
-function Frame11() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
-    </div>
-  );
-}
-
-function Frame12() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
-    </div>
-  );
-}
-
-function DropdownArrowIcon300WRounded1() {
-  return (
-    <div className="h-[7px] relative shrink-0 w-[12.775px]" data-name="Dropdown Arrow Icon 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13 7">
-        <g id="Dropdown Arrow Icon 300W Rounded">
-          <path d={svgPaths.p11ff1530} fill="var(--fill-0, #64748B)" id="Dropdown Arrow" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame13() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Quality</p>
-      <DropdownArrowIcon300WRounded1 />
-    </div>
-  );
-}
-
-function Frame14() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Con</p>
-    </div>
-  );
-}
-
-function Menu1() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame10 />
-      <Frame11 />
-      <Frame12 />
-      <Frame13 />
-      <Frame14 />
-    </div>
-  );
-}
-
-function Item() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Navigation</p>
-      <Menu1 />
-    </div>
-  );
-}
-
-function Frame15() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Linkedin</p>
-    </div>
-  );
-}
-
-function Frame16() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Instagram</p>
-    </div>
-  );
-}
-
-function Menu2() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame15 />
-      <Frame16 />
-    </div>
-  );
-}
-
-function Item1() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Follow Us</p>
-      <Menu2 />
-    </div>
-  );
-}
-
-function Frame17() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Terms & Conditions`}</p>
-    </div>
-  );
-}
-
-function Frame18() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Privacy Policy</p>
-    </div>
-  );
-}
-
-function Menu3() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame17 />
-      <Frame18 />
-    </div>
-  );
-}
-
-function Item2() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Legal</p>
-      <Menu3 />
-    </div>
-  );
-}
-
-function Menu4() {
-  return (
-    <div className="basis-0 content-stretch flex grow items-start justify-between min-h-px min-w-px relative shrink-0" data-name="Menu">
-      <Item />
-      <Item1 />
-      <Item2 />
-    </div>
-  );
-}
-
-function Mid() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Mid">
-      <div className="size-full">
-        <div className="box-border content-stretch flex items-start justify-between px-[80px] py-0 relative w-full">
-          <SloganLogo />
-          <Menu4 />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Subfooter() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Subfooter">
-      <div className="size-full">
-        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[normal] not-italic px-[80px] py-[32px] relative text-[#333333] text-[16px] text-nowrap w-full whitespace-pre">
-          <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
-          <p className="opacity-70 relative shrink-0 text-right">Back to Top</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Component1920PxContact({ onNavigate }: ContactComponentProps = {}) {
   return (
-    <div className="bg-white relative size-full" data-name="1920px - Contact">
-      <div className="absolute h-[515px] left-[665px] top-[864px] w-[572px]" data-name="image 46">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgImage46} />
-      </div>
+    <div className="bg-white relative w-full min-h-screen overflow-x-hidden">
       <SiteHeader onNavigate={onNavigate} />
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[normal] left-[931px] not-italic text-[#212121] text-[28px] top-[226px] tracking-[-0.56px] w-[709px]">Your message matters. Our team is ready to assist you with any questions or requests.</p>
-      <Frame21 />
-      <div className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[96px] left-[280px] not-italic text-[#333333] text-[80px] text-nowrap top-[170px] whitespace-pre">
-        <p className="mb-0">Let’s get</p>
-        <p>in touch</p>
+      
+      {/* Hero Section */}
+      <div className="relative px-4 md:px-8 lg:px-[280px] pt-8 md:pt-12 lg:pt-16">
+        <div className="font-['Inter:Medium',sans-serif] font-medium leading-tight not-italic text-[#333333] text-4xl md:text-6xl lg:text-[80px]">
+          <p className="mb-0">Let&apos;s get</p>
+          <p>in touch</p>
+        </div>
       </div>
-      <Div10 />
-      <Frame22 />
-      <div className="absolute h-[452px] left-[280px] mix-blend-luminosity rounded-[40px] top-[1553px] w-[1360px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage4} />
+
+      {/* Contact Section */}
+      <div className="relative px-4 md:px-8 lg:px-[280px] py-8 md:py-12 lg:py-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[71px]">
+          {/* Left Side - Contact Info */}
+          <div className="flex-1">
+            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-[400px] md:h-[515px] w-[400px] md:w-[572px] -z-10 opacity-50 lg:opacity-100" data-name="image 46">
+              <img alt="" className="w-full h-full object-cover pointer-events-none" src={imgImage46} />
+            </div>
+            
+            <p className="font-['Inter:Regular',sans-serif] font-normal leading-normal not-italic text-[#212121] text-lg md:text-2xl lg:text-[28px] tracking-[-0.56px] mb-8 lg:mb-16">
+              Your message matters. Our team is ready to assist you with any questions or requests.
+            </p>
+            
+            <div className="content-stretch flex flex-col font-medium gap-12 lg:gap-[103px] items-start not-italic text-[#212121] tracking-[-0.56px]">
+              <p className="font-['Inter:Medium',sans-serif] leading-normal text-xl md:text-2xl lg:text-[28px]">
+                Don&apos;t be afraid to say hello with us!
+              </p>
+              <div className="font-['Inter:Medium','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] leading-normal text-[0px]">
+                <p className="font-['Inter:Regular','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] font-normal mb-0 not-italic text-lg md:text-xl lg:text-[24px]">
+                  Phone
+                </p>
+                <p className="mb-0 text-xl md:text-2xl lg:text-[28px]">+90 (232) 864 22 00</p>
+                <p className="mb-0 text-xl md:text-2xl lg:text-[28px]"> </p>
+                <p className="font-['Inter:Regular','Noto_Sans:Regular','Noto_Sans:Medium',sans-serif] font-normal mb-0 not-italic text-lg md:text-xl lg:text-[24px]">
+                  Email
+                </p>
+                <p className="text-xl md:text-2xl lg:text-[28px]">sales@meyv.com.tr</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Form */}
+          <div className="flex-1 lg:flex-none lg:w-[709px]">
+            <Div10 />
+          </div>
+        </div>
       </div>
-      <Frame />
+
+      {/* Office Section */}
+      <div className="relative px-4 md:px-8 lg:px-[280px] py-8 md:py-12">
+        <Frame22 />
+      </div>
+
+      {/* Map Image */}
+      <div className="relative px-4 md:px-8 lg:px-[280px] py-8 md:py-12">
+        <div className="h-[300px] md:h-[400px] lg:h-[452px] mix-blend-luminosity rounded-[20px] md:rounded-[40px] w-full overflow-hidden" data-name="image">
+          <img alt="" className="w-full h-full object-cover pointer-events-none rounded-[20px] md:rounded-[40px]" src={imgImage4} />
+        </div>
+      </div>
+
+      {/* Logo Frame - Hidden on mobile */}
+      <div className="hidden lg:block">
+        <Frame />
+      </div>
+
+      {/* Instagram Section */}
       <Frame26 />
-      <div className="absolute bottom-[31px] left-0 w-full">
+
+      {/* Footer */}
+      <div className="relative mt-8">
         <SiteFooter onNavigate={onNavigate} />
       </div>
     </div>
