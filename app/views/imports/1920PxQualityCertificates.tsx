@@ -19,59 +19,60 @@ const certificationImages = [
 ];
 
 const overviewParagraphs = [
-  "Our products are grown under continuous supervision on contracted or company-owned fields, ensuring full quality control from the very beginning. After harvest, the raw materials are processed into finished or semi-finished goods at our own facilities.",
-  "Every step—from washing and slicing to freezing, packaging, and container loading—is carried out by our group companies, delivering an unbroken, fully traceable production chain.",
+  "Our products are grown under continuous supervision on contracted or company-owned fields, ensuring complete quality control from the very beginning. After harvest, the raw materials are processed into finished or semi-finished goods at our own production facilities. All packaging and related services are carried out by our group companies, maintaining full control over every stage—from field to container loading. This fully integrated and traceable production model allows us to operate with uncompromising quality standards, ensuring transparency, consistency, and reliability across the entire supply chain.",
 ];
 
 const storySections = [
   {
     title: "From field to final product",
     body:
-      "Every stage is managed in-house—from cultivation and processing to packaging and logistics—so we maintain complete traceability and deliver consistent quality without compromise.",
+      "Every stage of our production is managed in-house — from cultivation in our contracted and company-owned fields to processing, packaging, and logistics. This end-to-end control ensures total traceability and consistent product quality, allowing us to deliver premium standards without compromise.",
   },
   {
     title: "Integrated quality, transparent process",
     body:
-      "We combine agricultural expertise with advanced manufacturing technologies inside our own facilities, guaranteeing transparency, reliability, and customer trust across the entire value chain.",
+      "We combine agricultural expertise with advanced manufacturing and packaging technologies within our own facilities. By managing every link in the value chain, we guarantee transparency, traceability, and reliability — ensuring our customers receive products they can trust, every time.",
   },
 ];
 
 const certificationCards = [
-  { label: "ISO 22000", description: "Food Safety Management System" },
-  { label: "BRCGS", description: "Global Food Safety Standard" },
-  { label: "ISO 9001", description: "Quality Management System" },
+  { label: "ISO 22000 – Food Safety Management System", description: "" },
+  { label: "BRCGS Food Safety Certification", description: "" },
+  { label: "ISO 9001 – Quality Management System", description: "" },
 ];
 
 export default function Component1920PxQualityCertificates() {
   return (
     <div className="bg-white min-h-screen w-full overflow-x-hidden">
       <Header />
-      <main className="flex flex-col gap-16 md:gap-24 pb-16 md:pb-24">
+      <main className="flex flex-col">
         {/* Hero */}
-        <section className="px-4 md:px-8 lg:px-16 pt-24">
-          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.08)] relative h-[240px] sm:h-[300px] lg:h-[360px]">
+        <section className="px-4 md:px-8 lg:px-20 pt-4 md:pt-6">
+          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden relative h-[300px] sm:h-[350px] md:h-[400px]">
             <Image src={heroImage} alt="Quality hero" fill priority className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="relative z-10 flex h-full flex-col justify-center gap-4 px-6 sm:px-12 text-white">
-              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl leading-tight">Quality & Certificates</p>
-              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-2xl">
-                Ensuring excellence at every step—from field to final product—through certified processes, strict quality control, and full traceability.
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/25" />
+            <div className="relative z-10 flex h-full flex-col justify-center gap-4 md:gap-10 px-6 sm:px-10 md:px-16 text-white">
+              <h1 className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-[80px] lg:leading-[96px] leading-tight max-w-2xl">
+                Quality & Certificates
+              </h1>
+              <p className="font-['Inter:Medium',sans-serif] text-base sm:text-lg md:text-xl lg:text-[21px] lg:leading-[25px] max-w-2xl">
+                Ensuring excellence at every step — from field to final product — through certified processes, strict quality control, and complete traceability.
               </p>
       </div>
     </div>
         </section>
 
         {/* Overview */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl text-[#212121] leading-tight">
-                Vertical integration & full traceability
-              </p>
+        <section className="py-16 md:py-20 lg:py-32 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-8">
+            <div className="flex-1 text-left">
+              <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#212121] tracking-tight">
+                Vertical integration and full traceability
+              </h2>
     </div>
-            <div className="flex-1 text-center md:text-left space-y-4">
+            <div className="flex-1 text-left space-y-4 lg:space-y-6">
               {overviewParagraphs.map((paragraph) => (
-                <p key={paragraph} className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
+                <p key={paragraph} className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%] text-[#303030]">
                   {paragraph}
                 </p>
               ))}
@@ -80,13 +81,13 @@ export default function Component1920PxQualityCertificates() {
         </section>
 
         {/* Map and process timeline */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto space-y-10">
-            <div className="relative w-full rounded-[32px] overflow-hidden shadow-xl">
+        <section className="py-16 md:py-20 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto space-y-10 md:space-y-12">
+            <div className="relative w-full rounded-[40px] overflow-hidden">
               <Image src={mapImage} alt="Global operations map" width={1200} height={700} className="w-full h-auto object-cover" />
     </div>
             <div className="flex justify-center">
-              <div className="w-full max-w-3xl rounded-[32px] overflow-hidden shadow-lg">
+              <div className="w-full max-w-4xl rounded-[40px] overflow-hidden">
                 <Image src={processTimelineImage} alt="Process timeline" width={950} height={400} className="w-full h-auto object-cover" />
         </div>
       </div>
@@ -94,19 +95,23 @@ export default function Component1920PxQualityCertificates() {
         </section>
 
         {/* Story sections */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto space-y-12">
+        <section className="py-16 md:py-20 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto space-y-16 md:space-y-20">
             {storySections.map((section, index) => (
               <div
                 key={section.title}
-                className={`flex flex-col ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-16`}
+                className={`flex flex-col ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 md:gap-12 lg:gap-16`}
               >
-                <div className="flex-1 text-center lg:text-left space-y-4">
-                  <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl text-[#212121] leading-tight">{section.title}</p>
-                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030]/85 leading-relaxed">{section.body}</p>
+                <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                  <h3 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#333333] tracking-tight">
+                    {section.title}
+                  </h3>
+                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[16px] lg:leading-[150%] text-[#303030] opacity-70">
+                    {section.body}
+                  </p>
       </div>
-                <div className="flex-1 flex justify-center lg:justify-end">
-                  <div className="relative w-full max-w-md aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg">
+                <div className="flex-1 flex justify-center">
+                  <div className="relative w-full max-w-lg aspect-[4/3] rounded-[40px] overflow-hidden">
                     <Image
                       src={storyImages[index % storyImages.length]}
                       alt={section.title}
@@ -122,30 +127,33 @@ export default function Component1920PxQualityCertificates() {
         </section>
 
         {/* Certifications */}
-        <section className="bg-[#f1f4ee] px-4 md:px-8 lg:px-16 py-12 md:py-20">
-          <div className="max-w-screen-xl mx-auto space-y-12">
-            <div className="space-y-4 text-center">
-              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl text-[#115132]">Certified quality, guaranteed freshness</p>
-              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030]/80 leading-relaxed">
-                Our operations meet globally recognized food-safety and quality standards, ensuring every shipment is consistent, hygienic, and trustworthy.
+        <section className="bg-[#F1F4EE] py-16 md:py-20 lg:py-32 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto space-y-10 md:space-y-12 lg:space-y-16">
+            <div className="space-y-4 lg:space-y-6 text-left max-w-3xl">
+              <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#115132] tracking-tight">
+                Certified Quality, Guaranteed Freshness
+              </h2>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%] text-[#303030]">
+                Our operations meet the highest international food safety and quality standards. From farm to frozen fruit, every process is certified to ensure consistency, hygiene, and trust — delivering products that meet global expectations.
               </p>
             </div>
-            <div className="grid gap-8 md:gap-12 md:grid-cols-3">
+            <div className="grid gap-8 md:gap-10 lg:gap-12 md:grid-cols-3">
               {certificationCards.map((card, index) => (
-                <div key={card.label} className="flex flex-col items-center gap-6">
-                  <div className="relative w-full aspect-[3/4] rounded-[32px] overflow-hidden shadow-lg">
+                <div key={card.label} className="flex flex-col gap-4 lg:gap-6">
+                  <div className="relative w-full aspect-[3/4] rounded-[40px] overflow-hidden bg-white">
                     <Image
                       src={certificationImages[index]}
                       alt={card.label}
                       fill
-                      sizes="(max-width: 1024px) 80vw, 20vw"
-                      className="object-cover"
+                      sizes="(max-width: 1024px) 80vw, 30vw"
+                      className="object-contain p-4"
                     />
                   </div>
-                  <div className="text-center space-y-1">
-                    <p className="font-['Inter:Medium',sans-serif] text-xl text-[#212121]">{card.label}</p>
-                    <p className="font-['Inter:Regular',sans-serif] text-base text-[#303030]/80">{card.description}</p>
-          </div>
+                  {card.label && (
+                    <p className="font-['Inter:Medium',sans-serif] text-base sm:text-lg text-[#212121] text-center">
+                      {card.label}
+                    </p>
+                  )}
               </div>
               ))}
             </div>

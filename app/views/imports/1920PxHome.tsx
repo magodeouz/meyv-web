@@ -23,19 +23,19 @@ const stats = [
     value: "100%",
     label: "Customer Satisfaction Rate",
     description:
-      "Built around customer needs, our premium ingredients earn loyalty and drive word-of-mouth growth.",
+      "Meyv shows how products meet consumer needs, enhancing satisfaction and fostering loyalty, leading to recommendations and expanding influence.",
   },
   {
     value: "20+",
     label: "Years of Experience",
     description:
-      "Two decades of agricultural expertise combined with cutting-edge preservation technology.",
+      "With 20 years in agriculture, Meyv shows how products meet consumer needs, enhancing satisfaction and loyalty.",
   },
   {
     value: "160K",
-    label: "Farmers Around the World",
+    label: "Farmer Around the World",
     description:
-      "A global network of growers guided by sustainable, ethical partnerships.",
+      "Meyv illustrates how products cater to the needs of farmers globally, boosting their satisfaction and loyalty. Loyalty boosts recommendations and expands impact.",
   },
 ];
 
@@ -44,19 +44,19 @@ const preservationSteps = [
     number: "01",
     title: "Fresh Harvesting",
     description:
-      "Produce is picked at peak ripeness to lock in optimal flavor, color, and nutrition.",
+      "Fruits and vegetables are picked at peak ripeness to ensure optimal flavor and nutrition.",
   },
   {
     number: "02",
     title: "Rapid Freezing",
     description:
-      "Each piece is frozen individually using ultra-low temperatures to protect texture and prevent clumping.",
+      "Each piece is quickly frozen individually using ultra-low temperatures to prevent clumping and preserve texture.",
   },
   {
     number: "03",
     title: "Long-Lasting Quality",
     description:
-      "Gentle vacuum drying preserves taste, aroma, and nutrients for extended shelf life.",
+      "Maintains natural taste, color, and nutritional value—perfect for foodservice and retail with extended shelf life.",
   },
 ];
 
@@ -67,22 +67,22 @@ const productDetails = [
     description:
       "Vibrant color and bright acidity in a crisp bite—ideal for snacks, baking, or premium toppings.",
     features: [
-      "100% natural with no added sugar",
-      "High in potassium and fiber",
-      "Slices, cubes, or powder formats",
-      "Shelf-stable without refrigeration",
+      "100% natural, no added sugar",
+      "Rich in potassium and fiber",
+      "Long shelf life without refrigeration",
+      "Available in slices, cubes, or powder formats",
     ],
   },
   {
     id: "blueberry",
     name: "Blueberry",
     description:
-      "Naturally sweet blueberries preserved at peak freshness with antioxidants intact.",
+      "Our freeze-dried bananas deliver the naturally sweet taste and creamy texture of ripe fruit in a light, crunchy form. Gently processed to preserve nutrients, color, and flavor without any additives, these banana slices are ideal for snacks, cereals, smoothie blends, or baking applications.",
     features: [
-      "Whole, diced, or powdered",
-      "Perfect for cereals, confectionery, and beverages",
-      "Deep color retention",
-      "No preservatives or additives",
+      "100% natural, no added sugar",
+      "Rich in potassium and fiber",
+      "Long shelf life without refrigeration",
+      "Available in slices, cubes, or powder formats",
     ],
     isDefault: true,
   },
@@ -116,34 +116,38 @@ const valuePillars = [
   {
     title: "Unmatched Freshness",
     description:
-      "Advanced IQF and freeze-drying techniques preserve the original flavor, aroma, and nutrients.",
+      "We preserve the original taste, color, and nutrients of our ingredients through advanced IQF and freeze-drying technologies.",
     image: pillarImageTwo,
     textColor: "text-[#115132]",
-    background: "bg-[#f1f4ee]",
+    background: "bg-[#F1F4EE]",
+    size: "small",
   },
   {
     title: "Consistent Quality",
     description:
-      "Every batch is verified against international food safety and quality standards.",
+      "From harvest to packaging, every product meets strict international food safety and quality standards.",
     image: pillarImageOne,
     textColor: "text-[#115132]",
-    background: "bg-[#f1f4ee]",
+    background: "bg-[#F1F4EE]",
+    size: "medium",
   },
   {
     title: "Tailored Solutions",
     description:
-      "Custom formats and blends built for retail, foodservice, and manufacturing partners.",
+      "We offer customizable formats and blends to fit your production needs, whether for retail, foodservice, or industrial use.",
     image: pillarImageThree,
-    textColor: "text-[#cde253]",
+    textColor: "text-[#CDE253]",
     background: "bg-[#115132]",
+    size: "large",
   },
   {
     title: "Sustainable Approach",
     description:
-      "Eco-conscious farming, minimal waste, and energy-efficient processing protect our planet.",
+      "We prioritize eco-conscious farming, minimal waste, and energy-efficient processing to protect our planet while feeding the world.",
     image: pillarImageFour,
     textColor: "text-[#115132]",
-    background: "bg-[#cde253]",
+    background: "bg-[#CDE253]",
+    size: "xlarge",
   },
 ];
 
@@ -162,13 +166,13 @@ type ProductAccordionProps = {
 function StatCard({ value, label, description }: (typeof stats)[number]) {
   return (
     <div className="space-y-2">
-      <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+      <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-6xl sm:text-7xl md:text-8xl lg:text-[96px] leading-tight lg:leading-[116px]">
         {value}
       </p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] text-[#212121] text-lg sm:text-xl md:text-2xl leading-snug">
+      <p className="font-['Inter:Semi_Bold',sans-serif] text-[#212121] text-lg sm:text-xl lg:text-[21px] leading-snug lg:leading-[25px]">
         {label}
       </p>
-      <p className="font-['Inter:Regular',sans-serif] text-[#303030]/80 text-sm sm:text-base md:text-lg leading-relaxed">
+      <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-sm sm:text-base lg:text-[15px] leading-relaxed lg:leading-[18px] opacity-70">
         {description}
       </p>
     </div>
@@ -177,7 +181,7 @@ function StatCard({ value, label, description }: (typeof stats)[number]) {
 
 function StatsSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
       {stats.map((stat) => (
         <StatCard key={stat.label} {...stat} />
       ))}
@@ -189,105 +193,86 @@ function AboutSection() {
   return (
     <section
       id="about"
-      className="px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32"
+      className="bg-white px-4 md:px-8 lg:px-20 xl:px-[280px] py-16 md:py-24 lg:py-[160px]"
     >
-      <div className="max-w-screen-xl mx-auto space-y-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
-          <div className="space-y-4">
-            <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+      <div className="max-w-[1920px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-start mb-16 lg:mb-[120px]">
+          {/* Left side - Title */}
+          <div>
+            <h2 className="font-['Inter:Medium',sans-serif] text-[#212121] text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight lg:leading-[58px] tracking-tight">
               Where freshness meets innovation
-            </p>
-            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg md:text-xl leading-relaxed">
-              Meyv is redefining how the world experiences fruit through
-              sustainable sourcing and advanced preservation. Our mission is to
-              deliver nutrient-rich products that retain their original flavor,
-              color, and integrity—without compromise.
-            </p>
-            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg md:text-xl leading-relaxed">
-              By blending modern techniques with time-honored harvesting
-              practices, we offer shelf-stable solutions that meet demands for
-              quality, convenience, and sustainability.
+            </h2>
+          </div>
+          
+          {/* Right side - Content */}
+          <div className="space-y-6 lg:space-y-10">
+            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] leading-relaxed lg:leading-[160%]">
+              Meyv, where tradition meets innovation, is dedicated to redefining how the world experiences fruit—through sustainable sourcing and advanced freeze-drying technology. Our mission is to deliver natural, nutrient-rich fruit products that retain their original flavor, color, and integrity—without compromise. By blending modern preservation techniques with time-honored harvesting practices, we offer shelf-stable solutions that meet today's demands for quality, convenience, and sustainability—supporting healthier choices for generations to come.
             </p>
             <button
               type="button"
               onClick={() => scrollToSection("products")}
-              className="font-['Inter:Bold',sans-serif] text-[#212121] text-base sm:text-lg md:text-xl inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
+              className="font-['Inter:Bold',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
             >
-              Learn More <span aria-hidden="true">→</span>
+              Learn More →
             </button>
           </div>
-          <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl">
-            <Image
-              src={aboutImage}
-              alt="Team harvesting fresh produce"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              className="object-cover"
-              priority
-            />
-          </div>
         </div>
+        
+        {/* Stats Section */}
         <StatsSection />
       </div>
     </section>
   );
 }
 
-function MissionSection() {
-  return (
-    <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-14">
-        <div className="flex-1 space-y-6">
-          <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg md:text-xl leading-relaxed">
-            By integrating modern techniques with time-honored methods, we’re
-            creating a more resilient, efficient agricultural landscape for
-            future generations.
-          </p>
-          <button
-            type="button"
-            onClick={() => scrollToSection("products")}
-            className="font-['Inter:Bold',sans-serif] text-[#212121] text-base sm:text-lg md:text-xl inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
-          >
-            Learn More <span aria-hidden="true">→</span>
-          </button>
-        </div>
-        <div className="flex-1 w-full max-w-xl">
-          <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl">
-            <Image
-              src={aboutImage}
-              alt="Mission section imagery"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FamiliesFirstSection() {
   return (
-    <section className="relative bg-[#f1f4ee] py-16 md:py-24 lg:py-32 overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-center space-y-4">
-        <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
-          We believe in putting families first
-        </p>
-        <p className="font-['Inter:Regular',sans-serif] text-[#3f3f3f] text-base sm:text-lg md:text-xl">
-          Nutrition, transparency, and long-term partnerships guide every
-          decision we make.
-        </p>
-      </div>
-      <div className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 w-64 h-48 lg:w-96 lg:h-64 opacity-40">
-        <div className="relative w-full h-full rounded-3xl overflow-hidden">
+    <section className="relative bg-[#F1F4EE] py-16 md:py-20 lg:py-[131px] overflow-hidden">
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-20 relative">
+        {/* Small decorative image on left */}
+        <div className="hidden lg:block absolute left-[52px] top-1/2 -translate-y-1/2 w-[280px] md:w-[364px] h-[220px] md:h-[285px] rounded-[40px] overflow-hidden">
           <Image
             src={familiesImage}
-            alt="Family harvesting fruit"
+            alt="Fresh produce"
             fill
-            sizes="400px"
+            sizes="364px"
             className="object-cover"
           />
+        </div>
+        
+        {/* Center content */}
+        <div className="text-center max-w-[876px] mx-auto space-y-8 lg:space-y-12">
+          <h2 className="font-['Inter:Medium',sans-serif] text-[#115132] text-3xl sm:text-4xl md:text-6xl lg:text-[96px] leading-tight lg:leading-[116px] tracking-tight text-center">
+            We believe in putting families first
+          </h2>
+        </div>
+        
+        {/* Bottom image and text */}
+        <div className="mt-12 lg:mt-[94px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[91px] items-center max-w-[1360px] mx-auto lg:mx-[280px]">
+          <div className="space-y-6 lg:space-y-10">
+            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] leading-relaxed lg:leading-[160%]">
+              By integrating modern techniques with time-honored methods, we aim to create a more resilient and efficient agricultural landscape for future generations.
+            </p>
+            <button
+              type="button"
+              onClick={() => scrollToSection("products")}
+              className="font-['Inter:Bold',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
+            >
+              Learn More →
+            </button>
+          </div>
+          
+          <div className="relative w-full aspect-[545/403] rounded-[40px] overflow-hidden shadow-lg">
+            <Image
+              src={aboutImage}
+              alt="Family with fresh produce"
+              fill
+              sizes="(max-width: 1024px) 100vw, 545px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -296,40 +281,55 @@ function FamiliesFirstSection() {
 
 function ProductAccordion({ activeId, onToggle }: ProductAccordionProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {productDetails.map((product) => {
         const isOpen = product.id === activeId;
         return (
-          <div key={product.id} className="border-b border-[#d5d9e3] pb-4">
+          <div key={product.id} className={isOpen ? "space-y-4" : ""}>
             <button
               type="button"
               onClick={() => onToggle(isOpen ? "" : product.id)}
-              className="flex items-center justify-between w-full py-2 text-left"
+              className={`flex items-center justify-between w-full text-left ${
+                isOpen ? "pb-3" : "pb-3 border-b border-[#D5D9E3]"
+              }`}
             >
               <span
-                className={`font-['Inter:Medium',sans-serif] text-lg sm:text-xl md:text-2xl ${
+                className={`font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl lg:text-[32px] leading-tight lg:leading-[39px] tracking-tight ${
                   isOpen ? "text-[#115132]" : "text-[#212121]"
                 }`}
               >
                 {product.name}
               </span>
-              <span
-                className={`inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#d5d9e3] text-[#212121] transition-transform ${
-                  isOpen ? "rotate-180 text-[#115132]" : ""
+              <div
+                className={`flex items-center justify-center w-8 h-8 transition-transform ${
+                  isOpen ? "rotate-180" : ""
                 }`}
               >
-                ⌄
-              </span>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path
+                    d="M8 12L16 20L24 12"
+                    stroke={isOpen ? "#115132" : "#212121"}
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
             </button>
             {isOpen ? (
-              <div className="space-y-3 pt-2">
-                <p className="font-['Inter:Regular',sans-serif] text-[#212121] text-base sm:text-lg leading-relaxed">
+              <div className="space-y-4 pb-3 border-b border-[#D5D9E3]">
+                <p className="font-['Inter:Regular',sans-serif] text-[#212121] text-base lg:text-[16px] leading-relaxed lg:leading-[160%]">
                   {product.description}
                 </p>
-                <div className="font-['Inter:Regular',sans-serif] text-sm sm:text-base leading-relaxed text-[#212121] space-y-0.5">
-                  {product.features.map((feature) => (
-                    <p key={feature}>{`• ${feature}`}</p>
-                  ))}
+                <div className="space-y-2">
+                  <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-base lg:text-[16px] leading-relaxed lg:leading-[160%]">
+                    Features:
+                  </p>
+                  <div className="font-['Inter:Regular',sans-serif] text-base lg:text-[16px] leading-relaxed lg:leading-[160%] text-[#212121]">
+                    {product.features.map((feature) => (
+                      <p key={feature}>{`• ${feature}`}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ) : null}
@@ -349,25 +349,28 @@ function ProductsSection() {
   return (
     <section
       id="products"
-      className="px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32"
+      className="bg-white px-4 md:px-8 lg:px-20 xl:px-[280px] py-16 md:py-24 lg:py-[160px]"
     >
-      <div className="max-w-screen-xl mx-auto space-y-12">
-        <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+      <div className="max-w-[1920px] mx-auto space-y-12 lg:space-y-[60px]">
+        <h2 className="font-['Inter:Medium',sans-serif] text-[#212121] text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight lg:leading-[58px] tracking-tight">
           Products
-        </p>
-        <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-12">
-          <div className="flex-1 w-full">
-            <div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden shadow-xl">
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-[548px_1fr] gap-10 lg:gap-[148px] items-start">
+          {/* Left side - Product Image */}
+          <div className="relative w-full">
+            <div className="relative w-full aspect-[548/491] rounded-[40px] overflow-hidden shadow-lg">
               <Image
                 src={productImage}
                 alt="Freeze-dried fruit assortment"
                 fill
-                sizes="(max-width: 1024px) 100vw, 480px"
+                sizes="(max-width: 1024px) 100vw, 548px"
                 className="object-cover"
               />
             </div>
           </div>
-          <div className="flex-1 w-full">
+          
+          {/* Right side - Product Accordion */}
+          <div className="relative w-full max-w-[664px]">
             <ProductAccordion
               activeId={activeId}
               onToggle={(id) => setActiveId(id || defaultId)}
@@ -383,58 +386,76 @@ function PreservationMethodsSection() {
   return (
     <section
       id="methods"
-      className="bg-neutral-50 px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32"
+      className="bg-[#FAFAFA] px-4 md:px-8 lg:px-20 xl:px-[280px] py-16 md:py-24 lg:py-[160px]"
     >
-      <div className="max-w-screen-xl mx-auto space-y-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <div className="space-y-6">
-            <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+      <div className="max-w-[1920px] mx-auto space-y-12 lg:space-y-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-start">
+          {/* Left side - Content */}
+          <div className="space-y-6 lg:space-y-10">
+            <h2 className="font-['Inter:Medium',sans-serif] text-[#212121] text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight lg:leading-[58px] tracking-tight">
               Our preservation methods, explained
-            </p>
-            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg md:text-xl leading-relaxed">
-              From field to final product, we maintain the integrity of every
-              ingredient. IQF and gentle vacuum drying lock in peak freshness so
-              premium quality is available year-round.
+            </h2>
+            <p className="font-['Inter:Regular',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] leading-relaxed lg:leading-[160%]">
+              From field to final product, our mission is to maintain the integrity of every ingredient we process. Whether flash-frozen with IQF or gently vacuum-dried, our methods lock in peak freshness, making premium quality available all year round.
             </p>
             <button
               type="button"
               onClick={() => scrollToSection("products")}
-              className="font-['Inter:Bold',sans-serif] text-[#212121] text-base sm:text-lg md:text-xl inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
+              className="font-['Inter:Bold',sans-serif] text-[#303030] text-base sm:text-lg lg:text-[18px] inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
             >
-              Learn More <span aria-hidden="true">→</span>
+              Learn More →
             </button>
           </div>
-          <div className="relative w-full">
-            <div className="relative rounded-[32px] overflow-hidden shadow-xl">
-              <div className="relative aspect-[3/4]">
-                <Image
-                  src={preservationImage}
-                  alt="Preservation process"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-4 left-4 bg-[rgba(205,226,83,0.9)] text-[#115132] px-4 py-2 rounded-full font-['Inter:Medium',sans-serif] text-base sm:text-lg">
+          
+          {/* Right side - Empty space for layout */}
+          <div className="hidden lg:block"></div>
+        </div>
+        
+        {/* Image and Steps Row */}
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-8">
+          {/* Image with badge */}
+          <div className="relative w-full lg:w-[316px] flex-shrink-0">
+            <div className="relative w-full aspect-[316/540] rounded-[40px] overflow-hidden shadow-lg">
+              <Image
+                src={preservationImage}
+                alt="Preservation process"
+                fill
+                sizes="(max-width: 1024px) 100vw, 316px"
+                className="object-cover"
+              />
+              <div className="absolute left-0 top-[400px] bg-[rgba(205,226,83,0.8)] rounded-r-[20px] px-5 py-2">
+                <p className="font-['Inter:Medium',sans-serif] text-[#FAFAFA] text-xl sm:text-2xl lg:text-[28px] leading-tight lg:leading-[34px] tracking-tight">
                   From fresh to forever
-                </div>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {preservationSteps.map((step) => (
-            <div key={step.number} className="space-y-4 border-t border-[#d5d9e3] pt-6">
-              <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-3xl sm:text-4xl md:text-5xl">
-                {step.number}
-              </p>
-              <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-xl sm:text-2xl">
-                {step.title}
-              </p>
-              <p className="font-['Inter:Regular',sans-serif] text-[#212121] text-base sm:text-lg leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
+          
+          {/* Preservation Steps */}
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8">
+            {preservationSteps.map((step, index) => (
+              <div 
+                key={step.number} 
+                className={`space-y-5 flex flex-col ${
+                  index === 0 ? 'justify-start' : 
+                  index === 1 ? 'justify-center' : 
+                  'justify-end'
+                }`}
+              >
+                <p className="font-['Inter:Medium',sans-serif] text-[#115132] text-4xl sm:text-5xl lg:text-[48px] leading-tight lg:leading-[58px] tracking-tight">
+                  {step.number}
+                </p>
+                <div className="space-y-4">
+                  <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-xl sm:text-2xl lg:text-[24px] leading-tight lg:leading-[29px]">
+                    {step.title}
+                  </p>
+                  <p className="font-['Inter:Regular',sans-serif] text-[#212121] text-base lg:text-[16px] leading-relaxed lg:leading-[160%]">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -447,24 +468,27 @@ function ValuePillarCard({
   image,
   background,
   textColor,
+  size,
 }: (typeof valuePillars)[number]) {
+  const imageHeight = size === "small" ? "h-[105px]" : size === "medium" ? "h-[160px]" : size === "large" ? "h-[152px]" : "h-[476px]";
+  
   return (
-    <div className={`${background} rounded-[32px] p-6 md:p-8 flex flex-col gap-4`}>
-      <div className="relative h-40 rounded-2xl overflow-hidden">
+    <div className={`${background} rounded-[24px] p-5 md:p-6 flex flex-col gap-4 md:gap-6`}>
+      <div className={`relative ${imageHeight} rounded-[24px] overflow-hidden`}>
         <Image
           src={image}
           alt={title}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
           className="object-cover"
         />
       </div>
-      <div className="space-y-2">
-        <p className={`font-['Inter:Medium',sans-serif] text-xl sm:text-2xl ${textColor}`}>
+      <div className="space-y-3 md:space-y-[14px]">
+        <h3 className={`font-['Inter:Medium',sans-serif] text-xl sm:text-2xl lg:text-[28px] leading-tight lg:leading-[34px] ${textColor}`}>
           {title}
-        </p>
+        </h3>
         <p
-          className={`font-['Inter:Regular',sans-serif] text-sm sm:text-base md:text-lg leading-relaxed ${textColor}`}
+          className={`font-['Inter:Regular',sans-serif] text-sm lg:text-[14px] leading-relaxed lg:leading-[17px] ${textColor}`}
         >
           {description}
         </p>
@@ -477,16 +501,34 @@ function WhyChooseSection() {
   return (
     <section
       id="why"
-      className="px-4 md:px-8 lg:px-16 xl:px-24 py-16 md:py-24 lg:py-32"
+      className="bg-white px-4 md:px-8 lg:px-20 xl:px-[280px] py-16 md:py-24 lg:py-[160px]"
     >
-      <div className="max-w-screen-xl mx-auto space-y-12">
-        <p className="font-['Inter:Medium',sans-serif] text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+      <div className="max-w-[1920px] mx-auto space-y-12 lg:space-y-[60px]">
+        <h2 className="font-['Inter:Medium',sans-serif] text-[#212121] text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight lg:leading-[58px] tracking-tight">
           Why choose our products?
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {valuePillars.map((pillar) => (
-            <ValuePillarCard key={pillar.title} {...pillar} />
-          ))}
+        </h2>
+        
+        {/* Custom Grid Layout - matches Figma design */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[316px_432px_548px] gap-4 lg:gap-8">
+          {/* Small card - Unmatched Freshness */}
+          <div className="lg:row-span-1">
+            <ValuePillarCard {...valuePillars[0]} />
+          </div>
+          
+          {/* Medium card - Consistent Quality */}
+          <div className="lg:row-span-1">
+            <ValuePillarCard {...valuePillars[1]} />
+          </div>
+          
+          {/* XLarge card - Sustainable Approach (spans 2 rows) */}
+          <div className="lg:row-span-2">
+            <ValuePillarCard {...valuePillars[3]} />
+          </div>
+          
+          {/* Large card - Tailored Solutions (spans 2 columns) */}
+          <div className="md:col-span-2 lg:col-span-2">
+            <ValuePillarCard {...valuePillars[2]} />
+          </div>
         </div>
       </div>
     </section>
@@ -495,7 +537,7 @@ function WhyChooseSection() {
 
 function CtaSection() {
   return (
-    <section className="relative w-full min-h-[320px] md:min-h-[450px] lg:min-h-[560px] my-12">
+    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px]">
       <div className="absolute inset-0">
         <Image
           src={ctaImage}
@@ -505,18 +547,29 @@ function CtaSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25" />
       </div>
-      <div className="relative z-10 max-w-screen-xl mx-auto h-full flex flex-col items-center justify-center gap-6 text-center px-4 md:px-8">
-        <p className="font-['Inter:Bold',sans-serif] text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center gap-10 lg:gap-[60px] text-center px-4">
+        <h2 className="font-['Inter:Bold',sans-serif] text-[#115132] text-5xl sm:text-7xl md:text-8xl lg:text-[152px] leading-tight lg:leading-[184px] tracking-tight">
           Crafted to Stay Fresh
-        </p>
+        </h2>
         <button
           type="button"
           onClick={() => scrollToSection("products")}
-          className="bg-white text-[#115132] px-8 md:px-12 py-3 md:py-4 rounded-full font-['Inter:Medium',sans-serif] text-base sm:text-lg uppercase tracking-wider"
+          className="bg-white text-[#115132] px-8 md:px-12 py-4 md:py-5 lg:px-12 lg:py-[10px] rounded-[32px] font-['Inter:Medium',sans-serif] text-base sm:text-lg lg:text-[18px] hover:bg-opacity-90 transition-all inline-flex items-center gap-4 uppercase tracking-[0.1em]"
         >
-          Products
+          <span>Products</span>
+          <div className="w-10 h-10 bg-[#115132] rounded-full flex items-center justify-center">
+            <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+              <path
+                d="M22 8L2 8M22 8L15 1M22 8L15 15"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </section>
@@ -535,19 +588,18 @@ export default function Component1920PxHome() {
         backgroundAlt="Fresh produce crates in an orchard"
         titleLines={["Organic &", "Conventional"]}
         paragraphs={[
-          "Premium fruit, vegetable, herb, and specialty ingredients—grown and processed to meet the highest standards.",
+          "We provide premium fruit, vegetable, herb, and specialty ingredients—grown and processed to meet the highest standards.",
         ]}
-        paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl"
-        contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-16 py-32 md:py-48 lg:py-64 text-white gap-12"
+        paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-lg sm:text-xl md:text-xl lg:text-[21px] leading-relaxed max-w-[785px]"
+        contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-20 py-24 md:py-32 lg:py-40 text-white gap-12 md:gap-16"
         hideGradient
         cta={{
           label: "Products",
           onClick: () => scrollToSection("products"),
-          className: "px-6 md:px-10 py-3 md:py-4 border-white",
+          className: "px-6 py-4 border-white rounded-full",
         }}
       />
       <AboutSection />
-      <MissionSection />
       <FamiliesFirstSection />
       <ProductsSection />
       <PreservationMethodsSection />

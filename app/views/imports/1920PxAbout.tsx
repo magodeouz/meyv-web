@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { HeroSection as SharedHeroSection } from "@/components/HeroSection";
 import svgPaths from "./svg-uxdpx2db5h";
 
@@ -117,47 +118,6 @@ const milestones = [
   }
 ];
 
-function Logo() {
-  return (
-    <div className="h-16 w-32 md:h-20 md:w-40">
-      <svg className="h-full w-full" viewBox="0 0 133 64" fill="none" preserveAspectRatio="xMidYMid meet">
-        <g clipPath="url(#logo-clip)">
-          <path d={svgPaths.p2c2b4370} fill="var(--fill-0, #19459D)" />
-          <path d={svgPaths.p29295e00} fill="var(--fill-0, #19459D)" />
-          <path d={svgPaths.p3209fa00} fill="var(--fill-0, #19459D)" />
-          <path d={svgPaths.p1edaac70} fill="var(--fill-0, #19459D)" fillRule="evenodd" clipRule="evenodd" />
-          <path d={svgPaths.p410e800} fill="url(#logo-paint-0)" />
-          <path d={svgPaths.p2f949000} fill="url(#logo-paint-1)" />
-          <path d={svgPaths.p98c4c70} fill="var(--fill-0, #CFE5AE)" />
-          <path d={svgPaths.p44fb900} fill="var(--fill-0, #0D6D38)" />
-          <path d={svgPaths.pe555700} fill="var(--fill-0, #CFE5AE)" />
-          <path d={svgPaths.p3f4ffe00} fill="var(--fill-0, #19459D)" />
-        </g>
-        <defs>
-          <linearGradient id="logo-paint-0" x1="54.3525" x2="50.634" y1="63.3711" y2="46.5562" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <linearGradient id="logo-paint-1" x1="19.1797" x2="54.1336" y1="52.8126" y2="45.0812" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <clipPath id="logo-clip">
-            <rect width="132.489" height="64" fill="white" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function DropdownArrowIcon() {
-  return (
-    <svg className="h-2 w-3" viewBox="0 0 13 7" fill="none" preserveAspectRatio="xMidYMid meet">
-      <path d={svgPaths.p11ff1530} fill="var(--fill-0, #64748B)" />
-    </svg>
-  );
-}
 
 function AboutHeroSection() {
   return (
@@ -167,8 +127,8 @@ function AboutHeroSection() {
       backgroundAlt="Orchard rows with harvesting tractor"
       titleLines={["Our Story"]}
       paragraphs={heroDescription}
-      paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl"
-      contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-16 py-32 md:py-48 lg:py-64 text-white gap-12"
+      paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl lg:text-[21px] lg:leading-[25px] leading-relaxed max-w-2xl"
+      contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-20 py-20 md:py-28 lg:py-32 text-white gap-8 md:gap-10"
       hideGradient
     />
   );
@@ -176,25 +136,25 @@ function AboutHeroSection() {
 
 function AboutSection() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-          <div className="flex-1 text-center md:text-left space-y-4">
-            <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#212121] leading-snug md:leading-tight">
+    <section className="py-16 md:py-20 lg:py-40 px-4 md:px-8 lg:px-20">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-8">
+          <div className="flex-1 text-left">
+            <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#212121] tracking-tight">
               Rooted in nature. Driven by technology.
-            </p>
-    </div>
-          <div className="flex-1 text-center md:text-left space-y-4">
+            </h2>
+          </div>
+          <div className="flex-1 text-left space-y-4 lg:space-y-10">
             {aboutParagraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed text-[#303030]"
+                className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%] text-[#303030]"
               >
                 {paragraph}
               </p>
             ))}
-    </div>
-    </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -204,83 +164,94 @@ function GroupCompaniesSection() {
   const logos = [imgImage54, imgImage55, imgImage56, imgImage57, imgImage58];
 
   return (
-    <section className="bg-neutral-50 py-12 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-8 md:gap-16">
-        <div className="text-center md:text-left space-y-4">
-          <p className="font-['Inter:Medium',sans-serif] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#212121] leading-snug md:leading-tight">
+    <section className="bg-[#FAFAFA] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-20">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-8 md:gap-10">
+        <div className="text-left">
+          <h3 className="font-['Inter:Medium',sans-serif] text-xl sm:text-2xl lg:text-[32px] lg:leading-[39px] text-[#212121] tracking-tight">
             Other group companies
-        </p>
-      </div>
-        <div className="flex flex-nowrap items-center justify-center gap-6 md:gap-10 overflow-x-auto">
+          </h3>
+        </div>
+        <div className="flex flex-wrap items-center justify-start gap-8 md:gap-10 lg:gap-12">
           {logos.map((logo) => (
             <div key={logo} className="flex items-center justify-center">
               <Image
                 src={logo}
                 alt="Partner company logo"
-                width={160}
-                height={80}
-                className="h-12 w-auto md:h-16 lg:h-20 object-contain"
+                width={150}
+                height={62}
+                className="h-10 w-auto md:h-12 lg:h-14 object-contain hover:opacity-70 transition-opacity"
               />
-    </div>
+            </div>
           ))}
+        </div>
       </div>
-    </div>
     </section>
   );
 }
 
 function VisionSection() {
   return (
-    <section className="bg-[#115132] py-12 md:py-24 px-4 md:px-8 lg:px-16 text-white">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
+    <section className="bg-[#115132] py-16 md:py-20 lg:py-32 px-4 md:px-8 lg:px-20 text-white">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-16 md:gap-20 lg:gap-32">
+        {/* What drives us */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 md:gap-12 lg:gap-16">
           <div className="flex-1 flex justify-center lg:justify-start">
-            <Image
-              src={imgImage}
-              alt="Selective berry processing"
-              width={640}
-              height={480}
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl object-cover"
-            />
-    </div>
-          <div className="flex-1 text-center lg:text-left space-y-4">
-            <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#cde253] leading-snug md:leading-tight">
+            <div className="relative w-full max-w-md lg:max-w-lg rounded-[40px] overflow-hidden">
+              <Image
+                src={imgImage}
+                alt="Selective berry processing"
+                width={620}
+                height={563}
+                className="w-full h-auto object-cover rounded-[40px]"
+              />
+            </div>
+          </div>
+          <div className="flex-1 text-left space-y-6 lg:space-y-8">
+            <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#CDE253] tracking-tight">
               What drives us
-            </p>
-            {visionParagraphs.map((text) => (
-              <p
-                key={text}
-                className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed"
-              >
-                {text}
-              </p>
-            ))}
-    </div>
-    </div>
-        <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 md:gap-12">
+            </h2>
+            <div className="space-y-4 lg:space-y-10">
+              {visionParagraphs.map((text) => (
+                <p
+                  key={text}
+                  className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%]"
+                >
+                  {text}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Our future focus */}
+        <div className="flex flex-col lg:flex-row-reverse items-start justify-between gap-10 md:gap-12 lg:gap-16">
           <div className="flex-1 flex justify-center lg:justify-end">
-            <Image
-              src={imgImage1}
-              alt="Thriving orchard rows"
-              width={640}
-              height={480}
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl object-cover"
-            />
-    </div>
-          <div className="flex-1 text-center lg:text-left space-y-4">
-            <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#cde253] leading-snug md:leading-tight">
+            <div className="relative w-full max-w-md lg:max-w-lg rounded-[40px] overflow-hidden">
+              <Image
+                src={imgImage1}
+                alt="Thriving orchard rows"
+                width={620}
+                height={475}
+                className="w-full h-auto object-cover rounded-[40px]"
+              />
+            </div>
+          </div>
+          <div className="flex-1 text-left space-y-6 lg:space-y-8">
+            <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#CDE253] tracking-tight">
               Our future focus
-            </p>
-            {futureParagraphs.map((text) => (
-              <p
-                key={text}
-                className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed"
-              >
-                {text}
-              </p>
-            ))}
-      </div>
-    </div>
+            </h2>
+            <div className="space-y-4 lg:space-y-10">
+              {futureParagraphs.map((text) => (
+                <p
+                  key={text}
+                  className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%]"
+                >
+                  {text}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -288,27 +259,31 @@ function VisionSection() {
 
 function AchievementsSection() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-8 md:gap-16">
-        <div className="text-center md:text-left space-y-4">
-          <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#212121] leading-snug md:leading-tight">
+    <section className="py-16 md:py-20 lg:py-40 px-4 md:px-8 lg:px-20">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16 lg:gap-20">
+        <div className="text-left">
+          <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#212121] tracking-tight">
             Key achievements
-          </p>
-    </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-8">
           {achievements.map(({ headline, suffix, title, description }) => (
-            <div key={title} className="flex flex-col gap-4">
-              <div className="font-['Inter:Medium',sans-serif] text-4xl sm:text-5xl md:text-6xl text-[#115132] leading-snug md:leading-tight">
-                {headline}
-                <span className="ml-1 text-lg sm:text-xl md:text-2xl text-[#115132]">{suffix}</span>
-    </div>
-              <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl md:text-2xl text-[#212121] leading-snug">
+            <div key={title} className="flex flex-col gap-2">
+              <div className="text-[#115132]">
+                <span className="font-['Inter:Medium',sans-serif] text-5xl sm:text-6xl md:text-7xl lg:text-[96px] lg:leading-[116px]">
+                  {headline}
+                </span>
+                <span className="font-['Inter:Medium',sans-serif] text-xl sm:text-2xl md:text-3xl lg:text-[32px] align-top ml-1">
+                  {suffix}
+                </span>
+              </div>
+              <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl lg:text-[21px] lg:leading-[25px] text-[#212121] mt-1">
                 {title}
               </p>
-              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed text-[#303030]">
+              <p className="font-['Inter:Regular',sans-serif] text-sm sm:text-base lg:text-[15px] lg:leading-[18px] text-[#303030] opacity-70">
                 {description}
               </p>
-    </div>
+            </div>
           ))}
         </div>
       </div>
@@ -318,155 +293,68 @@ function AchievementsSection() {
 
 function MilestonesSection() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16">
-        <div className="text-center md:text-left space-y-4">
-          <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#212121] leading-snug md:leading-tight">
+    <section className="py-16 md:py-20 lg:py-32 px-4 md:px-8 lg:px-20 bg-white">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16 lg:gap-20">
+        <div className="text-left space-y-3 lg:space-y-6">
+          <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#212121] tracking-tight">
             Milestones
-          </p>
-          <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed text-[#303030]/70">
-            Since 1973, we've been working to “endure through time.”
+          </h2>
+          <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[16px] lg:leading-[19px] text-[#303030] opacity-70">
+            Since 1973, we've been working to "endure through time."
           </p>
         </div>
-        <div className="flex flex-col gap-12 md:gap-16">
+        <div className="flex flex-col gap-16 md:gap-20">
           {milestones.map(({ title, paragraphs, image, reverse }) => (
             <div
               key={title}
-              className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between gap-8 md:gap-16`}
+              className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-start justify-between gap-10 md:gap-12 lg:gap-16`}
             >
-              <div className="flex-1 text-center md:text-left space-y-4">
-                <p className="font-['Inter:Medium',sans-serif] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#115132] leading-snug md:leading-tight">
+              <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                <h3 className="font-['Inter:Medium',sans-serif] text-xl sm:text-2xl md:text-3xl lg:text-[32px] lg:leading-[39px] text-[#115132]">
                   {title}
-                </p>
-                {paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl leading-relaxed text-[#303030]"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-      </div>
-              <div className="flex-1 flex justify-center md:justify-end">
-                <Image
-                  src={image}
-                  alt={title}
-                  width={640}
-                  height={480}
-                  className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover rounded-3xl"
-                />
-      </div>
-    </div>
+                </h3>
+                <div className="space-y-3 lg:space-y-4">
+                  {paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[16px] lg:leading-[150%] text-[#303030] opacity-70"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="flex-1 flex justify-center">
+                <div className="relative w-full max-w-md lg:max-w-lg rounded-[40px] overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={title}
+                    width={548}
+                    height={440}
+                    className="w-full h-auto object-cover rounded-[40px]"
+                  />
+                </div>
+              </div>
+            </div>
           ))}
-    </div>
-    </div>
+        </div>
+      </div>
     </section>
   );
 }
 
 function CtaSection() {
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 lg:px-16 bg-[#f0f7f2]">
-      <div className="max-w-screen-xl mx-auto flex flex-col items-center text-center gap-6 md:gap-10">
-        <p className="font-['Inter:Bold',sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#115132] leading-snug md:leading-tight">
+    <section className="relative w-full h-[450px] md:h-[550px] lg:h-[700px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.25)_100%),url('/assets/82c4c538c30244afbdb7308a18a81b162d0d8d85.png')] bg-cover bg-center flex items-center justify-center">
+      <div className="px-4 text-center">
+        <h2 className="font-['Inter:Bold',sans-serif] text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[152px] xl:leading-[184px] leading-tight tracking-tight">
           Let the Journey Begin
-        </p>
-        <div className="flex items-center justify-center gap-4 md:gap-6">
-          <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md">
-            <svg className="h-12 w-12" viewBox="0 0 96 96" fill="none" preserveAspectRatio="xMidYMid meet">
-              <path d={svgPaths.p1b7f1380} fill="var(--fill-0, #115132)" />
-      </svg>
-          </span>
-          <div className="text-left space-y-2">
-            <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl md:text-2xl text-[#115132]">
-              Ready to create something extraordinary?
-            </p>
-            <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
-              Connect with our team to explore tailored ingredient solutions for your products.
-            </p>
-    </div>
-    </div>
-    </div>
+        </h2>
+      </div>
     </section>
   );
 }
 
-function FooterNavigation() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-      <div className="space-y-4">
-        <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl md:text-2xl text-[#212121] leading-snug">
-          Navigation
-        </p>
-        <div className="flex flex-col gap-2 font-['Inter:Medium',sans-serif] text-base sm:text-lg md:text-xl text-[#212121]">
-          <span className="text-[#115132]">Home</span>
-          <span className="opacity-70">Products</span>
-          <span className="opacity-70">Who we are</span>
-          <span className="flex items-center gap-2 opacity-70">
-            Quality
-            <DropdownArrowIcon />
-          </span>
-          <span className="opacity-70">Contact</span>
-    </div>
-    </div>
-      <div className="space-y-4">
-        <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl md:text-2xl text-[#212121] leading-snug">
-          Follow Us
-        </p>
-        <div className="flex flex-col gap-2 font-['Inter:Medium',sans-serif] text-base sm:text-lg md:text-xl text-[#212121] opacity-70">
-          <span>LinkedIn</span>
-          <span>Instagram</span>
-        </div>
-      </div>
-      <div className="space-y-4">
-        <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl md:text-2xl text-[#212121] leading-snug">
-          Legal
-        </p>
-        <div className="flex flex-col gap-2 font-['Inter:Medium',sans-serif] text-base sm:text-lg md:text-xl text-[#212121] opacity-70">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-white py-12 md:py-24 px-4 md:px-8 lg:px-16">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
-          <Logo />
-          <div className="text-center md:text-right space-y-2 font-['Inter:Medium',sans-serif] text-[#212121]">
-            <p className="text-xl sm:text-2xl md:text-3xl leading-snug">+90 (232) 864 22 00</p>
-            <p className="text-lg sm:text-xl md:text-2xl leading-snug">sales@meyv.com.tr</p>
-      </div>
-    </div>
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12">
-          <div className="flex-1 space-y-4">
-            <p className="font-['Inter:Semi_Bold',sans-serif] text-xl sm:text-2xl md:text-3xl text-[#212121] leading-snug">
-              Naturally Sweet, Perfectly Dried
-            </p>
-            <Image
-              src={imgImage66}
-              alt="Meyv slogan"
-              width={180}
-              height={60}
-              className="h-14 w-auto object-contain"
-            />
-      </div>
-          <div className="flex-1">
-            <FooterNavigation />
-      </div>
-    </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[#333333] font-['Inter:Regular',sans-serif] text-sm sm:text-base leading-relaxed opacity-70">
-          <p>Copyright © 2025. All rights reserved.</p>
-          <p>Back to Top</p>
-    </div>
-      </div>
-    </footer>
-  );
-}
 
 export default function Component1920PxAbout() {
   return (

@@ -19,21 +19,20 @@ const ctaImage = "/assets/c15bb3d7b30d65e84a0ade7670e584f728d9b5a7.png";
 const overview = {
   title: "From field to frozen – fully integrated facilities",
   paragraphs: [
-    "Our factories represent the full cycle of vertical integration—from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment.",
-    "Every step takes place under one unified control system, ensuring traceability and consistency with advanced food-safety protocols and automation technologies.",
+    "Our factories represent the full cycle of vertical integration — from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment. Every step takes place under one continuous control system, ensuring full traceability and consistency. With advanced food safety protocols and automation technologies, we deliver frozen fruits that preserve the taste, color, and nutrition of freshly harvested produce.",
   ],
 };
 
 const highlightCards = [
   {
-    title: "Where quality meets technology",
-    body:
-      "Next-generation IQF systems and precision-controlled environments keep every fruit at peak integrity from harvest to shipment.",
-  },
-  {
     title: "Innovation in every corner",
     body:
-      "We combine engineering excellence with sustainable practices so each batch retains its natural flavor, color, and nutrition.",
+      "Our production facilities are equipped with next-generation IQF (Individually Quick Frozen) systems, automated sorting lines, and precision-controlled environments that maintain product integrity at every stage. We combine technological excellence with a deep respect for nature, ensuring that every fruit retains its freshness and authentic flavor. Continuous investment in innovation allows us to increase efficiency, sustainability, and capacity while meeting global food safety standards.",
+  },
+  {
+    title: "Where quality meets technology",
+    body:
+      "At the heart of our operations lies a commitment to precision and hygiene. Each factory is designed according to international standards such as ISO 22000, BRCGS, and HACCP, supported by advanced quality-control laboratories. From washing and slicing to freezing and packaging, every process is monitored in real-time to guarantee consistent, high-quality results. Our facilities reflect the harmony between modern engineering and nature's finest fruits.",
   },
 ];
 
@@ -41,13 +40,13 @@ const globalSections = [
   {
     title: "Global reach, local roots",
     body:
-      "Headquarters and regional offices connect our growing regions with export markets. Dedicated teams handle sales, logistics, and customer service with agility.",
+      "Our headquarters and offices strategically connect our growing regions with key export markets. While our factories are located near fertile agricultural zones to ensure rapid processing after harvest, our international offices manage sales, logistics, and customer relations with agility and precision. This global network allows us to deliver IQF fruits to partners in Europe, the Middle East, and beyond — always on time, always in perfect condition.",
     image: globalImages[0],
   },
   {
     title: "Controlled environments, uncompromised quality",
     body:
-      "Every facility operates under meticulously controlled conditions—from temperature and humidity to advanced hygiene systems and digital monitoring.",
+      "Each of our facilities operates under meticulously controlled conditions — from temperature and humidity to air filtration and hygiene. Automated packaging and metal-detection systems safeguard product safety, while digital monitoring ensures process transparency. Supported by experienced food technologists and engineers, we maintain an unbroken chain of quality from the moment the fruit is picked until it reaches our customers' doors.",
     image: globalImages[1],
   },
 ];
@@ -56,15 +55,17 @@ export default function Component1920PxFactoriesOffices() {
   return (
     <div className="bg-white min-h-screen w-full overflow-x-hidden">
       <Header />
-      <main className="flex flex-col gap-16 md:gap-24 pb-16 md:pb-24">
+      <main className="flex flex-col">
         {/* Hero */}
-        <section className="px-4 md:px-8 lg:px-16 pt-24">
-          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.08)] relative h-[240px] sm:h-[300px] lg:h-[360px]">
+        <section className="px-4 md:px-8 lg:px-20 pt-4 md:pt-6">
+          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden relative h-[300px] sm:h-[350px] md:h-[400px]">
             <Image src={heroImage} alt="Factories hero" fill priority className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="relative z-10 flex h-full flex-col justify-center gap-4 px-6 sm:px-12 text-white">
-              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl leading-tight">Factories & Offices</p>
-              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-2xl">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/25" />
+            <div className="relative z-10 flex h-full flex-col justify-center gap-4 md:gap-10 px-6 sm:px-10 md:px-16 text-white">
+              <h1 className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-[80px] lg:leading-[96px] leading-tight max-w-3xl">
+                Factories & Offices
+              </h1>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl lg:text-[21px] lg:leading-[25px] max-w-2xl">
                 Discover the journey behind our brand and the purpose that guides everything we do.
               </p>
             </div>
@@ -72,16 +73,16 @@ export default function Component1920PxFactoriesOffices() {
         </section>
 
         {/* Overview */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl text-[#212121] leading-tight">
+        <section className="py-16 md:py-20 lg:py-40 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-12 lg:gap-8">
+            <div className="flex-1 text-left">
+              <h2 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#212121] tracking-tight">
                 {overview.title}
-              </p>
+              </h2>
             </div>
-            <div className="flex-1 text-center md:text-left space-y-4">
+            <div className="flex-1 text-left space-y-4 lg:space-y-6">
               {overview.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
+                <p key={paragraph} className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%] text-[#303030]">
                   {paragraph}
                 </p>
               ))}
@@ -90,95 +91,115 @@ export default function Component1920PxFactoriesOffices() {
         </section>
 
         {/* Highlights */}
-        <section className="bg-[#115132] text-white px-4 md:px-8 lg:px-16 py-12 md:py-20">
-          <div className="max-w-screen-xl mx-auto grid lg:grid-cols-[1.1fr,0.9fr] gap-10 items-center">
-            <div className="space-y-8">
-              {highlightCards.map((card) => (
-                <div key={card.title} className="space-y-3">
-                  <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl leading-snug sm:leading-tight">{card.title}</p>
-                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-white/85 leading-relaxed">{card.body}</p>
-                </div>
-              ))}
-            </div>
-            <div className="grid gap-6">
-              {highlightImages.map((image, index) => (
-                <div
-                  key={image}
-                  className={`relative w-full aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl ${index === 1 ? 'hidden md:block' : ''}`}
-                >
+        <section className="bg-[#115132] text-white py-16 md:py-20 lg:py-32 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto space-y-16 md:space-y-20 lg:space-y-24">
+            {/* Innovation in every corner - Image left, text right */}
+            <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-12 lg:gap-16">
+              <div className="flex-1 flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-lg aspect-[4/3] rounded-[40px] overflow-hidden">
                   <Image
-                    src={image}
-                    alt={index === 0 ? 'Processing facility' : 'Cold storage'}
+                    src={highlightImages[0]}
+                    alt="Processing facility"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 45vw"
                     className="object-cover"
                   />
                 </div>
-              ))}
+              </div>
+              <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                <h3 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#CDE253] tracking-tight">
+                  {highlightCards[0].title}
+                </h3>
+                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%]">
+                  {highlightCards[0].body}
+                </p>
+              </div>
+            </div>
+
+            {/* Where quality meets technology - Text left, image right */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-12 lg:gap-16">
+              <div className="flex-1 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-lg aspect-[4/3] rounded-[40px] overflow-hidden">
+                  <Image
+                    src={highlightImages[1]}
+                    alt="Cold storage"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 45vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                <h3 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#CDE253] tracking-tight">
+                  {highlightCards[1].title}
+                </h3>
+                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[18px] lg:leading-[160%]">
+                  {highlightCards[1].body}
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Global sections */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto space-y-12">
-            {globalSections.map((section, index) => (
-              <div
-                key={section.title}
-                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-16`}
-              >
-                <div className="flex-1 text-center lg:text-left space-y-4">
-                  <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl text-[#212121] leading-tight">{section.title}</p>
-                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030]/85 leading-relaxed">{section.body}</p>
-                </div>
-                <div className="flex-1 flex justify-center lg:justify-end">
-                  <div className="relative w-full max-w-lg aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl">
-                    <Image
-                      src={section.image}
-                      alt={section.title}
-                      fill
-                      sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 40vw"
-                      className="object-cover"
-                    />
-                  </div>
+        <section className="py-16 md:py-20 lg:py-20 px-4 md:px-8 lg:px-20">
+          <div className="max-w-screen-xl mx-auto space-y-16 md:space-y-20">
+            {/* Global reach, local roots - Image left, text right */}
+            <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-12 lg:gap-16">
+              <div className="flex-1 flex justify-center lg:justify-start">
+                <div className="relative w-full max-w-lg aspect-[4/3] rounded-[40px] overflow-hidden">
+                  <Image
+                    src={globalSections[0].image}
+                    alt={globalSections[0].title}
+                    fill
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 40vw"
+                    className="object-cover"
+                  />
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+              <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                <h3 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#333333] tracking-tight">
+                  {globalSections[0].title}
+                </h3>
+                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[16px] lg:leading-[150%] text-[#303030] opacity-70">
+                  {globalSections[0].body}
+                </p>
+              </div>
+            </div>
 
-        {/* Insights */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-8">
-            {highlightCards.map((card) => (
-              <div key={`insight-${card.title}`} className="rounded-[32px] border border-[#dfe6da] bg-white p-6 space-y-3">
-                <p className="font-['Inter:Medium',sans-serif] text-2xl text-[#115132] leading-snug">{card.title}</p>
-                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg text-[#303030]/80 leading-relaxed">{card.body}</p>
+            {/* Controlled environments - Text left, image right */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-12 lg:gap-16">
+              <div className="flex-1 flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-lg aspect-[4/3] rounded-[40px] overflow-hidden">
+                  <Image
+                    src={globalSections[1].image}
+                    alt={globalSections[1].title}
+                    fill
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 40vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
-            ))}
+              <div className="flex-1 text-left space-y-4 lg:space-y-6">
+                <h3 className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl lg:text-[48px] lg:leading-[58px] text-[#333333] tracking-tight">
+                  {globalSections[1].title}
+                </h3>
+                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg lg:text-[16px] lg:leading-[150%] text-[#303030] opacity-70">
+                  {globalSections[1].body}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="px-4 md:px-8 lg:px-16">
-          <div className="relative max-w-screen-xl mx-auto rounded-[48px] overflow-hidden text-center text-white py-20 md:py-28">
-            <Image src={ctaImage} alt="CTA background" fill className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-black/35" />
-            <div className="relative space-y-6 px-6">
-              <p className="font-['Inter:Bold',sans-serif] text-4xl sm:text-5xl md:text-6xl">Let the Journey Begin</p>
-              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
-                Precision-engineered facilities, global offices, and an unbroken chain of quality—ready for your next project.
-              </p>
-              <button
-                type="button"
-                className="bg-white text-[#115132] px-10 py-3 rounded-full font-['Inter:Medium',sans-serif] text-base sm:text-lg"
-                onClick={() => {
-                  window.location.href = "mailto:sales@meyv.com.tr?subject=Meyv%20Inquiry";
-                }}
-              >
-                Contact Us
-              </button>
-            </div>
+        <section className="relative w-full h-[450px] md:h-[550px] lg:h-[700px]">
+          <Image src={ctaImage} alt="CTA background" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/25" />
+          <div className="relative z-10 flex items-center justify-center h-full px-4">
+            <h2 className="font-['Inter:Bold',sans-serif] text-[#115132] text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[152px] xl:leading-[184px] leading-tight tracking-tight text-center">
+              Let the Journey Begin
+            </h2>
           </div>
         </section>
       </main>
