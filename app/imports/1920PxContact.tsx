@@ -205,7 +205,7 @@ export default function Component1920PxContact({ onNavigate }: ContactComponentP
       <OfficeSection />
       <MapSection />
       <InstagramSection />
-        <SiteFooter onNavigate={onNavigate} />
+      <SiteFooter />
     </div>
   );
 }
