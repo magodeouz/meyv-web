@@ -178,7 +178,7 @@ export function ProductList({ onNavigate }: ProductListProps) {
           </div>
         </section>
       </main>
-      <Footer onNavigate={onNavigate} />
+      <Footer />
     </div>
   );
 }

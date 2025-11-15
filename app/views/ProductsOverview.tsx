@@ -138,7 +138,7 @@ export function ProductsOverview({ onNavigate }: ProductsOverviewProps) {
         </section>
       </main>
 
-      <Footer onNavigate={onNavigate} />
+      <Footer />
     </div>
   );
 }

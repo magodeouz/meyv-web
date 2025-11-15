@@ -214,7 +214,7 @@ export function ProductDetail({ onNavigate, productName = "Raspberry" }: Product
           </div>
         </section>
       </main>
-      <Footer onNavigate={onNavigate} />
+      <Footer />
     </div>
   );
 }
