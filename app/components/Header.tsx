@@ -155,28 +155,27 @@ export function Header({ onNavigate }: HeaderProps = {}) {
   };
 
   return (
-    <>
-      {/* Desktop & Tablet Header */}
-      <div className="absolute bg-white flex h-[110px] items-center justify-between left-4 md:left-8 lg:left-20 top-0 right-4 md:right-8 lg:right-20 z-10 px-4 md:px-0">
-        <div className="flex gap-4 md:gap-8 lg:gap-[125px] items-center">
+    <header className="bg-white shadow-sm sticky top-0 z-40 w-full">
+      <div className="max-w-screen-xl mx-auto flex h-20 items-center justify-between px-4 md:px-8 lg:px-16">
+        <div className="flex gap-4 md:gap-8 lg:gap-16 items-center">
           <NavLink to="/" onClick={createClickHandler("home")} className="cursor-pointer">
             <Layer />
           </NavLink>
-          
+
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex gap-[27px] items-center">
+          <nav className="hidden lg:flex gap-8 items-center">
             {navItems.map(({ label, page, to, end, showArrow }) => (
               <NavLink
                 key={page}
                 to={to}
                 end={end}
-                className="box-border flex gap-[10px] items-center justify-center p-[10px] cursor-pointer group"
+                className="relative flex gap-2 items-center justify-center px-2 py-2 cursor-pointer group"
                 onClick={createClickHandler(page)}
               >
                 {({ isActive }) => (
                   <>
                     <p
-                      className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${
+                      className={`font-['Inter:Medium',sans-serif] text-base md:text-lg transition-colors duration-200 ${
                         isActive ? "text-[#115132]" : "text-[#212121]"
                       }`}
                     >
@@ -195,20 +194,16 @@ export function Header({ onNavigate }: HeaderProps = {}) {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Desktop Contact Button */}
           <button
-            className="hidden md:flex bg-[#115132] box-border gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] rounded-[32px] cursor-pointer border-none"
+            className="hidden md:flex bg-[#115132] gap-3 h-12 items-center justify-center pl-8 pr-4 rounded-full text-white"
             onClick={handleContactClick}
           >
-            <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic text-[16px] text-nowrap text-white whitespace-pre">
-              Contact Us
-            </p>
-            <div className="bg-white box-border flex flex-col gap-[10px] items-center justify-center p-[10px] rounded-[10000px] size-[40px]">
+            <span className="font-['Inter:Medium',sans-serif] text-base">Contact Us</span>
+            <div className="bg-white flex items-center justify-center rounded-full size-10">
               <LongArrowRight300WRounded />
             </div>
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden text-[#212121] p-2 cursor-pointer bg-transparent border-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -219,22 +214,21 @@ export function Header({ onNavigate }: HeaderProps = {}) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[110px] bg-white z-20 overflow-y-auto">
-          <nav className="flex flex-col px-8 py-6 gap-4">
+      {mobileMenuOpen ? (
+        <div className="lg:hidden border-t border-gray-100 bg-white px-4 py-6">
+          <nav className="flex flex-col gap-4">
             {navItems.map(({ label, page, to, end, showArrow }) => (
               <NavLink
                 key={page}
                 to={to}
                 end={end}
-                className="flex gap-[10px] items-center justify-between p-4 cursor-pointer border-b border-gray-100"
+                className="flex items-center justify-between py-3 cursor-pointer border-b border-gray-100 last:border-none"
                 onClick={createClickHandler(page)}
               >
                 {({ isActive }) => (
                   <>
                     <p
-                      className={`font-['Inter:Medium',sans-serif] font-medium text-[18px] transition-colors duration-200 ${
+                      className={`font-['Inter:Medium',sans-serif] text-base transition-colors duration-200 ${
                         isActive ? "text-[#115132]" : "text-[#212121]"
                       }`}
                     >
@@ -245,22 +239,19 @@ export function Header({ onNavigate }: HeaderProps = {}) {
                 )}
               </NavLink>
             ))}
-            
-            {/* Mobile Contact Button */}
+
             <button
-              className="mt-4 bg-[#115132] flex gap-[16px] h-[48px] items-center justify-center px-8 py-[10px] rounded-[32px] cursor-pointer border-none w-full"
+              className="mt-4 bg-[#115132] flex gap-3 h-12 items-center justify-center px-6 rounded-full text-white"
               onClick={handleContactClick}
             >
-              <p className="font-['Inter:Medium',sans-serif] font-medium text-[16px] text-white">
-                Contact Us
-              </p>
-              <div className="bg-white flex items-center justify-center p-[10px] rounded-full size-[40px]">
+              <span className="font-['Inter:Medium',sans-serif] text-base">Contact Us</span>
+              <div className="bg-white flex items-center justify-center rounded-full size-10">
                 <LongArrowRight300WRounded />
               </div>
             </button>
           </nav>
         </div>
-      )}
-    </>
+      ) : null}
+    </header>
   );
 }

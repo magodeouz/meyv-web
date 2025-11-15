@@ -1,709 +1,188 @@
 "use client";
 
-import NavLink from "@/components/NavLink";
+import Image from "next/image";
+
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { imgImage68 } from "./svg-70gsh";
-import svgPaths from "./svg-u7nplz23fe";
 
-const imgCta = "/assets/c15bb3d7b30d65e84a0ade7670e584f728d9b5a7.png";
-const imgImage66 = "/assets/ffeba28eb520fc86d5a21d336c1c9fc39ddb9b41.png";
-const imgImage69 = "/assets/eaafecb983683b15887e29a337e54f286b9f0548.png";
-const imgImage70 = "/assets/ed517dd0e9dcd4f869637683a298e388775773fd.png";
-const imgImage = "/assets/56dc78c27f09e8b4c4bf295b74d0e48d1587b55f.png";
-const imgImage1 = "/assets/57446fc4f09979b364c1122960f918acd71741c6.png";
-const imgSubtract = "/assets/e2684821a002ca86e013a5d8adac2ec3d61d332b.png";
+const heroImage = "/assets/e2684821a002ca86e013a5d8adac2ec3d61d332b.png";
+const highlightImages = [
+  "/assets/56dc78c27f09e8b4c4bf295b74d0e48d1587b55f.png",
+  "/assets/57446fc4f09979b364c1122960f918acd71741c6.png",
+];
+const globalImages = [
+  "/assets/eaafecb983683b15887e29a337e54f286b9f0548.png",
+  "/assets/ed517dd0e9dcd4f869637683a298e388775773fd.png",
+];
+const ctaImage = "/assets/c15bb3d7b30d65e84a0ade7670e584f728d9b5a7.png";
 
-function Layer() {
-  return (
-    <div className="h-[64px] relative shrink-0 w-[132.489px]" data-name="Layer_1">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 133 64">
-        <g clipPath="url(#clip0_9_196)" id="Layer_1">
-          <path d={svgPaths.p2c2b4370} fill="var(--fill-0, #19459D)" id="Vector" />
-          <path d={svgPaths.p29295e00} fill="var(--fill-0, #19459D)" id="Vector_2" />
-          <path d={svgPaths.p3209fa00} fill="var(--fill-0, #19459D)" id="Vector_3" />
-          <path clipRule="evenodd" d={svgPaths.p1edaac70} fill="var(--fill-0, #19459D)" fillRule="evenodd" id="Vector_4" />
-          <g id="Group">
-            <path d={svgPaths.p410e800} fill="url(#paint0_linear_9_196)" id="Vector_5" />
-            <path d={svgPaths.p2f949000} fill="url(#paint1_linear_9_196)" id="Vector_6" />
-            <g id="Group_2">
-              <path d={svgPaths.p98c4c70} fill="var(--fill-0, #CFE5AE)" id="Vector_7" />
-            </g>
-            <g id="Group_3">
-              <path d={svgPaths.p44fb900} fill="var(--fill-0, #0D6D38)" id="Vector_8" />
-            </g>
-            <g id="Group_4">
-              <path d={svgPaths.pe555700} fill="var(--fill-0, #CFE5AE)" id="Vector_9" />
-            </g>
-          </g>
-          <path d={svgPaths.p3f4ffe00} fill="var(--fill-0, #19459D)" id="Vector_10" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_9_196" x1="54.3525" x2="50.634" y1="63.3711" y2="46.5562">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_9_196" x1="19.1797" x2="54.1336" y1="52.8126" y2="45.0812">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <clipPath id="clip0_9_196">
-            <rect fill="white" height="64" width="132.489" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
+const overview = {
+  title: "From field to frozen – fully integrated facilities",
+  paragraphs: [
+    "Our factories represent the full cycle of vertical integration—from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment.",
+    "Every step takes place under one unified control system, ensuring traceability and consistency with advanced food-safety protocols and automation technologies.",
+  ],
+};
 
-function Frame() {
-  return (
-    <NavLink
-      to="/"
-      end
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
-    >
-      {({ isActive }) => (
-        <>
-          <div aria-hidden="true" className={`absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`} />
-          <p className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${isActive ? "text-[#115132]" : "text-[#212121]"}`}>Home</p>
-        </>
-      )}
-    </NavLink>
-  );
-}
+const highlightCards = [
+  {
+    title: "Where quality meets technology",
+    body:
+      "Next-generation IQF systems and precision-controlled environments keep every fruit at peak integrity from harvest to shipment.",
+  },
+  {
+    title: "Innovation in every corner",
+    body:
+      "We combine engineering excellence with sustainable practices so each batch retains its natural flavor, color, and nutrition.",
+  },
+];
 
-function Frame2() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
-    </div>
-  );
-}
-
-function Frame1() {
-  return (
-    <NavLink
-      to="/about"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
-    >
-      {({ isActive }) => (
-        <>
-          <p className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${isActive ? "text-[#115132]" : "text-[#212121]"}`}>Who we are</p>
-          <span aria-hidden="true" className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`} />
-        </>
-      )}
-    </NavLink>
-  );
-}
-
-function Frame4() {
-  return (
-    <NavLink
-      to="/factories"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
-    >
-      {({ isActive }) => (
-        <>
-          <p className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${isActive ? "text-[#115132]" : "text-[#212121]"}`}>Factories</p>
-          <span aria-hidden="true" className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`} />
-        </>
-      )}
-    </NavLink>
-  );
-}
-
-function DropdownArrowIcon300WRounded() {
-  return (
-    <div className="h-[7px] relative shrink-0 w-[12.775px]" data-name="Dropdown Arrow Icon 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13 7">
-        <g id="Dropdown Arrow Icon 300W Rounded">
-          <path d={svgPaths.p11ff1530} fill="var(--fill-0, #64748B)" id="Dropdown Arrow" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame3() {
-  return (
-    <NavLink
-      to="/quality"
-      className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0 cursor-pointer group"
-    >
-      {({ isActive }) => (
-        <>
-          <p className={`font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre transition-colors duration-200 ${isActive ? "text-[#115132]" : "text-[#212121]"}`}>{`Quality & Certificates`}</p>
-          <DropdownArrowIcon300WRounded />
-          <span aria-hidden="true" className={`pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-[#cde253] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`} />
-        </>
-      )}
-    </NavLink>
-  );
-}
-
-function Menu() {
-  return (
-    <div className="content-stretch flex gap-[27px] items-center relative shrink-0" data-name="Menu">
-      <Frame />
-      <Frame2 />
-      <Frame1 />
-      <Frame4 />
-      <Frame3 />
-    </div>
-  );
-}
-
-function Frame7() {
-  return (
-    <div className="content-stretch flex gap-[125px] items-center relative shrink-0">
-      <Layer />
-      <Menu />
-    </div>
-  );
-}
-
-function LongArrowRight300WRounded() {
-  return (
-    <div className="h-[16px] relative shrink-0 w-[22.559px]" data-name="Long Arrow Right 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 23 16">
-        <g id="Long Arrow Right 300W Rounded">
-          <path d={svgPaths.pcc9c080} fill="var(--fill-0, #115132)" id="Arrow Right" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame6() {
-  return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-[10px] items-center justify-center p-[10px] relative rounded-[10000px] shrink-0 size-[40px]">
-      <LongArrowRight300WRounded />
-    </div>
-  );
-}
-
-function Frame5() {
-  return (
-    <div className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">Contact Us</p>
-      <Frame6 />
-    </div>
-  );
-}
-
-function Frame8() {
-  return <Header />;
-}
-
-function Frame16() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-base md:text-[18px] w-full">Our factories represent the full cycle of vertical integration — from sourcing fruits in our contracted and company-owned fields to processing, IQF freezing, packaging, and shipment. Every step takes place under one continuous control system, ensuring full traceability and consistency. With advanced food safety protocols and automation technologies, we deliver frozen fruits that preserve the taste, color, and nutrition of freshly harvested produce.</p>
-    </div>
-  );
-}
-
-function Frame17() {
-  return (
-    <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full md:w-1/2">From field to frozen – fully integrated facilities</p>
-      <Frame16 />
-    </div>
-  );
-}
-
-function Frame18() {
-  return (
-    <div className="relative box-border content-stretch flex flex-col gap-16 md:gap-24 lg:gap-[120px] items-start left-0 px-4 md:px-8 lg:px-[280px] py-16 md:py-24 lg:py-[160px] mt-[400px] md:mt-[450px] lg:mt-[510px] w-full">
-      <Frame17 />
-    </div>
-  );
-}
-
-function Title() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start not-italic relative shrink-0 text-white w-full" data-name="Title">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-tight md:leading-[96px] relative shrink-0 text-5xl md:text-7xl lg:text-[80px]">{`Factories & Offices`}</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] w-full relative shrink-0 text-base md:text-lg lg:text-[21px]">11Discover the journey behind our brand and the purpose that guides everything we do.</p>
-    </div>
-  );
-}
-
-function Frame10() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-8 md:gap-[60px] items-start left-4 md:left-8 lg:left-[160px] top-32 md:top-40 lg:top-[205px] right-4 md:right-auto w-auto lg:w-[602px]">
-      <Title />
-    </div>
-  );
-}
-
-function Cta() {
-  return (
-    <div className="content-stretch flex flex-col gap-8 md:gap-[60px] h-[400px] md:h-[550px] lg:h-[700px] items-center justify-center relative shrink-0 w-full px-4" data-name="CTA">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgCta} />
-        <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
-      </div>
-      <p className="font-['Inter:Bold',sans-serif] font-bold leading-tight md:leading-[normal] not-italic relative shrink-0 text-[#115132] text-4xl md:text-7xl lg:text-9xl xl:text-[152px] text-center tracking-tight md:tracking-[-3.04px]">Let the Journey Begin</p>
-      <div className="relative shrink-0 size-12 md:size-20 lg:size-[96px]" data-name="Vector">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 96 96">
-          <path d={svgPaths.p1b7f1380} fill="var(--fill-0, white)" id="Vector" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function Logo() {
-  return (
-    <div className="h-[64px] relative shrink-0 w-[132.489px]" data-name="Logo">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 133 64">
-        <g clipPath="url(#clip0_9_180)" id="Logo">
-          <path d={svgPaths.p2c2b4370} fill="var(--fill-0, #19459D)" id="Vector" />
-          <path d={svgPaths.p29295e00} fill="var(--fill-0, #19459D)" id="Vector_2" />
-          <path d={svgPaths.p3209fa00} fill="var(--fill-0, #19459D)" id="Vector_3" />
-          <path clipRule="evenodd" d={svgPaths.p1edaac70} fill="var(--fill-0, #19459D)" fillRule="evenodd" id="Vector_4" />
-          <g id="Group">
-            <path d={svgPaths.p410e800} fill="url(#paint0_linear_9_180)" id="Vector_5" />
-            <path d={svgPaths.p2f949000} fill="url(#paint1_linear_9_180)" id="Vector_6" />
-            <g id="Group_2">
-              <path d={svgPaths.p98c4c70} fill="var(--fill-0, #CFE5AE)" id="Vector_7" />
-            </g>
-            <g id="Group_3">
-              <path d={svgPaths.p44fb900} fill="var(--fill-0, #0D6D38)" id="Vector_8" />
-            </g>
-            <g id="Group_4">
-              <path d={svgPaths.pe555700} fill="var(--fill-0, #CFE5AE)" id="Vector_9" />
-            </g>
-          </g>
-          <path d={svgPaths.p3f4ffe00} fill="var(--fill-0, #19459D)" id="Vector_10" />
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_9_180" x1="54.3525" x2="50.634" y1="63.3711" y2="46.5562">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_9_180" x1="19.1797" x2="54.1336" y1="52.8126" y2="45.0812">
-            <stop stopColor="#72BF44" />
-            <stop offset="1" stopColor="#007932" />
-          </linearGradient>
-          <clipPath id="clip0_9_180">
-            <rect fill="white" height="64" width="132.489" />
-          </clipPath>
-        </defs>
-      </svg>
-    </div>
-  );
-}
-
-function Logo1() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px overflow-clip relative shrink-0" data-name="Logo">
-      <Logo />
-    </div>
-  );
-}
-
-function ContactInfo() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-xl md:text-3xl lg:text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-lg md:text-2xl lg:text-[32px] w-full">sales@meyv.com.tr</p>
-    </div>
-  );
-}
-
-function Top() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Top">
-      <div aria-hidden="true" className="absolute border-[#d5d9e3] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col md:flex-row items-center size-full">
-        <div className="box-border content-stretch flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-0 px-4 md:px-8 lg:px-[80px] py-8 md:py-12 lg:py-[60px] relative w-full">
-          <Logo1 />
-          <ContactInfo />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SloganLogo() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-xl md:text-2xl lg:text-[28px] w-full max-w-[403px]">
-        <p className="mb-0">Naturally Sweet,</p>
-        <p>Perfectly Dried</p>
-      </div>
-      <div className="h-[45px] relative shrink-0 w-[128px] mt-4" data-name="image 66">
-        <img alt="" className="w-full h-full object-contain" src={imgImage66} />
-      </div>
-    </div>
-  );
-}
-
-function Frame9() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
-    </div>
-  );
-}
-
-function Frame11() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
-    </div>
-  );
-}
-
-function Frame12() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
-    </div>
-  );
-}
-
-function DropdownArrowIcon300WRounded1() {
-  return (
-    <div className="h-[7px] relative shrink-0 w-[12.775px]" data-name="Dropdown Arrow Icon 300W Rounded">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13 7">
-        <g id="Dropdown Arrow Icon 300W Rounded">
-          <path d={svgPaths.p11ff1530} fill="var(--fill-0, #64748B)" id="Dropdown Arrow" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Frame13() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Quality</p>
-      <DropdownArrowIcon300WRounded1 />
-    </div>
-  );
-}
-
-function Frame14() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Con</p>
-    </div>
-  );
-}
-
-function Menu1() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame9 />
-      <Frame11 />
-      <Frame12 />
-      <Frame13 />
-      <Frame14 />
-    </div>
-  );
-}
-
-function Item() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Navigation</p>
-      <Menu1 />
-    </div>
-  );
-}
-
-function Frame15() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Linkedin</p>
-    </div>
-  );
-}
-
-function Frame19() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Instagram</p>
-    </div>
-  );
-}
-
-function Menu2() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame15 />
-      <Frame19 />
-    </div>
-  );
-}
-
-function Item1() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Follow Us</p>
-      <Menu2 />
-    </div>
-  );
-}
-
-function Frame20() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Terms & Conditions`}</p>
-    </div>
-  );
-}
-
-function Frame21() {
-  return (
-    <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Privacy Policy</p>
-    </div>
-  );
-}
-
-function Menu3() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0 w-full" data-name="Menu">
-      <Frame20 />
-      <Frame21 />
-    </div>
-  );
-}
-
-function Item2() {
-  return (
-    <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Legal</p>
-      <Menu3 />
-    </div>
-  );
-}
-
-function Menu4() {
-  return (
-    <div className="basis-0 content-stretch flex flex-col md:flex-row grow items-start justify-between gap-8 md:gap-4 min-h-px min-w-px relative shrink-0" data-name="Menu">
-      <Item />
-      <Item1 />
-      <Item2 />
-    </div>
-  );
-}
-
-function Mid() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Mid">
-      <div className="size-full">
-        <div className="box-border content-stretch flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 px-4 md:px-8 lg:px-[80px] py-0 relative w-full">
-          <SloganLogo />
-          <Menu4 />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Subfooter() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Subfooter">
-      <div className="size-full">
-        <div className="box-border content-stretch flex flex-col md:flex-row font-['Inter:Regular',sans-serif] font-normal items-start justify-between gap-4 md:gap-0 leading-[normal] not-italic px-4 md:px-8 lg:px-[80px] py-6 md:py-[32px] relative text-[#333333] text-sm md:text-[16px] w-full">
-          <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
-          <p className="opacity-70 relative shrink-0 text-left md:text-right">Back to Top</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <div className="bg-white content-stretch flex flex-col gap-12 md:gap-20 lg:gap-[100px] items-start relative shrink-0 w-full" data-name="Footer">
-      <Top />
-      <Mid />
-      <Subfooter />
-    </div>
-  );
-}
-
-function CtaFooter() {
-  return (
-    <div className="content-stretch flex flex-col items-start w-full" data-name="CTA & Footer">
-      <Cta />
-      <Footer />
-    </div>
-  );
-}
-
-function MaskGroup() {
-  return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Mask group">
-      <div className="[grid-area:1_/_1] h-[460.079px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[43.281px_12.649px] mask-size-[548px_440px] ml-[-43.28px] mt-[-12.65px] relative rounded-[40px] w-[602.502px]" data-name="image 68" style={{ maskImage: `url('${imgImage68}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage69} />
-      </div>
-    </div>
-  );
-}
-
-function Text() {
-  return (
-    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">Global reach, local roots</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">Our headquarters and offices strategically connect our growing regions with key export markets. While our factories are located near fertile agricultural zones to ensure rapid processing after harvest, our international offices manage sales, logistics, and customer relations with agility and precision. This global network allows us to deliver IQF fruits to partners in Europe, the Middle East, and beyond — always on time, always in perfect condition.</p>
-    </div>
-  );
-}
-
-function Section() {
-  return (
-    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
-      <div className="hidden lg:block"><MaskGroup /></div>
-      <Text />
-    </div>
-  );
-}
-
-function Text1() {
-  return (
-    <div className="content-stretch flex flex-col gap-4 md:gap-[24px] items-start not-italic relative shrink-0 w-full" data-name="Text">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#333333] text-2xl md:text-4xl lg:text-[48px] w-full">Controlled environments, uncompromised quality</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] opacity-70 relative shrink-0 text-[#303030] text-sm md:text-[16px] w-full">Each of our facilities operates under meticulously controlled conditions — from temperature and humidity to air filtration and hygiene. Automated packaging and metal-detection systems safeguard product safety, while digital monitoring ensures process transparency. Supported by experienced food technologists and engineers, we maintain an unbroken chain of quality from the moment the fruit is picked until it reaches our customers&apos; doors.</p>
-    </div>
-  );
-}
-
-function MaskGroup1() {
-  return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-name="Mask group">
-      <div className="[grid-area:1_/_1] h-[457.096px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[29.86px_12.65px] mask-size-[548px_440px] ml-[-29.86px] mt-[-12.65px] relative rounded-[40px] w-[606.976px]" data-name="image 69" style={{ maskImage: `url('${imgImage68}')` }}>
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage70} />
-      </div>
-    </div>
-  );
-}
-
-function Section1() {
-  return (
-    <div className="content-stretch flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-[148px] items-center relative shrink-0 w-full" data-name="Section">
-      <Text1 />
-      <div className="hidden lg:block"><MaskGroup1 /></div>
-    </div>
-  );
-}
-
-function Sections() {
-  return (
-    <div className="content-stretch flex flex-col gap-12 md:gap-16 lg:gap-[80px] items-start w-full" data-name="Sections">
-      <Section />
-      <Section1 />
-    </div>
-  );
-}
-
-function Group1() {
-  return (
-    <div className="absolute contents left-0 top-[2465px]">
-      <CtaFooter />
-      <Sections />
-    </div>
-  );
-}
-
-function Frame22() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-base md:text-[18px] text-white w-full">At the heart of our operations lies a commitment to precision and hygiene. Each factory is designed according to international standards such as ISO 22000, BRCGS, and HACCP, supported by advanced quality-control laboratories. From washing and slicing to freezing and packaging, every process is monitored in real-time to guarantee consistent, high-quality results. Our facilities reflect the harmony between modern engineering and nature&apos;s finest fruits.</p>
-    </div>
-  );
-}
-
-function Frame24() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[32px] items-start w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full">Where quality meets technology</p>
-      <Frame22 />
-    </div>
-  );
-}
-
-function Frame23() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[40px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-base md:text-[18px] text-white w-full">Our production facilities are equipped with next-generation IQF (Individually Quick Frozen) systems, automated sorting lines, and precision-controlled environments that maintain product integrity at every stage. We combine technological excellence with a deep respect for nature, ensuring that every fruit retains its freshness and authentic flavor. Continuous investment in innovation allows us to increase efficiency, sustainability, and capacity while meeting global food safety standards.</p>
-    </div>
-  );
-}
-
-function Frame25() {
-  return (
-    <div className="content-stretch flex flex-col gap-6 md:gap-[32px] items-start w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#cde253] text-2xl md:text-4xl lg:text-[48px] tracking-[-0.96px] w-full">Innovation in every corner</p>
-      <Frame23 />
-    </div>
-  );
-}
-
-function Group() {
-  return (
-    <div className="absolute contents left-0 top-[1033px]">
-      <div className="absolute bg-[#115132] h-[1014px] left-0 top-[1207px] w-[1920px]" data-name="Bg" />
-      <Frame24 />
-      <Frame25 />
-      <div className="absolute h-[563px] left-[302px] rounded-[40px] top-[1033px] w-[620px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage} />
-      </div>
-      <div className="absolute h-[475px] left-[998px] rounded-[40px] top-[1830px] w-[620px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={imgImage1} />
-      </div>
-    </div>
-  );
-}
+const globalSections = [
+  {
+    title: "Global reach, local roots",
+    body:
+      "Headquarters and regional offices connect our growing regions with export markets. Dedicated teams handle sales, logistics, and customer service with agility.",
+    image: globalImages[0],
+  },
+  {
+    title: "Controlled environments, uncompromised quality",
+    body:
+      "Every facility operates under meticulously controlled conditions—from temperature and humidity to advanced hygiene systems and digital monitoring.",
+    image: globalImages[1],
+  },
+];
 
 export default function Component1920PxFactoriesOffices() {
   return (
-    <div className="bg-white relative w-full min-h-screen overflow-x-hidden" data-name="1920px - Factories & Offices">
-      {/* Hero Section with Background */}
-      <div className="relative">
-        <div className="absolute h-[300px] md:h-[350px] lg:h-[400px] left-4 md:left-8 lg:left-[80px] right-4 md:right-8 lg:right-[80px] top-[110px]" data-name="Subtract">
-          <img alt="" className="w-full h-full object-cover" src={imgSubtract} />
-        </div>
-        <Frame10 />
-        <Frame8 />
-      </div>
-
-      {/* Content Section */}
-      <Frame18 />
-
-      {/* Green Background Section */}
-      <div className="relative bg-[#115132] py-16 md:py-24 lg:py-32">
-        <div className="px-4 md:px-8 lg:px-[280px] flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
-          <div className="w-full lg:w-1/2">
-            <Frame25 />
+    <div className="bg-white min-h-screen w-full overflow-x-hidden">
+      <Header />
+      <main className="flex flex-col gap-16 md:gap-24 pb-16 md:pb-24">
+        {/* Hero */}
+        <section className="px-4 md:px-8 lg:px-16 pt-24">
+          <div className="max-w-screen-xl mx-auto rounded-[48px] overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.08)] relative h-[240px] sm:h-[300px] lg:h-[360px]">
+            <Image src={heroImage} alt="Factories hero" fill priority className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="relative z-10 flex h-full flex-col justify-center gap-4 px-6 sm:px-12 text-white">
+              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl leading-tight">Factories & Offices</p>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-2xl">
+                Discover the journey behind our brand and the purpose that guides everything we do.
+              </p>
+            </div>
           </div>
-          <div className="w-full lg:w-1/2">
-            <Frame24 />
+        </section>
+
+        {/* Overview */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl text-[#212121] leading-tight">
+                {overview.title}
+              </p>
+            </div>
+            <div className="flex-1 text-center md:text-left space-y-4">
+              {overview.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-        {/* Decorative Images - Hidden on Mobile */}
-        <div className="hidden lg:block absolute h-[563px] left-[302px] rounded-[40px] top-[100px] w-[620px]" data-name="image">
-          <img alt="" className="w-full h-full object-cover rounded-[40px]" src={imgImage} />
-        </div>
-        <div className="hidden lg:block absolute h-[475px] right-[302px] rounded-[40px] bottom-[100px] w-[620px]" data-name="image">
-          <img alt="" className="w-full h-full object-cover rounded-[40px]" src={imgImage1} />
-        </div>
-      </div>
+        </section>
 
-      {/* Info Sections */}
-      <div className="relative py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-[280px]">
-        <Sections />
-      </div>
+        {/* Highlights */}
+        <section className="bg-[#115132] text-white px-4 md:px-8 lg:px-16 py-12 md:py-20">
+          <div className="max-w-screen-xl mx-auto grid lg:grid-cols-[1.1fr,0.9fr] gap-10 items-center">
+            <div className="space-y-8">
+              {highlightCards.map((card) => (
+                <div key={card.title} className="space-y-3">
+                  <p className="font-['Inter:Medium',sans-serif] text-2xl sm:text-3xl md:text-4xl leading-snug sm:leading-tight">{card.title}</p>
+                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-white/85 leading-relaxed">{card.body}</p>
+                </div>
+              ))}
+            </div>
+            <div className="grid gap-6">
+              {highlightImages.map((image, index) => (
+                <div
+                  key={image}
+                  className={`relative w-full aspect-[4/3] rounded-[32px] overflow-hidden shadow-2xl ${index === 1 ? 'hidden md:block' : ''}`}
+                >
+                  <Image
+                    src={image}
+                    alt={index === 0 ? 'Processing facility' : 'Cold storage'}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 45vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* CTA & Footer */}
-      <CtaFooter />
+        {/* Global sections */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto space-y-12">
+            {globalSections.map((section, index) => (
+              <div
+                key={section.title}
+                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-16`}
+              >
+                <div className="flex-1 text-center lg:text-left space-y-4">
+                  <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl text-[#212121] leading-tight">{section.title}</p>
+                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030]/85 leading-relaxed">{section.body}</p>
+                </div>
+                <div className="flex-1 flex justify-center lg:justify-end">
+                  <div className="relative w-full max-w-lg aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl">
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 40vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Insights */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-8">
+            {highlightCards.map((card) => (
+              <div key={`insight-${card.title}`} className="rounded-[32px] border border-[#dfe6da] bg-white p-6 space-y-3">
+                <p className="font-['Inter:Medium',sans-serif] text-2xl text-[#115132] leading-snug">{card.title}</p>
+                <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg text-[#303030]/80 leading-relaxed">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="relative max-w-screen-xl mx-auto rounded-[48px] overflow-hidden text-center text-white py-20 md:py-28">
+            <Image src={ctaImage} alt="CTA background" fill className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-black/35" />
+            <div className="relative space-y-6 px-6">
+              <p className="font-['Inter:Bold',sans-serif] text-4xl sm:text-5xl md:text-6xl">Let the Journey Begin</p>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
+                Precision-engineered facilities, global offices, and an unbroken chain of quality—ready for your next project.
+              </p>
+              <button
+                type="button"
+                className="bg-white text-[#115132] px-10 py-3 rounded-full font-['Inter:Medium',sans-serif] text-base sm:text-lg"
+                onClick={() => {
+                  window.location.href = "mailto:sales@meyv.com.tr?subject=Meyv%20Inquiry";
+                }}
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }

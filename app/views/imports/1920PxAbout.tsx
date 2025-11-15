@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { Header } from "@/components/Header";
 import { HeroSection as SharedHeroSection } from "@/components/HeroSection";
 import svgPaths from "./svg-uxdpx2db5h";
@@ -165,15 +167,9 @@ function AboutHeroSection() {
       backgroundAlt="Orchard rows with harvesting tractor"
       titleLines={["Our Story"]}
       paragraphs={heroDescription}
-      titleClassName="font-['Inter:Medium',sans-serif] text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
-      paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl leading-relaxed max-w-xl"
-      contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-6 sm:px-10 lg:px-16 py-16 md:py-24 lg:py-28 text-white gap-10 md:gap-14"
-      overlayImage={{
-        src: imgImage1,
-        alt: "Close-up of blueberries",
-        containerClassName: "hidden md:flex justify-end md:items-end",
-        className: "h-32 w-48 lg:h-36 lg:w-56 rounded-[24px] object-cover"
-      }}
+      paragraphClassName="font-['Inter:Regular',sans-serif] text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-2xl"
+      contentWrapperClassName="max-w-screen-xl mx-auto flex h-full w-full flex-col justify-between px-4 md:px-8 lg:px-16 py-32 md:py-48 lg:py-64 text-white gap-12"
+      hideGradient
     />
   );
 }
@@ -218,9 +214,11 @@ function GroupCompaniesSection() {
         <div className="flex flex-nowrap items-center justify-center gap-6 md:gap-10 overflow-x-auto">
           {logos.map((logo) => (
             <div key={logo} className="flex items-center justify-center">
-              <img
+              <Image
                 src={logo}
                 alt="Partner company logo"
+                width={160}
+                height={80}
                 className="h-12 w-auto md:h-16 lg:h-20 object-contain"
               />
     </div>
@@ -237,9 +235,11 @@ function VisionSection() {
       <div className="max-w-screen-xl mx-auto flex flex-col gap-12 md:gap-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
           <div className="flex-1 flex justify-center lg:justify-start">
-            <img
+            <Image
               src={imgImage}
               alt="Selective berry processing"
+              width={640}
+              height={480}
               className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl object-cover"
             />
     </div>
@@ -259,9 +259,11 @@ function VisionSection() {
     </div>
         <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 md:gap-12">
           <div className="flex-1 flex justify-center lg:justify-end">
-            <img
+            <Image
               src={imgImage1}
               alt="Thriving orchard rows"
+              width={640}
+              height={480}
               className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-3xl object-cover"
             />
     </div>
@@ -346,9 +348,11 @@ function MilestonesSection() {
                 ))}
       </div>
               <div className="flex-1 flex justify-center md:justify-end">
-                <img
+                <Image
                   src={image}
                   alt={title}
+                  width={640}
+                  height={480}
                   className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-cover rounded-3xl"
                 />
       </div>
@@ -443,9 +447,11 @@ function Footer() {
             <p className="font-['Inter:Semi_Bold',sans-serif] text-xl sm:text-2xl md:text-3xl text-[#212121] leading-snug">
               Naturally Sweet, Perfectly Dried
             </p>
-            <img
+            <Image
               src={imgImage66}
               alt="Meyv slogan"
+              width={180}
+              height={60}
               className="h-14 w-auto object-contain"
             />
       </div>

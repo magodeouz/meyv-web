@@ -56,7 +56,7 @@ function Frame() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
       <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#115132] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Home</p>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function Frame() {
 function Frame2() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Products</p>
     </div>
   );
 }
@@ -72,7 +72,7 @@ function Frame2() {
 function Frame1() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Who we are</p>
     </div>
   );
 }
@@ -80,7 +80,7 @@ function Frame1() {
 function Frame4() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Factories</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Factories</p>
     </div>
   );
 }
@@ -100,7 +100,7 @@ function DropdownArrowIcon300WRounded() {
 function Frame3() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center p-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Quality & Certificates`}</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">{`Quality & Certificates`}</p>
       <DropdownArrowIcon300WRounded />
     </div>
   );
@@ -150,7 +150,7 @@ function Frame6() {
 function Frame5() {
   return (
     <div className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[48px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[16px] text-nowrap text-white whitespace-pre">Contact Us</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-base sm:text-lg md:text-xl text-nowrap text-white whitespace-pre">Contact Us</p>
       <Frame6 />
     </div>
   );
@@ -168,7 +168,7 @@ function Frame8() {
 function Frame16() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-snug md:leading-tight not-italic relative shrink-0 text-[#303030] text-base sm:text-lg md:text-xl w-full">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
     </div>
   );
 }
@@ -176,7 +176,7 @@ function Frame16() {
 function Frame17() {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
+      <div className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[-0.96px] w-[664px]">
         <p className="mb-0">11Picked.</p>
         <p>Perfected. Packaged.</p>
       </div>
@@ -196,7 +196,7 @@ function Frame18() {
 function Frame19() {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Why choose our products?</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[-0.96px] w-[664px]">Why choose our products?</p>
     </div>
   );
 }
@@ -204,9 +204,9 @@ function Frame19() {
 function Frame11() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">1</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Quality You Can Taste</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Every product is carefully sourced, processed, and preserved to deliver peak flavor, color, and nutrition—without compromise.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight relative shrink-0 text-[#115132] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-nowrap whitespace-pre">1</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight min-w-full relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-[min-content]">Quality You Can Taste</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-snug md:leading-tight min-w-full opacity-70 relative shrink-0 text-[#303030] text-base sm:text-lg md:text-xl w-[min-content]">Every product is carefully sourced, processed, and preserved to deliver peak flavor, color, and nutrition—without compromise.</p>
     </div>
   );
 }
@@ -214,9 +214,9 @@ function Frame11() {
 function Frame14() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">2</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">Trusted by Professionals Worldwide</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Food brands, manufacturers, and distributors rely on our consistent quality, safety standards, and clean-label fruit solutions.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight relative shrink-0 text-[#115132] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-nowrap whitespace-pre">2</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight min-w-full relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-[min-content]">Trusted by Professionals Worldwide</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-snug md:leading-tight min-w-full opacity-70 relative shrink-0 text-[#303030] text-base sm:text-lg md:text-xl w-[min-content]">Food brands, manufacturers, and distributors rely on our consistent quality, safety standards, and clean-label fruit solutions.</p>
     </div>
   );
 }
@@ -224,9 +224,9 @@ function Frame14() {
 function Frame12() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[7px] grow items-start min-h-px min-w-px not-italic relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#115132] text-[96px] text-nowrap whitespace-pre">3</p>
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[#212121] text-[21px] w-[min-content]">From Farm to Final Product</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] min-w-full opacity-70 relative shrink-0 text-[#303030] text-[15px] w-[min-content]">Our vertically integrated supply chain ensures traceability, sustainability, and reliable excellence—every step of the way.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight relative shrink-0 text-[#115132] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-nowrap whitespace-pre">3</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight min-w-full relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-[min-content]">From Farm to Final Product</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-snug md:leading-tight min-w-full opacity-70 relative shrink-0 text-[#303030] text-base sm:text-lg md:text-xl w-[min-content]">Our vertically integrated supply chain ensures traceability, sustainability, and reliable excellence—every step of the way.</p>
     </div>
   );
 }
@@ -263,7 +263,7 @@ function Cta() {
         </div>
         <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
       </div>
-      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[152px] text-center text-white tracking-[-3.04px] w-[min-content]">Fruit, Reinvented</p>
+      <p className="font-['Inter:Bold',sans-serif] font-bold leading-snug md:leading-tight min-w-full not-italic relative shrink-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-white tracking-[-3.04px] w-[min-content]">Fruit, Reinvented</p>
     </div>
   );
 }
@@ -320,9 +320,9 @@ function Logo1() {
 
 function ContactInfo() {
   return (
-    <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
-      <p className="relative shrink-0 text-[40px] w-full">+90 (232) 864 22 00</p>
-      <p className="relative shrink-0 text-[32px] w-full">sales@meyv.com.tr</p>
+    <div className="basis-0 content-stretch flex flex-col font-['Inter:Medium',sans-serif] font-medium gap-[13px] grow items-start leading-snug md:leading-tight min-h-px min-w-px not-italic relative shrink-0 text-[#212121]" data-name="Contact Info">
+      <p className="relative shrink-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-full">+90 (232) 864 22 00</p>
+      <p className="relative shrink-0 text-lg sm:text-xl md:text-2xl w-full">sales@meyv.com.tr</p>
     </div>
   );
 }
@@ -344,7 +344,7 @@ function Top() {
 function SloganLogo() {
   return (
     <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative self-stretch shrink-0" data-name="Slogan & Logo">
-      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[28px] w-[403px]">
+      <div className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-lg sm:text-xl md:text-2xl w-[403px]">
         <p className="mb-0">Naturally Sweet,</p>
         <p>Perfectly Dried</p>
       </div>
@@ -359,7 +359,7 @@ function Frame9() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
       <div aria-hidden="true" className="absolute border-[#cde253] border-[0px_0px_2px] border-solid inset-0 pointer-events-none" />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#115132] text-[16px] text-nowrap whitespace-pre">Home</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-[#115132] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Home</p>
     </div>
   );
 }
@@ -367,7 +367,7 @@ function Frame9() {
 function Frame13() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Products</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Products</p>
     </div>
   );
 }
@@ -375,7 +375,7 @@ function Frame13() {
 function Frame20() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Who we are</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Who we are</p>
     </div>
   );
 }
@@ -395,7 +395,7 @@ function DropdownArrowIcon300WRounded1() {
 function Frame21() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Quality</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Quality</p>
       <DropdownArrowIcon300WRounded1 />
     </div>
   );
@@ -404,7 +404,7 @@ function Frame21() {
 function Frame22() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Con</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Con</p>
     </div>
   );
 }
@@ -424,7 +424,7 @@ function Menu1() {
 function Item() {
   return (
     <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Navigation</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-full">Navigation</p>
       <Menu1 />
     </div>
   );
@@ -433,7 +433,7 @@ function Item() {
 function Frame23() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Linkedin</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Linkedin</p>
     </div>
   );
 }
@@ -441,7 +441,7 @@ function Frame23() {
 function Frame24() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Instagram</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Instagram</p>
     </div>
   );
 }
@@ -458,7 +458,7 @@ function Menu2() {
 function Item1() {
   return (
     <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Follow Us</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-full">Follow Us</p>
       <Menu2 />
     </div>
   );
@@ -467,7 +467,7 @@ function Item1() {
 function Frame25() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">{`Terms & Conditions`}</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">{`Terms & Conditions`}</p>
     </div>
   );
 }
@@ -475,7 +475,7 @@ function Frame25() {
 function Frame26() {
   return (
     <div className="box-border content-stretch flex gap-[10px] items-center justify-center px-0 py-[10px] relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic opacity-50 relative shrink-0 text-[#212121] text-[16px] text-nowrap whitespace-pre">Privacy Policy</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic opacity-50 relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl text-nowrap whitespace-pre">Privacy Policy</p>
     </div>
   );
 }
@@ -492,7 +492,7 @@ function Menu3() {
 function Item2() {
   return (
     <div className="content-stretch flex flex-col gap-[17px] items-start relative shrink-0" data-name="Item">
-      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] w-full">Legal</p>
+      <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight not-italic relative shrink-0 text-[#212121] text-base sm:text-lg md:text-xl w-full">Legal</p>
       <Menu3 />
     </div>
   );
@@ -525,7 +525,7 @@ function Subfooter() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subfooter">
       <div className="size-full">
-        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[normal] not-italic px-[80px] py-[32px] relative text-[#333333] text-[16px] text-nowrap w-full whitespace-pre">
+        <div className="box-border content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-snug md:leading-tight not-italic px-[80px] py-[32px] relative text-[#333333] text-base sm:text-lg md:text-xl text-nowrap w-full whitespace-pre">
           <p className="opacity-70 relative shrink-0">Copyright © 2025. All rights reserved.</p>
           <p className="opacity-70 relative shrink-0 text-right">Back to Top</p>
         </div>
@@ -565,7 +565,7 @@ function Frame28() {
 function Frame27() {
   return (
     <div className="box-border content-stretch flex flex-col items-start pb-[34px] pt-0 px-0 relative shrink-0">
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] not-italic relative shrink-0 text-[80px] text-nowrap text-white whitespace-pre">Products</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight not-italic relative shrink-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-nowrap text-white whitespace-pre">Products</p>
     </div>
   );
 }
@@ -574,7 +574,7 @@ function Title() {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-name="Title">
       <Frame27 />
-      <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] min-w-full not-italic relative shrink-0 text-[21px] text-white w-[min-content]">Carefully selected strawberries, freeze-dried or IQF-processed for maximum shelf life and minimal loss of flavor or texture.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium leading-snug md:leading-tight min-w-full not-italic relative shrink-0 text-base sm:text-lg md:text-xl text-white w-[min-content]">Carefully selected strawberries, freeze-dried or IQF-processed for maximum shelf life and minimal loss of flavor or texture.</p>
     </div>
   );
 }
@@ -609,7 +609,7 @@ export default function Component1920PxProducts() {
           <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 rounded-[40px] to-50% to-[rgba(0,0,0,0.45)]" />
         </div>
       </div>
-      <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] left-[620.5px] not-italic text-[48px] text-center text-nowrap text-white top-[1113px] tracking-[-0.96px] translate-x-[-50%] whitespace-pre">
+      <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight left-[620.5px] not-italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-nowrap text-white top-[1113px] tracking-[-0.96px] translate-x-[-50%] whitespace-pre">
         <p className="mb-0">IQF</p>
         <p>Products</p>
       </div>
@@ -623,7 +623,7 @@ export default function Component1920PxProducts() {
         <img alt="" className="block max-w-none size-full" height="400" src={imgSubtract} width="1760" />
       </div>
       <Frame10 />
-      <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] left-[1308.5px] not-italic text-[48px] text-center text-nowrap text-white top-[1113px] tracking-[-0.96px] translate-x-[-50%] whitespace-pre">
+      <div className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-snug md:leading-tight left-[1308.5px] not-italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-nowrap text-white top-[1113px] tracking-[-0.96px] translate-x-[-50%] whitespace-pre">
         <p className="mb-0">Freeze Dry</p>
         <p>Products</p>
       </div>

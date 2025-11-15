@@ -1,193 +1,184 @@
 "use client";
 
+import Image from "next/image";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import svgPaths from "@/imports/svg-lasglpsk63";
 
-const imgImage = "/assets/f7e2551cb869ca3bcf26a39b607254ba142ad1ae.png";
-const imgImage1 = "/assets/27f5b63142058765da03e8c1f7d233fd84aafe26.png";
-const imgImage2 = "/assets/e6b0ff8832c4cd3c5e8c49a8286fa65d4d1c37d1.png";
-const imgImage3 = "/assets/da6f214df68e9135ea7da87f3a6afad486061d61.png";
-const imgImage4 = "/assets/73f455577d742a33355c0e1e32220cc2f31ecf0f.png";
-const imgImage5 = "/assets/8e342947f328fbee2c161b2ba361c2d1cb901b74.png";
-const imgImage6 = "/assets/6c3d626ccfa29c270df4cea4a3c68cab9a0ebc7b.png";
-const imgImage7 = "/assets/88654e2f867c824a61814c77d48e19547c949694.png";
-const imgImage66 = "/assets/ffeba28eb520fc86d5a21d336c1c9fc39ddb9b41.png";
-const imgSubtract = "/assets/2f66065bf70904e46b181fea861d96a697e786a5.png";
+const heroImage = "/assets/2f66065bf70904e46b181fea861d96a697e786a5.png";
+const heroInsetImage = "/assets/d009e6cdfad9224c09bac53ee0ae46d9d683f012.png";
+const ctaImage = "/assets/f7e2551cb869ca3bcf26a39b607254ba142ad1ae.png";
 
-function SearchIcon300WRounded() {
-  return (
-    <div className="relative shrink-0 size-[16px]">
-      <div className="absolute bottom-0 left-[-2.84%] right-0 top-0">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17 16">
-          <g id="Search Icon 300W Rounded">
-            <path d={svgPaths.p3ecaef00} fill="var(--fill-0, #64748B)" id="Search" />
-          </g>
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function DropdownArrowIcon300WRounded() {
-  return (
-    <div className="h-[6px] relative shrink-0 w-[10.95px]">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11 6">
-        <g id="Dropdown Arrow Icon 300W Rounded">
-          <path d={svgPaths.p1aa92b00} fill="var(--fill-0, #64748B)" id="Dropdown Arrow" />
-        </g>
-      </svg>
-    </div>
-  );
-}
+const products = [
+  { name: "Soul Cherries", image: "/assets/f7e2551cb869ca3bcf26a39b607254ba142ad1ae.png" },
+  { name: "Mango", image: "/assets/27f5b63142058765da03e8c1f7d233fd84aafe26.png" },
+  { name: "Blueberry", image: "/assets/e6b0ff8832c4cd3c5e8c49a8286fa65d4d1c37d1.png" },
+  { name: "Strawberry", image: "/assets/da6f214df68e9135ea7da87f3a6afad486061d61.png" },
+  { name: "Apple", image: "/assets/73f455577d742a33355c0e1e32220cc2f31ecf0f.png" },
+  { name: "Blackberry", image: "/assets/8e342947f328fbee2c161b2ba361c2d1cb901b74.png" },
+  { name: "Raspberry", image: "/assets/6c3d626ccfa29c270df4cea4a3c68cab9a0ebc7b.png" },
+  { name: "Peach", image: "/assets/88654e2f867c824a61814c77d48e19547c949694.png" },
+];
 
 interface ProductListProps {
   onNavigate: (page: string, productName?: string) => void;
 }
 
-const products = [
-  { name: 'Soul Cherries', image: imgImage },
-  { name: 'Mango', image: imgImage1 },
-  { name: 'Blueberry', image: imgImage2 },
-  { name: 'Strawberry', image: imgImage3 },
-  { name: 'Apple', image: imgImage4 },
-  { name: 'Blackberry', image: imgImage5 },
-  { name: 'Raspberry', image: imgImage6 },
-  { name: 'Peach', image: imgImage7 },
-];
+function SearchIcon() {
+  return (
+    <svg className="w-4 h-4 text-[#64748B]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <circle cx="11" cy="11" r="8" strokeWidth="2" />
+      <path d="m21 21-4.35-4.35" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ChevronDownIcon() {
+  return (
+    <svg className="w-3 h-3 text-[#64748B]" viewBox="0 0 12 7" fill="none" stroke="currentColor">
+      <path d="M1 1.5 6 5 11 1.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export function ProductList({ onNavigate }: ProductListProps) {
   return (
-    <div className="bg-white relative size-full min-h-screen">
+    <div className="bg-white min-h-screen w-full overflow-x-hidden">
       <Header onNavigate={onNavigate} />
-
-      {/* Hero Title Section */}
-      <div className="absolute content-stretch flex flex-col gap-[60px] items-start left-[160px] top-[264px] w-[602px]">
-        <div className="content-stretch flex flex-col gap-[40px] items-start not-italic relative shrink-0 text-white w-full">
-          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[96px] relative shrink-0 text-[80px] text-nowrap whitespace-pre">IQF Products</p>
-          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] min-w-full relative shrink-0 text-[21px] w-[min-content]">Explore our full range of premium fruit products, preserved at peak freshness for lasting quality.</p>
-        </div>
-      </div>
-
-      {/* Hero Background */}
-      <div className="absolute h-[400px] left-[80px] top-[110px] w-[1760px]">
-        <img alt="" className="block max-w-none size-full" height="400" src={imgSubtract} width="1760" />
-      </div>
-
-      {/* Picked. Perfected. Packaged. Section */}
-      <div className="absolute box-border content-stretch flex flex-col gap-[120px] items-start left-0 px-[280px] py-[160px] top-[910px] w-[1920px]">
-        <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-          <div className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">
-            <p className="mb-0">11Picked.</p>
-            <p>Perfected. Packaged.</p>
+      <main className="flex flex-col gap-16 md:gap-24 lg:gap-32 pb-16 md:pb-24">
+        {/* Hero */}
+        <section className="px-4 md:px-8 lg:px-16 pt-28">
+          <div className="max-w-screen-xl mx-auto bg-white rounded-[48px] shadow-lg p-4 sm:p-6 lg:p-10">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch">
+              <div className="relative flex-1 rounded-[40px] overflow-hidden min-h-[320px]">
+                <Image
+                  src={heroImage}
+                  alt="Assorted IQF fruits"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 65vw"
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="relative z-10 h-full w-full flex flex-col justify-end p-6 sm:p-8 lg:p-12 space-y-4 max-w-2xl">
+                  <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-white leading-tight">
+                    IQF Products
+                  </p>
+                  <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-white leading-relaxed">
+                    Explore our full range of premium fruit products, preserved at peak freshness for lasting quality.
+                  </p>
+                </div>
+              </div>
+              <div className="flex-1 flex items-end justify-center">
+                <div className="w-full max-w-sm rounded-[40px] overflow-hidden shadow-lg">
+                  <Image
+                    src={heroInsetImage}
+                    alt="Hand-picked frozen fruit detail"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[664px]">
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[#303030] text-[18px] w-full">At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with state-of-the-art processing technologies.</p>
-          </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Products Section */}
-      <div className="absolute content-stretch flex flex-col gap-[60px] items-center left-[280px] top-[1378px] w-[1360px]">
-        <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-          <p className="[grid-area:1_/_1] font-['Inter:Medium',sans-serif] font-medium leading-[normal] ml-0 mt-0 not-italic relative text-[#212121] text-[48px] tracking-[-0.96px] w-[664px]">Product List</p>
-          
-          {/* Products Grid */}
-          <div className="[grid-area:1_/_1] box-border content-stretch flex flex-col gap-[48px] items-start ml-0 mt-[90px] relative w-[1360px]">
-            {/* Row 1 */}
-            <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full">
-              {products.slice(0, 4).map((product, index) => (
+        {/* Intro */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-16">
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl text-[#212121] leading-tight">
+                Picked. Perfected. Packaged.
+              </p>
+            </div>
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
+                At Meyv, we specialize in delivering high-quality freeze-dried and IQF fruit ingredients to clients worldwide. Founded on
+                the principles of innovation, sustainability, and consistency, our company blends time-tested agricultural practices with
+                state-of-the-art processing technologies.
+              </p>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl text-[#303030] leading-relaxed">
+                From farm to final product, every step is handled with care to preserve natural taste, nutrients, and texture—ensuring your
+                ingredients arrive at their flavorful best.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Products */}
+        <section className="px-4 md:px-8 lg:px-16">
+          <div className="max-w-screen-xl mx-auto space-y-10">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <p className="font-['Inter:Medium',sans-serif] text-3xl sm:text-4xl md:text-5xl text-[#212121]">Product List</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <label className="flex items-center gap-3 rounded-xl border border-gray-200 px-4 py-3 bg-white">
+                  <SearchIcon />
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="bg-transparent border-none outline-none font-['Inter:Regular',sans-serif] text-sm sm:text-base text-[#303030] placeholder:text-[#303030]/60"
+                  />
+                </label>
+                <button className="flex items-center gap-3 rounded-xl border border-gray-200 px-4 py-3 bg-white">
+                  <span className="font-['Inter:Regular',sans-serif] text-sm sm:text-base text-[#303030]/80">Order by</span>
+                  <ChevronDownIcon />
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {products.map((product) => (
                 <button
-                  key={index}
-                  onClick={() => onNavigate('product-detail', product.name)}
-                  className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0 w-[316px] cursor-pointer bg-transparent border-none"
+                  key={product.name}
+                  type="button"
+                  onClick={() => onNavigate("product-detail", product.name)}
+                  className="flex flex-col gap-4 items-center text-center group"
                 >
-                  <div className="h-[316px] relative rounded-[40px] shrink-0 w-full">
-                    {product.name === 'Strawberry' ? (
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[40px]">
-                        <img alt="" className="absolute h-[271.84%] left-[-219.62%] max-w-none top-[-62.03%] w-[407.7%]" src={product.image} />
-                      </div>
-                    ) : (
-                      <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={product.image} />
-                    )}
+                  <div className="relative w-full aspect-square overflow-hidden rounded-[32px]">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
-                  <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] text-center w-full">{product.name}</p>
+                  <p className="font-['Inter:Semi_Bold',sans-serif] text-lg sm:text-xl text-[#212121]">{product.name}</p>
                 </button>
               ))}
             </div>
 
-            {/* Row 2 */}
-            <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full">
-              {products.slice(4, 8).map((product, index) => (
-                <button
-                  key={index}
-                  onClick={() => onNavigate('product-detail', product.name)}
-                  className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0 w-[316px] cursor-pointer bg-transparent border-none"
-                >
-                  <div className="h-[316px] relative rounded-[40px] shrink-0 w-full">
-                    {product.name === 'Apple' ? (
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[40px]">
-                        <img alt="" className="absolute left-[-18.35%] max-w-none size-[133.54%] top-[-13.92%]" src={product.image} />
-                      </div>
-                    ) : product.name === 'Blackberry' ? (
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[40px]">
-                        <img alt="" className="absolute left-[-16.46%] max-w-none size-[206.01%] top-[-75.32%]" src={product.image} />
-                      </div>
-                    ) : product.name === 'Peach' ? (
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[40px]">
-                        <img alt="" className="absolute left-[-29.11%] max-w-none size-[161.39%] top-[-31.96%]" src={product.image} />
-                      </div>
-                    ) : (
-                      <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[40px] size-full" src={product.image} />
-                    )}
-                  </div>
-                  <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[normal] not-italic relative shrink-0 text-[#212121] text-[21px] text-center w-full">{product.name}</p>
-                </button>
-              ))}
+            <div className="flex justify-center">
+              <button className="bg-[#115132] text-white font-['Inter:Medium',sans-serif] text-base sm:text-lg px-10 py-4 rounded-full">
+                Load more product
+              </button>
             </div>
           </div>
+        </section>
 
-          {/* Search and Filter */}
-          <div className="[grid-area:1_/_1] box-border content-stretch flex gap-[12px] items-center ml-[848px] mt-[14px] relative">
-            <div className="bg-white box-border content-stretch flex gap-[10px] h-[44px] items-center px-[12px] py-[8px] relative rounded-[8px] shrink-0 w-[250px]">
-              <div aria-hidden="true" className="absolute border border-[rgba(146,151,165,0.5)] border-solid inset-0 pointer-events-none rounded-[8px]" />
-              <SearchIcon300WRounded />
-              <input 
-                type="text"
-                placeholder="Search"
-                className="basis-0 font-['Inter:Regular',sans-serif] font-normal grow leading-[normal] min-h-px min-w-px not-italic opacity-[0.55] relative shrink-0 text-[#303030] text-[14px] bg-transparent border-none outline-none"
-              />
-            </div>
-            <div className="bg-white box-border content-stretch flex gap-[10px] h-[44px] items-center px-[12px] py-[8px] relative rounded-[8px] shrink-0 w-[250px]">
-              <div aria-hidden="true" className="absolute border border-[rgba(146,151,165,0.5)] border-solid inset-0 pointer-events-none rounded-[8px]" />
-              <p className="basis-0 font-['Inter:Regular',sans-serif] font-normal grow leading-[normal] min-h-px min-w-px not-italic opacity-[0.55] relative shrink-0 text-[#303030] text-[14px]">Order by</p>
-              <DropdownArrowIcon300WRounded />
+        {/* CTA */}
+        <section className="relative px-4 md:px-8 lg:px-16">
+          <div className="relative max-w-screen-xl mx-auto rounded-[48px] overflow-hidden text-center text-white py-20 md:py-28">
+            <Image src={ctaImage} alt="Fruit processing" fill className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="relative space-y-6 px-6">
+              <p className="font-['Inter:Bold',sans-serif] text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Fruit, Reinvented</p>
+              <p className="font-['Inter:Regular',sans-serif] text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
+                Premium IQF fruits crafted for modern food innovation. Let’s build your next hero product together.
+              </p>
+              <button
+                type="button"
+                className="bg-white text-[#115132] px-10 py-3 rounded-full font-['Inter:Medium',sans-serif] text-base sm:text-lg"
+                onClick={() => onNavigate("contact")}
+              >
+                Contact our team
+              </button>
             </div>
           </div>
-        </div>
-
-        {/* Load More Button */}
-        <button className="bg-[#115132] box-border content-stretch flex gap-[16px] h-[64px] items-center justify-center pl-[32px] pr-[6px] py-[10px] relative rounded-[32px] shrink-0 w-[664px] cursor-pointer border-none">
-          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[21px] text-nowrap text-white whitespace-pre">Load more product</p>
-        </button>
-      </div>
-
-      {/* CTA and Footer section */}
-      <div className="absolute top-[2948px] left-0 w-[1920px]">
-        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-          {/* CTA */}
-          <div className="content-stretch flex flex-col gap-[60px] h-[450px] items-center justify-center relative shrink-0 w-full">
-            <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-              <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgImage} />
-              <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0)] inset-0 to-[rgba(0,0,0,0.25)]" />
-            </div>
-            <p className="font-['Inter:Bold',sans-serif] font-bold leading-[normal] min-w-full not-italic relative shrink-0 text-[152px] text-center text-white tracking-[-3.04px] w-[min-content]">Fruit, Reinvented</p>
-          </div>
-
-          {/* Footer */}
-          <Footer onNavigate={onNavigate} />
-        </div>
-      </div>
+        </section>
+      </main>
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 }
